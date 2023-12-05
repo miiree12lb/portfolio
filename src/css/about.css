@@ -9,14 +9,6 @@
 	background: black;
 }
 
-.content > a{
-	color: black;
-}
-
-.content > a:hover{
-	color: white;
-}
-
 @media screen and (max-width: 950px) {
     #interesting {
         display: block;
@@ -25,5 +17,10 @@
     .content {
         width: 100%;
         margin-top: 10px;
+        background:#151515;
+    }
+
+    #memes{
+        min-width: 300px;
     }
 }
