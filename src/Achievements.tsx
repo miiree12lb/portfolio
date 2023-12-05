@@ -41,7 +41,7 @@ export default function Achievements(){
             pollution has on the growth of urban trees. You can take a look to the article below. Thanks to the article I was assigned to the program in Geneva, NY
             during summer 2022.
         </p>
-        <p className="read_more_inline" onClick={() => {navigate("/article")}}>Read Article</p>
+        <a className="read_more_inline" href="https://drive.google.com/file/d/1_YvJ4za5SmY7GrqMH3CNjQNX1AtdQxy1/view?usp=sharing">Read Article</a>
     </div>
 
     //second summer popup jic
