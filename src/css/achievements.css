@@ -26,6 +26,7 @@
 }
 
 .read_more_inline{
+    text-decoration: none;
     color: #94692d;
     cursor: pointer;
 }
