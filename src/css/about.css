@@ -1,0 +1,29 @@
+#interesting{
+	display: flex;
+	justify-content: space-between;
+}
+
+.content{
+	padding:1%;
+	border-radius: 10px;
+	background: black;
+}
+
+.content > a{
+	color: black;
+}
+
+.content > a:hover{
+	color: white;
+}
+
+@media screen and (max-width: 950px) {
+    #interesting {
+        display: block;
+    }
+
+    .content {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,33 @@
+#form_holder{
+    background-color: #424242;
+    display: block;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+#form {
+    display: block;
+    padding: 60px 80px;
+}
+
+form > input[type=text], form > input[type=email], form > button, form > textarea {
+    width: 100%;
+    border-radius: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #94692d;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: #FF4136;
+}

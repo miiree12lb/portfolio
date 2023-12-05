@@ -1,0 +1,17 @@
+#quotes_container{
+    background: black;
+    text-align: center;
+    display: flex;
+}
+
+#quote {
+    border-radius: 10px;
+    flex: 1;
+}
+
+#next_quote, #previous_quote {
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
