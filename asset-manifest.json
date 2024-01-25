@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.88533d8f.css",
+    "main.css": "/static/css/main.b17ac71b.css",
     "main.js": "/static/js/main.e64508bc.js",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/rome.PNG": "/static/media/rome.5e640ac71d964d5a16b2.PNG",
@@ -93,11 +93,11 @@
     "static/media/instagram.svg": "/static/media/instagram.f1b93ec68f3f311e5c68d6085a9b479c.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
-    "main.88533d8f.css.map": "/static/css/main.88533d8f.css.map",
+    "main.b17ac71b.css.map": "/static/css/main.b17ac71b.css.map",
     "main.e64508bc.js.map": "/static/js/main.e64508bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.88533d8f.css",
+    "static/css/main.b17ac71b.css",
     "static/js/main.e64508bc.js"
   ]
 }
