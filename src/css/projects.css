@@ -1,0 +1,29 @@
+#grid{
+    padding-top: 30px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#filter{
+    border: solid 1px #94692d;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 0;
+}
+
+#filter input[type=text], #filter select {
+    border-radius: 10px;
+    padding-left: 5px;
+    width: 250px;
+}
+
+#filter_components {
+    display: flex;
+    justify-content: space-between;
+}
+
+.opts > label {
+    margin-right: 10px;
+}

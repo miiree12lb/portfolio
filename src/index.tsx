@@ -8,6 +8,7 @@ import Contact from "./Contact.tsx";
 import Achievements from "./Achievements.tsx";
 import Navbar from "./Navbar.tsx";
 import PhoneNavbar from "./PhoneNavbar.tsx";
+import Projects from "./Projects.tsx";
 // @ts-ignore
 import './css/root.css';
 import Footer from "./Footer.tsx";
@@ -30,6 +31,7 @@ function Root() {
                     <Route path="/education" element={<Education />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/achievements" element={<Achievements />} />
+                    <Route path="/projects" element={<Projects />} />
                 </Routes>
             </div>
 

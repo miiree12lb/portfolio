@@ -15,6 +15,7 @@ export default function PhoneNavbar() {
                 <Link to="education">Education</Link>
                 <Link to="experience">Experience</Link>
                 <Link to="achievements">Achievements</Link>
+                <Link to="projects">Projects</Link>
                 <Link to="contact">Contact Me</Link>
             </div>
             
