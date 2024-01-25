@@ -27,3 +27,25 @@
 .opts > label {
     margin-right: 10px;
 }
+
+@media screen and (max-width: 1260px) {
+    #filter input[type=text] {
+        width: 200px;
+    }
+
+    #filter select {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #filter_components {
+        display: block;
+    }
+    #filter input[type=text], #filter select {
+        width: 100%;
+    }
+    #grid {
+        display: block;
+    }
+}
