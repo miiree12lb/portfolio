@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b17ac71b.css",
-    "main.js": "/static/js/main.e64508bc.js",
+    "main.js": "/static/js/main.2541ccda.js",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/rome.PNG": "/static/media/rome.5e640ac71d964d5a16b2.PNG",
     "static/media/ny.png": "/static/media/ny.bab0877b58dc89731c33.png",
@@ -19,6 +19,7 @@
     "static/media/ny2.png": "/static/media/ny2.5373e5efccb01f773a8a.png",
     "static/media/TechMed-Centre-UT.png": "/static/media/TechMed-Centre-UT.17b2ff630d056dc6168a.png",
     "static/media/EM33qcnXsAA8vJi.png": "/static/media/EM33qcnXsAA8vJi.5289009c275ad1c22404.png",
+    "static/media/stack_overflow.png": "/static/media/stack_overflow.0972465385374299629b.png",
     "static/media/schrodingers_cat.png": "/static/media/schrodingers_cat.245a5f4042c5ed86a63b.png",
     "static/media/foot3.png": "/static/media/foot3.e3486db7c121c99aef6c.png",
     "static/media/c++_python.png": "/static/media/c++_python.5dd73801eac875febea7.png",
@@ -94,10 +95,10 @@
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
     "main.b17ac71b.css.map": "/static/css/main.b17ac71b.css.map",
-    "main.e64508bc.js.map": "/static/js/main.e64508bc.js.map"
+    "main.2541ccda.js.map": "/static/js/main.2541ccda.js.map"
   },
   "entrypoints": [
     "static/css/main.b17ac71b.css",
-    "static/js/main.e64508bc.js"
+    "static/js/main.2541ccda.js"
   ]
 }
