@@ -44,6 +44,8 @@ import foot3 from "./assets/images/football/foot3.png";
 import foot4 from "./assets/images/football/foot4.png";
 // @ts-ignore
 import tech1 from "./assets/images/tech/tech1.png";
+// @ts-ignore
+import stack from "./assets/images/memes/stack_overflow.png";
 
 
 
@@ -51,7 +53,7 @@ export default function Home(){
     const travel_images = [ny2, stonhenge, zadar, ny, athens, croatia, zagreb, hp, rome];
     const football_images = [foot1, foot2, foot3, foot4];
     const science_images = [tech1];
-    const memes = [pcpp, dualitat_patro, forces, identity_matrix, cat];
+    const memes = [pcpp, stack, dualitat_patro, forces, identity_matrix, cat];
     const quotes = [
         { text: 'Everybody\'s a genius. But if you judge a fish by its ability to climb a tree, it will live its whole  life believing that it is stupid.', author: 'Albert Einstein' },
         { text: 'No és el pas del temps qui et porta a créixer són els seus cops.', author: 'Txarango' },

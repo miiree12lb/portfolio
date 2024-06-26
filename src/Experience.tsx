@@ -9,6 +9,29 @@ export default function Experience(){
         <h1>Experience</h1>
 
         <h2>Work</h2>
+        <h3>M.A.C.S Lake Delton</h3>
+        <h4>Wisconsin USA</h4>
+        <p>15/06/2024 - 02/09/2024</p>
+
+        <p>
+            M.A.C.S. (Macaroni and Cheese Shop) Lake Delton is a vibrant and welcoming restaurant with an exceptional dining experience with 
+            our signature dishes. We pride ourselves on our high-quality food, friendly service, and inviting atmosphere.
+        </p>
+        
+        <p>
+            My key responsibilities as a waitress are:
+            <ul>
+                <li>Greet customers with a friendly and welcoming attitude.</li>
+                <li>Take accurate customer orders and relay them to the kitchen efficiently.</li>
+                <li>Deliver food to tables promptly.</li>
+                <li>Prepare and package to-go, online, and phone orders.</li>
+                <li>Maintain cleanliness and organization in the dining area.</li>
+                <li>Collect and clear customer dishes from tables.</li>
+                <li>Empty trash cans regularly to ensure a tidy environment.</li>
+                <li>Refill the fridge and ensure it's well-stocked with beverages and other items.</li>
+            </ul>
+        </p>
+
         <h3>GoStudent</h3>
         <p> 11/11/2022 - current</p>
         <p>
