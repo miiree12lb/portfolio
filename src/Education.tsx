@@ -21,6 +21,7 @@ import twente2 from "./assets/images/twente/ut_me.png";
 import twente3 from "./assets/images/twente/ut-tower.png";
 // @ts-ignore
 import twente4 from "./assets/images/twente/ut.png";
+import { Link } from "react-router-dom";
 
 export default function Education(){
     const aula_images = [aula1, aula2, aula3];
@@ -174,9 +175,170 @@ export default function Education(){
         </table>
     </div>
 
+    const [isSubjectSummaryUTOpen, setIsSubjectSummaryUTOpen] = useState(false);
+
+    const openSubjectSummaryUTPopup = () => {
+        setIsSubjectSummaryUTOpen(true);
+    }
+
+    const closeSubjectSummaryUTPopup = () => {
+        setIsSubjectSummaryUTOpen(false);
+    }
+
+    const UTsubjectSummary = <div>
+        <p>
+            Below you can find a table summarising all the subjects in TCS Bachelor Degree. The table 
+            shows the name, the year the class is taken and the
+            credits you obtain after passing the class.
+        </p>
+        <table className="table">
+            <thead>
+                <tr>
+                    <td>Subject</td>
+                    <td>Year</td>
+                    <td>Credits</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pearls of Computer Science</td>
+                    <td>1</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Intro to Math + Calculus 1A</td>
+                    <td>1</td>
+                    <td>4</td>
+                </tr>
+
+                <tr>
+                    <td>Software Systems</td>
+                    <td>1</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Calculus 1B for CS</td>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>Network Systems</td>
+                    <td>1</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Linear Algebra for CS</td>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>Data & Information</td>
+                    <td>1</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Probability Theory</td>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>Computer Architecture and Organisation</td>
+                    <td>2</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems</td>
+                    <td>2</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>IT & Law</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Discrete Mathematics</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>Artificial Intelligence & Cyber Security</td>
+                    <td>2</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>HCI Design and Evaluation</td>
+                    <td>2</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Statistical Techniques for CS/BIT</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>Algorithmic Discrete Mathematics</td>
+                    <td>2</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Languages & Machines</td>
+                    <td>2</td>
+                    <td>3.5</td>
+                </tr>
+                <tr>
+                    <td>Algebra</td>
+                    <td>2</td>
+                    <td>3.5</td>
+                </tr>
+                <tr>
+                    <td>Implementation Project on Graph Isomorphisms</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>Minor/Elective</td>
+                    <td>2</td>
+                    <td>15</td>
+                </tr>
+
+                <tr>
+                    <td>Minor/Elective Module</td>
+                    <td>3</td>
+                    <td>15</td>
+                </tr>
+
+                <tr>
+                    <td>Minor/Elective Module</td>
+                    <td>3</td>
+                    <td>15</td>
+                </tr>
+
+                <tr>
+                    <td>Design Project Module</td>
+                    <td>3</td>
+                    <td>15</td>
+                </tr>
+
+                <tr>
+                    <td>Research Project Module</td>
+                    <td>3</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     return <>
         <Popup isOpen={isSpanishBaccalaureatePopupOpen} onRequestClose={closeSpanishBaccalaureatePopup} title="Spanish Baccalaureate" content={spanishBaccalaureatePopupContent} />
         <Popup isOpen={isInternationalBaccalaureatePopupOpen} onRequestClose={closeInternationalBaccalaureatePopup} title="International Baccalaureate" content={internationalBaccalaureatePopupContent} />
+        <Popup isOpen={isSubjectSummaryUTOpen} onRequestClose={closeSubjectSummaryUTPopup} title="TCS - UT Subject Summary" content={UTsubjectSummary} />
         <h1>Education</h1>
 
         <h2>University of Twente</h2>
@@ -207,16 +369,66 @@ export default function Education(){
                 <p>
                     I am majoring in Technical Computer Science (TCS) at the University of Twente, in Enschede, The Netherlands.
                     This is a three-year Bachelor's programme that focuses on software engineering and computer science fundamentals 
-                    such as algorithms, data structures, networks, web programming, security, etc. Below you can see a table with the 
-                    subjects I will take during the degree.
+                    such as algorithms, data structures, networks, web programming, security, etc.
                 </p>
-                <h3>Elective(s)</h3>
-                <p>
-                    
-                </p>
-                <h3>Minor</h3>
-                <p>
+                <p className="read_more_inline" onClick={openSubjectSummaryUTPopup}>View subject summary</p>
 
+                <h3>Minor</h3>
+            </div>
+        </div>
+        
+        <h3>Elective(s)</h3>
+        <div id="minors_electives">
+            
+            
+            <div className="half_div">
+                <h4>Data Science & Artificial Intelligence: Seeing through the hype</h4>
+                <p>
+                    The aim is to teach the fundamentals together with advanced concepts to increase technical knowledge as well as foster students' critical thinking on DS & AI.
+
+                    <ul>
+                        <li>The module's learning objectives are formulated using Bloom's taxonomy. The learning objectives are mapped to Programme Intended Learning Outcomes</li>
+                        <li>Understand the data analytics workflow (based on CRISP-DM (Wirth, & Hipp, 2000))</li>
+                        <li>Assess data quality and ability to scrape, cleanse, and ethically maintain data</li>
+                        <li>Assess and compare the suitability of different data modeling methods/algorithms for optimal performance and evaluate results objectively.</li>
+                        <li>Familiarity with infrastructures and distributed systems used to deal with them, such as Hadoop and MapReduce</li>
+                        <li>Analyze and apply the most advanced and relevant statistic and mathematical techniques for business purposes, specifically</li>
+                        <li>Fundamental algorithms and mathematical models for processing natural language</li>
+                        <li>The fundamentals of the neural network as applied to the analysis of images</li>
+                        <li>Mathematical methods of decision analysis and modeling ML/AI algorithms</li>
+                        <li>Apply new frameworks and advanced fundamental knowledge, reflect on how frameworks work and motivate choice, integrate different parts of ML/AI</li>
+                        <li>Build an automated workflow to scrap, clean, and ethically maintain data and result's privacy</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div className="half_div">
+                <h4>Programming paradigms</h4>
+                <p>
+                    Up until this point, the students have mainly learned imperative, object-oriented programming. This module will extend their awareness and ability in the following directions:
+                    <ul>
+                        <li>Non-imperative programming: in particular, the functional paradigm (extensively) and the logic paradigm (briefly)</li>
+                        <li>Programming for concurrent systems: concepts, data structures and algorithms for multi-core and GPU-based parallelism</li>
+                        <li>Programming language technology: parsing, compilation and code generation</li>
+                    </ul>
+                    These three strands are initially taught separately and come together in the module project, where the students develop a compiler for their own language with support for parallelism, 
+                    generating code that runs on an extensible hardware emulator written in a functional language.
+                </p>
+
+                <p>
+                    After successful completion of this module, the student is able to:
+                    <ul>
+                        <li>Describe the major programming paradigms (FP, LP and CP) and their essential characteristics and differences</li>
+                        <li>Write basic programs in all major programming paradigms</li>
+                        <li>Solve non-trivial programming problems in FP and CP</li>
+                        <li>Explain the concepts and importance of typing, in terms of FP and CC</li>
+                        <li>Explain and use the typical types and data structures in FP and CP</li>
+                        <li>Explain and take advantage of the evaluation and execution mechanisms of FP (lazy evaluation) and CP (hardware-related aspects, concurrency models)</li>
+                        <li>Explain and use the following concepts of FP: recursion, list comprehension, higher order functions, function composition, lazy evaluation</li>
+                        <li>Explain and use the following concepts of CP: interleaving, fairness, deadlock, memory models, synchronisation, locking</li>
+                        <li>Explain and use the following concepts of CC: syntactic and semantic analysis, scanning, parsing, run-time organisation, code generation, optimisation</li>
+                        <li>Write a compiler for a non-trivial imperative language with concurrency features generating a given (dedicated) instruction set</li>
+                    </ul>
                 </p>
             </div>
         </div>

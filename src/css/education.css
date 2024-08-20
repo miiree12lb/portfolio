@@ -21,3 +21,39 @@
 .table > tbody > tr:hover{
     background-color: #292929;
 }
+
+#filter {
+    border: solid 1px #94692d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#filter input {
+    width: 50px;
+}
+
+#filter_components {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+#minors_electives {
+    display: flex;
+    justify-content: space-between;
+}
+
+.half_div {
+    width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+    #minors_electives {
+        display: block;
+    }
+
+    .half_div {
+        width: 100%;
+    }
+}
