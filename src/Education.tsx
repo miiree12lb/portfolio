@@ -303,7 +303,7 @@ export default function Education(){
                 </tr>
 
                 <tr>
-                    <td>Minor/Elective</td>
+                    <td>Minor/Elective Module</td>
                     <td>2</td>
                     <td>15</td>
                 </tr>
@@ -335,10 +335,119 @@ export default function Education(){
         </table>
     </div>
 
+    const [isSISPopupOpen, setIsSISPopupOpen] = useState(false);
+    
+    const openSISPopup = () => {
+        setIsSISPopupOpen(true);
+    }
+
+    const closeSISPopup = () => {
+        setIsSISPopupOpen(false);
+    }
+
+    const sisPopupContent = <div>
+        The aim of this course is that participants are capable of the following once they have taken it:
+        <ol>
+            <li>Conceptualize and represent the real world in digital geospatial data.</li>
+            <li>Identify and apply methods for the exploration, analysis, integration, synthesis and presentation of digital spatial data and imagery in a geographic information system (GIS).</li>
+            <li>Apply basic statistical methods to geographic data to gain insights.</li>
+        </ol>
+    </div>
+
+    const [isSPGPopupOpen, setIsSPGPopupOpen] = useState(false);
+
+    const openSPGPopup = () => {
+        setIsSPGPopupOpen(true);
+    }
+
+    const closeSPGPopup = () => {
+        setIsSPGPopupOpen(false);
+    }
+
+    const spgPopupContent = <div>
+        After the course the student is able to use spatial concepts, instruments and measures in a given spatial planning situation;
+        <ol>
+            <li>
+                <p>Theory and context</p>
+                <ul>
+                    <li>Describe the evolution of spatial planning theory and practice and how these relate to notions of sustainable development and resilience.</li>
+                    <li>Explain the political, legal and institutional context of a spatial planning situation.</li>
+                </ul>
+            </li>
+
+            <li>
+                <p>Analysis of a planning situation</p>
+                <ul>
+                    <li>Analyse a given spatial planning problem/situation, identifying key stakeholders and their interests.</li>
+                    <li>Describe the trade-offs between competing interests in a given spatial planning situation.</li>
+                </ul>
+            </li>
+
+            <li>
+                <p>Advise on a planning situation</p>
+                <ul>
+                    <li>Develop and present a concept plan for addressing a given spatial planning situation.</li>
+                </ul>
+            </li>
+
+            <li>
+                <p>Recommend evaluation and future needs</p>
+                <ul>
+                    <li>Elaborate on ways to measures to guide, monitor and evaluate the realization of spatial plans.</li>
+                    <li>Discuss how spatial analysis can assist in anticipating future needs and emerging issues in society.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    const [isTEPopupOpen, setIsTEPopupOpen] = useState(false);
+
+    const openTEPopup = () => {
+        setIsTEPopupOpen(true);
+    }
+
+    const closeTEPopup = () => {
+        setIsTEPopupOpen(false);
+    }
+
+    const tePopupContent = <div>
+        Technical Environmental Engineering (TEE), modelling the processes in system Earth. After the course, students will be able to:
+        <ol>
+            <li>Describe cycles of nutrients, water and carbon and underlying principles such as conservation of mass and energy (Process thinking and conceptualization).</li>
+            <li>Apply schematizing complex systems using existing techniques to capture them in equations (System thinking and model conceptualization).</li>
+            <li>Apply probability density functions and concepts of correlations and regressions (Stochasticity) to estimations of relevant parameters of earth system processes.</li>
+            <li>Apply parameter uncertainty like variability, RMSE and R2, to make interpretations of outputs of models that simulate earth system processes (Parameter uncertainty).</li>
+        </ol>
+    </div>
+
+    const [isChallengeQ2PopupOpen, setIsChallengeQ2PopupOpen] = useState(false);
+
+    const openChallengeQ2Popup = () => {
+        setIsChallengeQ2PopupOpen(true);
+    }
+
+    const closeChallengeQ2Popup = () => {
+        setIsChallengeQ2PopupOpen(false);
+    }
+
+    const challengeQ2Content = <div>
+        Upon completion of the climate adaption challenge, you are able to:
+        <ol>
+            <li>Identify and describe gaps in your knowledge</li>
+            <li>Plan, execute and reflect on the learning process needed to bridge the gap</li>
+            <li>Integrate knowledge in formulating an actionable challenge using the challenge-based learning approach</li>
+        </ol>
+    </div>
+
     return <>
         <Popup isOpen={isSpanishBaccalaureatePopupOpen} onRequestClose={closeSpanishBaccalaureatePopup} title="Spanish Baccalaureate" content={spanishBaccalaureatePopupContent} />
         <Popup isOpen={isInternationalBaccalaureatePopupOpen} onRequestClose={closeInternationalBaccalaureatePopup} title="International Baccalaureate" content={internationalBaccalaureatePopupContent} />
         <Popup isOpen={isSubjectSummaryUTOpen} onRequestClose={closeSubjectSummaryUTPopup} title="TCS - UT Subject Summary" content={UTsubjectSummary} />
+        <Popup isOpen={isSISPopupOpen} onRequestClose={closeSISPopup} title="Spatial Information Science (SIS)" content={sisPopupContent} />
+        <Popup isOpen={isSPGPopupOpen} onRequestClose={closeSPGPopup} title="Spatial Planning for Governance (SPG)" content={spgPopupContent} />
+        <Popup isOpen={isTEPopupOpen} onRequestClose={closeTEPopup} title="Technical Engineering (TE)" content={tePopupContent} />
+        <Popup isOpen={isChallengeQ2PopupOpen} onRequestClose={closeChallengeQ2Popup} title="Challenge Q2" content={challengeQ2Content} />
+
         <h1>Education</h1>
 
         <h2>University of Twente</h2>
@@ -374,6 +483,16 @@ export default function Education(){
                 <p className="read_more_inline" onClick={openSubjectSummaryUTPopup}>View subject summary</p>
 
                 <h3>Minor</h3>
+                <h4>Adapting to Climate Change with Spatial Engineering</h4>
+                <p>
+                    This minor is offered by 'Master Spatial Engineering' and participants can choose one of three core course units:
+                    <ul>
+                        <li className="read_more_inline" onClick={openSISPopup}>Spatial Information Science (SIS)</li>
+                        <li className="read_more_inline" onClick={openSPGPopup}>Spatial Planning for Governance (SPG)</li>
+                        <li className="read_more_inline" onClick={openTEPopup}>Technical Engineering (TE)</li>
+                    </ul>
+                    Participants also need to complete the <p className="read_more_inline" onClick={openChallengeQ2Popup}>Challenge Q2</p>
+                </p>
             </div>
         </div>
         
