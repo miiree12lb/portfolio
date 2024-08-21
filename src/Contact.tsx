@@ -4,8 +4,6 @@ import "./css/contact.css"
 export default function Contact(){
     return(
         <>
-            <h1>Contact me</h1>
-
             <div id="form_holder">
                 <div id="form">
                     <h2>Send a message!</h2>
