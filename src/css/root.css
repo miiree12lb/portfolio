@@ -194,8 +194,8 @@ li > a{
         border-radius: 20px;
     }
 
-    .nav-item:hover, .nav-item.active {
-        background-color: black;
+    .nav-item.active {
+        background-color: #94692d;
     }
 
     #view {
