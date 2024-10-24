@@ -8,12 +8,14 @@ import Contact from "./Contact.tsx";
 import Achievements from "./Achievements.tsx";
 import Navbar from "./Navbar.tsx";
 import Projects from "./Projects.tsx";
+import ScrollToTop from "./ScrollToTop.tsx";
 // @ts-ignore
 import './css/root.css';
 import Footer from "./Footer.tsx";
 
 function Root() {
     return (<HashRouter>
+        <ScrollToTop />
         <div id="nav">
             <Navbar />
         </div>
