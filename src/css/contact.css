@@ -7,11 +7,13 @@
     align-items: center;
     border-radius: 20px;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 #form {
     display: block;
-    padding: 60px 80px;
+    padding: 10%;
+    padding-top: 0;
 }
 
 form > input[type=text], form > input[type=email], form > button, form > textarea {
