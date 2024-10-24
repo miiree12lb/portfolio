@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ed1193fc.css",
-    "main.js": "/static/js/main.609d5eb3.js",
+    "main.css": "/static/css/main.5ed6434d.css",
+    "main.js": "/static/js/main.98dbfcb9.js",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/rome.PNG": "/static/media/rome.5e640ac71d964d5a16b2.PNG",
     "static/media/ny.png": "/static/media/ny.bab0877b58dc89731c33.png",
@@ -71,6 +71,7 @@
     "static/media/KaTeX_Size1-Regular.ttf": "/static/media/KaTeX_Size1-Regular.6de7d4b539221a49e9e2.ttf",
     "static/media/KaTeX_SansSerif-Bold.woff2": "/static/media/KaTeX_SansSerif-Bold.95591a929f0d32aa282a.woff2",
     "static/media/KaTeX_SansSerif-Italic.woff2": "/static/media/KaTeX_SansSerif-Italic.7d393d382f3e7fb1c637.woff2",
+    "static/media/contactBlack.png": "/static/media/contactBlack.b8cc9648ed87d0c6ac04.png",
     "static/media/KaTeX_Size2-Regular.ttf": "/static/media/KaTeX_Size2-Regular.57f5c1837853986ea1db.ttf",
     "static/media/KaTeX_Fraktur-Bold.woff2": "/static/media/KaTeX_Fraktur-Bold.931d67ea207ab37ee693.woff2",
     "static/media/KaTeX_Fraktur-Regular.woff2": "/static/media/KaTeX_Fraktur-Regular.172d3529b26f8cedef6b.woff2",
@@ -94,11 +95,11 @@
     "static/media/instagram.svg": "/static/media/instagram.f1b93ec68f3f311e5c68d6085a9b479c.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
-    "main.ed1193fc.css.map": "/static/css/main.ed1193fc.css.map",
-    "main.609d5eb3.js.map": "/static/js/main.609d5eb3.js.map"
+    "main.5ed6434d.css.map": "/static/css/main.5ed6434d.css.map",
+    "main.98dbfcb9.js.map": "/static/js/main.98dbfcb9.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed1193fc.css",
-    "static/js/main.609d5eb3.js"
+    "static/css/main.5ed6434d.css",
+    "static/js/main.98dbfcb9.js"
   ]
 }
