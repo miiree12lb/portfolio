@@ -39,7 +39,7 @@ export default function Experience(){
         </p>
 
 
-        <h2>Voluteering</h2>
+        <h2>Volunteering</h2>
         <h3>OIFem</h3>
         <p> 2022 - current</p>
         <p>

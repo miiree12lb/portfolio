@@ -9,7 +9,7 @@ export default function Projects(){
         appType: "none",
     });
 
-    const global_languages = ["TypeScript", "CSS", "HTML", "Kotlin", "Java"];
+    const global_languages = ["TypeScript", "JavaScript", "Python", "CSS", "HTML", "Java"];
 
     const applications = [
         {
@@ -18,6 +18,14 @@ export default function Projects(){
             app_type: "Web Application",
             link: "https://miiree12lb.site",
         },
+
+        {
+            title: "Text Summarizer",
+            languages: ["JavaScript", "Python", "CSS", "HTML"],
+            app_type: "Web Application",
+            link: "https://text-summarizer-rho.vercel.app/"
+        },
+
         {
             title: "MenuMentor",
             languages: ["Java"],
