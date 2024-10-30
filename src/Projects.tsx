@@ -19,12 +19,12 @@ export default function Projects(){
             link: "https://miiree12lb.site",
         },
 
-        {
-            title: "Text Summarizer",
-            languages: ["JavaScript", "Python", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://text-summarizer-rho.vercel.app/"
-        },
+        // {
+        //     title: "Text Summarizer",
+        //     languages: ["JavaScript", "Python", "CSS", "HTML"],
+        //     app_type: "Web Application",
+        //     link: "https://text-summarizer-rho.vercel.app/"
+        // },
 
         {
             title: "MenuMentor",
