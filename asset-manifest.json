@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9e31e109.css",
-    "main.js": "/static/js/main.17969b1d.js",
+    "main.css": "/static/css/main.4ee81165.css",
+    "main.js": "/static/js/main.00955fdd.js",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/rome.PNG": "/static/media/rome.5e640ac71d964d5a16b2.PNG",
     "static/media/ny.png": "/static/media/ny.bab0877b58dc89731c33.png",
@@ -9,12 +9,17 @@
     "static/media/ut_me.png": "/static/media/ut_me.3d111dc6355ac6bc4882.png",
     "static/media/croatia.png": "/static/media/croatia.9b1417d9b2cfebaad10a.png",
     "static/media/tech1.png": "/static/media/tech1.25538b87acd080233e5e.png",
+    "static/media/OS.png": "/static/media/OS.d2b8b309e14aebb128e9.png",
     "static/media/aula_escuela_europea.png": "/static/media/aula_escuela_europea.5214c020d6f5e805731e.png",
+    "static/media/string_theory.png": "/static/media/string_theory.446e77ce287df2ef5bec.png",
+    "static/media/physics_laws.png": "/static/media/physics_laws.f5bbf0832cdc1840ef2c.png",
     "static/media/foot2.png": "/static/media/foot2.1cf5e0f08486d3be2188.png",
     "static/media/hp.png": "/static/media/hp.139b34cca743b27e4f07.png",
+    "static/media/i_ate_some_pie.png": "/static/media/i_ate_some_pie.d4580e6eed56b640274f.png",
     "static/media/ut-tower.png": "/static/media/ut-tower.974db7996bcd9d32b315.png",
     "static/media/ut.png": "/static/media/ut.81b6041c5ebc4543cd38.png",
     "static/media/aula.png": "/static/media/aula.abcf7bb2346552739195.png",
+    "static/media/time_relativity.png": "/static/media/time_relativity.b587810291704324f234.png",
     "static/media/Diploma_Mireia.png": "/static/media/Diploma_Mireia.32b4d2c4517395ecbaeb.png",
     "static/media/ny2.png": "/static/media/ny2.5373e5efccb01f773a8a.png",
     "static/media/TechMed-Centre-UT.png": "/static/media/TechMed-Centre-UT.17b2ff630d056dc6168a.png",
@@ -95,11 +100,11 @@
     "static/media/instagram.svg": "/static/media/instagram.f1b93ec68f3f311e5c68d6085a9b479c.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
-    "main.9e31e109.css.map": "/static/css/main.9e31e109.css.map",
-    "main.17969b1d.js.map": "/static/js/main.17969b1d.js.map"
+    "main.4ee81165.css.map": "/static/css/main.4ee81165.css.map",
+    "main.00955fdd.js.map": "/static/js/main.00955fdd.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e31e109.css",
-    "static/js/main.17969b1d.js"
+    "static/css/main.4ee81165.css",
+    "static/js/main.00955fdd.js"
   ]
 }
