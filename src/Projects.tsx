@@ -13,10 +13,10 @@ export default function Projects(){
 
     const applications = [
         {
-            title: "My Portfolio",
-            languages: ["TypeScript", "CSS", "HTML"],
+            title: "Color Palette Generator",
+            languages: ["JavaScript", "Python", "CSS", "HTML"],
             app_type: "Web Application",
-            link: "https://miiree12lb.site",
+            link: "https://miiree12lb.github.io/color-picker/"
         },
 
         {
@@ -24,6 +24,13 @@ export default function Projects(){
             languages: ["JavaScript", "Python", "CSS", "HTML"],
             app_type: "Web Application",
             link: "https://text-summarizer-rho.vercel.app/"
+        },
+
+        {
+            title: "My Portfolio",
+            languages: ["TypeScript", "CSS", "HTML"],
+            app_type: "Web Application",
+            link: "https://miiree12lb.site",
         },
 
         {
@@ -65,7 +72,7 @@ export default function Projects(){
                     <div id="filter_components">
                         <input
                             type="text"
-                            placeholder="search by title or description"
+                            placeholder="Search by title"
                             onInput={handleSearchInputChange}
                         />
 
