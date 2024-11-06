@@ -157,6 +157,11 @@ li > a{
     background-color: #151515;
 }
 
+#footer-logo-image {
+    width: 100px;
+    height: auto;
+}
+
 @media screen and (max-width: 800px) {
     .flex {
         flex-direction: column;

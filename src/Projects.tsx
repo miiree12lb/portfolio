@@ -14,7 +14,7 @@ export default function Projects(){
     const applications = [
         {
             title: "Color Palette Generator",
-            languages: ["JavaScript", "Python", "CSS", "HTML"],
+            languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
             link: "https://miiree12lb.github.io/color-picker/"
         },
