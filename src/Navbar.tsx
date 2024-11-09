@@ -12,7 +12,6 @@ import achievements from "./assets/images/nav icons/achievements.png";
 import projects from "./assets/images/nav icons/projects.png";
 // @ts-ignore
 import contact from "./assets/images/nav icons/contact.png";
-// Selected tab images (or use different images if desired)
 // @ts-ignore
 import selected_about_me from "./assets/images/nav icons/about_meBlack.png";
 // @ts-ignore
