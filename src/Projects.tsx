@@ -9,9 +9,15 @@ export default function Projects(){
         appType: "none",
     });
 
-    const global_languages = ["TypeScript", "JavaScript", "Python", "CSS", "HTML", "Java"];
+    const global_languages = ["TypeScript", "JavaScript", "Python", "CSS", "HTML", "Java", "SQL"];
 
     const applications = [
+        // {
+        //     title: "Expense Tracker",
+        //     languages: ["TypeScript", "SQL"],
+        //     app_type: "Smartphone Application",
+        //     link: ""
+        // },
         {
             title: "Color Palette Generator",
             languages: ["JavaScript", "CSS", "HTML"],
@@ -35,7 +41,7 @@ export default function Projects(){
 
         {
             title: "MenuMentor",
-            languages: ["Java"],
+            languages: ["Java", "SQL"],
             app_type: "Desktop Application",
             link: "https://miiree12lb.github.io/MenuMentor/",
         },
