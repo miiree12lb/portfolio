@@ -18,6 +18,7 @@ export default function Projects(){
         //     app_type: "Smartphone Application",
         //     link: ""
         // },
+        
         {
             title: "Color Palette Generator",
             languages: ["JavaScript", "CSS", "HTML"],
@@ -25,12 +26,12 @@ export default function Projects(){
             link: "https://miiree12lb.github.io/color-picker/"
         },
 
-        {
-            title: "Text Summarizer",
-            languages: ["JavaScript", "Python", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://text-summarizer-rho.vercel.app/"
-        },
+        // {
+        //     title: "Text Summarizer",
+        //     languages: ["JavaScript", "Python", "CSS", "HTML"],
+        //     app_type: "Web Application",
+        //     link: "https://text-summarizer-rho.vercel.app/"
+        // },
 
         {
             title: "My Portfolio",
@@ -47,7 +48,6 @@ export default function Projects(){
         },
     ];
 
-    // Filter applications based on the current filter criteria
     const filteredApplications = applications.filter((app) => {
         const titleMatch = app.title.toLowerCase().includes(filterCriteria.searchTerm.toLowerCase());
         const languageMatch = filterCriteria.language === "none" || app.languages.includes(filterCriteria.language);
