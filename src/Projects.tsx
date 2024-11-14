@@ -1,45 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Application from "./ApplicationInterface.tsx";
 import "./css/projects.css";
 
-export default function Projects(){
+export default function Projects() {
     const [filterCriteria, setFilterCriteria] = useState({
         searchTerm: "",
         language: "none",
         appType: "none",
     });
 
+    const [scrolled, setScrolled] = useState<boolean>(false);
+
     const global_languages = ["TypeScript", "JavaScript", "Python", "CSS", "HTML", "Java", "SQL"];
 
     const applications = [
-        // {
-        //     title: "Expense Tracker",
-        //     languages: ["TypeScript", "SQL"],
-        //     app_type: "Smartphone Application",
-        //     link: ""
-        // },
-        
         {
             title: "Color Palette Generator",
             languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
-            link: "https://miiree12lb.github.io/color-picker/"
+            link: "https://miiree12lb.github.io/color-picker/",
         },
-
-        // {
-        //     title: "Text Summarizer",
-        //     languages: ["JavaScript", "Python", "CSS", "HTML"],
-        //     app_type: "Web Application",
-        //     link: "https://text-summarizer-rho.vercel.app/"
-        // },
-
+        {
+            title: "Text Summarizer",
+            languages: ["JavaScript", "Python", "CSS", "HTML"],
+            app_type: "Web Application",
+            link: "https://text-summarizer-rho.vercel.app/",
+        },
         {
             title: "My Portfolio",
             languages: ["TypeScript", "CSS", "HTML"],
             app_type: "Web Application",
             link: "https://miiree12lb.site",
         },
-
         {
             title: "MenuMentor",
             languages: ["Java", "SQL"],
@@ -56,22 +48,35 @@ export default function Projects(){
         return titleMatch && languageMatch && appTypeMatch;
     });
 
-    const handleSearchInputChange = (event) => {
+    const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setFilterCriteria({ ...filterCriteria, searchTerm: event.target.value });
     };
 
-    const handleLanguageChange = (event) => {
+    const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setFilterCriteria({ ...filterCriteria, language: event.target.value });
     };
 
-    const handleAppTypeChange = (event) => {
+    const handleAppTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setFilterCriteria({ ...filterCriteria, appType: event.target.value });
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.innerWidth < 800 && window.scrollY > 0) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <>
             <div id="sticky">
-                <h1>Personal projects</h1>
+                <h1 className={scrolled ? "scrolled" : "not-scrolled"}>Personal projects</h1>
 
                 <div id="filter">
                     <h2>Search and filter</h2>
@@ -86,7 +91,7 @@ export default function Projects(){
                             <label htmlFor="language">Language:</label>
                             <select id="language" onChange={handleLanguageChange}>
                                 <option value="none">No filter</option>
-                                {global_languages.map((language) =>(
+                                {global_languages.map((language) => (
                                     <option key={language}>{language}</option>
                                 ))}
                             </select>
