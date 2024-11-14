@@ -40,6 +40,22 @@
 }
 
 @media screen and (max-width: 800px) {
+    #sticky {
+        background-color: #151515;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .scrolled {
+        padding-top: 70px;
+        transition: padding 0.3s ease;
+    }
+
+    .not-scrolled {
+        padding-top: 0;
+    }
+
     #filter_components {
         display: block;
     }
