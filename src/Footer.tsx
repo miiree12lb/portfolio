@@ -13,7 +13,9 @@ export default function Footer(){
     return (
         <>
             <div id="footer-logo">
-                <img alt="logo" src={logo} id="footer-logo-image" />
+                <Link to="https://miiree12lb.site/">
+                    <img alt="logo" src={logo} id="footer-logo-image" />
+                </Link>
             </div>
             <div id="footer-icons-text">
                 <div id="footer-icons">
