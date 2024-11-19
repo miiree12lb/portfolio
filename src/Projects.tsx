@@ -14,12 +14,12 @@ export default function Projects() {
     const global_languages = ["TypeScript", "JavaScript", "Python", "CSS", "HTML", "Java", "SQL"];
 
     const applications = [
-        // {
-        //     title: "Video Gallery",
-        //     languages: ["JapvaScript", "CSS", "HTML"],
-        //     app_type: "Web Application",
-        //     link: "https://miiree12lb.github.io/video-galery/"
-        // },
+        {
+            title: "Video Gallery",
+            languages: ["JapvaScript", "CSS", "HTML"],
+            app_type: "Web Application",
+            link: "https://miiree12lb.github.io/video-gallery/"
+        },
         {
             title: "Color Palette Generator",
             languages: ["JavaScript", "CSS", "HTML"],
