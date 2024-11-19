@@ -56,6 +56,8 @@ import os from "./assets/images/memes/OS.png";
 import physics_laws from "./assets/images/memes/physics_laws.png";
 // @ts-ignore
 import pie from "./assets/images/memes/i_ate_some_pie.png";
+import useScreenWidth from "./useScreenWidth.tsx";
+import { useMediaQuery } from "react-responsive";
 
 
 export default function Home(){
@@ -69,6 +71,8 @@ export default function Home(){
         { text: 'On ne voit bien qu\'avec le coeur. L\'essentiel est invisuble pour les yeux.', author: 'Antoine de Saint-Exupéry' },
         { text: 'Hay cosas encerradas dentro de los muros que, si salieran de pronto a la calle y gritaran, llenarían el mundo.', author: 'Federico García Lorca'}
     ];
+    const screenWidth = useScreenWidth();
+    const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
 
     return <>
         <h1>About me</h1>
@@ -99,19 +103,10 @@ export default function Home(){
                     </p>
                 </div>
                 <div className="image_slider_container">
-                    <div className="big_slider">
+                    <div>
                         <ImageSlider
-                            width={500}
-                            height={362}
-                            images={science_images}
-                            showBullets={true}
-                            showNavs={true}
-                        />
-                    </div>
-                    <div className="small_slider">
-                        <ImageSlider
-                            width={300}
-                            height={217}
+                            width= {`${isDesktop ? 40 : 80}vw`}
+                            height={isDesktop ? (screenWidth * 40 * 362)/(500 * 100) : (screenWidth * 80 * 362)/(500 * 100)}
                             images={science_images}
                             showBullets={true}
                             showNavs={true}
@@ -135,19 +130,10 @@ export default function Home(){
             <h2>Traveling</h2>
             <div className="flex">
                 <div className="image_slider_container">
-                    <div className="big_slider">
+                    <div>
                         <ImageSlider
-                            width={500}
-                            height={362}
-                            images={travel_images}
-                            showBullets={true}
-                            showNavs={true}
-                        />
-                    </div>
-                    <div className="small_slider">
-                        <ImageSlider
-                            width={300}
-                            height={217}
+                            width= {`${isDesktop ? 40 : 80}vw`}
+                            height={isDesktop ? (screenWidth * 40 * 362)/(500 * 100) : (screenWidth * 80 * 362)/(500 * 100)}
                             images={travel_images}
                             showBullets={true}
                             showNavs={true}
@@ -200,25 +186,15 @@ export default function Home(){
                     </p>
                 </div>
                 <div className="image_slider_container">
-                    <div className="big_slider">
+                    <div>
                         <ImageSlider
-                            width={500}
-                            height={362}
-                            images={football_images}
+                            width= {`${isDesktop ? 40 : 80}vw`}
+                            height={isDesktop ? (screenWidth * 40 * 362)/(500 * 100) : (screenWidth * 80 * 362)/(500 * 100)}
+                            images={science_images}
                             showBullets={true}
                             showNavs={true}
                         />
-                    </div>
-                    <div className="small_slider">
-                        <ImageSlider
-                            width={300}
-                            height={217}
-                            images={football_images}
-                            showBullets={true}
-                            showNavs={true}
-                        />
-                    </div>
-                        
+                    </div>      
                 </div>
             </div>
         </div>

@@ -21,9 +21,13 @@ import twente2 from "./assets/images/twente/ut_me.png";
 import twente3 from "./assets/images/twente/ut-tower.png";
 // @ts-ignore
 import twente4 from "./assets/images/twente/ut.png";
-import { Link } from "react-router-dom";
+import useScreenWidth from "./useScreenWidth.tsx";
+import { useMediaQuery } from "react-responsive";
 
 export default function Education(){
+    const screenWidth = useScreenWidth();
+    const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
+
     const aula_images = [aula1, aula2, aula3];
     const twente_images = [twente1, twente2, twente3, twente4];
 
@@ -454,19 +458,10 @@ export default function Education(){
         <h3>2022-current</h3>
         <div className="flex">
             <div className="image_slider_container">
-                <div className="big_slider">
+                <div>
                     <ImageSlider
-                        width={500}
-                        height={362}
-                        images={twente_images}
-                        showBullets={true}
-                        showNavs={true}
-                    />
-                </div>
-                <div className="small_slider">
-                    <ImageSlider
-                        width={300}
-                        height={217}
+                        width= {`${isDesktop ? 40 : 80}vw`}
+                        height={isDesktop ? (screenWidth * 40 * 362)/(500 * 100) : (screenWidth * 80 * 362)/(500 * 100)}
                         images={twente_images}
                         showBullets={true}
                         showNavs={true}
@@ -582,19 +577,10 @@ export default function Education(){
                 </p>
             </div>
             <div className="image_slider_container">
-                <div className="big_slider">
+                <div>
                     <ImageSlider
-                        width={500}
-                        height={362}
-                        images={aula_images}
-                        showBullets={true}
-                        showNavs={true}
-                    />
-                </div>
-                <div className="small_slider">
-                    <ImageSlider
-                        width={300}
-                        height={217}
+                        width= {`${isDesktop ? 40 : 80}vw`}
+                        height={isDesktop ? (screenWidth * 40 * 362)/(500 * 100) : (screenWidth * 80 * 362)/(500 * 100)}
                         images={aula_images}
                         showBullets={true}
                         showNavs={true}
