@@ -11,14 +11,12 @@ export default function Projects() {
 
     const [scrolled, setScrolled] = useState<boolean>(false);
 
-    const global_languages = ["TypeScript", "JavaScript", "Python", "CSS", "HTML", "Java", "SQL"];
-
     const applications = [
         {
             title: "Video Gallery",
-            languages: ["JapvaScript", "CSS", "HTML"],
+            languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
-            link: "https://miiree12lb.github.io/video-gallery/"
+            link: "https://miiree12lb.github.io/video-gallery/",
         },
         {
             title: "Color Palette Generator",
@@ -45,6 +43,14 @@ export default function Projects() {
             link: "https://miiree12lb.github.io/MenuMentor/",
         },
     ];
+
+    const global_languages = Array.from(
+        new Set(applications.flatMap((app) => app.languages))
+    );
+
+    const global_app_types = Array.from(
+        new Set(applications.map((app) => app.app_type))
+    );
 
     const filteredApplications = applications.filter((app) => {
         const titleMatch = app.title.toLowerCase().includes(filterCriteria.searchTerm.toLowerCase());
@@ -74,7 +80,7 @@ export default function Projects() {
                 setScrolled(false);
             }
         };
-    
+
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -98,7 +104,9 @@ export default function Projects() {
                             <select id="language" onChange={handleLanguageChange}>
                                 <option value="none">No filter</option>
                                 {global_languages.map((language) => (
-                                    <option key={language}>{language}</option>
+                                    <option key={language} value={language}>
+                                        {language}
+                                    </option>
                                 ))}
                             </select>
                         </div>
@@ -107,9 +115,11 @@ export default function Projects() {
                             <label htmlFor="app_type">App Type:</label>
                             <select id="app_type" onChange={handleAppTypeChange}>
                                 <option value="none">No filter</option>
-                                <option value="Web Application">Web Application</option>
-                                <option value="Desktop Application">Desktop Application</option>
-                                <option value="Smartphone Application">Smartphone Application</option>
+                                {global_app_types.map((appType) => (
+                                    <option key={appType} value={appType}>
+                                        {appType}
+                                    </option>
+                                ))}
                             </select>
                         </div>
                     </div>

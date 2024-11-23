@@ -190,7 +190,7 @@ export default function Home(){
                         <ImageSlider
                             width= {`${isDesktop ? 40 : 80}vw`}
                             height={isDesktop ? (screenWidth * 40 * 362)/(500 * 100) : (screenWidth * 80 * 362)/(500 * 100)}
-                            images={science_images}
+                            images={football_images}
                             showBullets={true}
                             showNavs={true}
                         />
@@ -228,14 +228,16 @@ export default function Home(){
 
                 
                 <div id="memes" className="content">
-                    <h3>Cool Nerdy Memes</h3>
-                    <ImageSlider
-                        width={300}
-                        height={300}
-                        images={memes}
-                        showBullets={true}
-                        showNavs={true}
-                    />
+                    <div>
+                        <h3>Cool Nerdy Memes</h3>
+                        <ImageSlider
+                            width={300}
+                            height={300}
+                            images={memes}
+                            showBullets={true}
+                            showNavs={true}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
