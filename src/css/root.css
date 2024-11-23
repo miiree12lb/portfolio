@@ -149,10 +149,6 @@ li > a{
 	justify-content: space-between;
 }
 
-.small_slider {
-    display: none;
-}
-
 #memes {
     width: 33%;
 }
@@ -167,6 +163,10 @@ li > a{
 }
 
 @media screen and (max-width: 800px) {
+    #memes {
+        width: 78vw;
+        display: flex;
+    }
     .flex {
         flex-direction: column;
     }
@@ -209,25 +209,5 @@ li > a{
 
     #view {
         padding-top: 60px;
-    }
-}
-
-@media screen and (max-width: 1112px) {
-    .big_slider{
-        display: none;
-    }
-
-    .small_slider {
-        display: block;
-    }
-}
-
-@media screen and (min-width: 650px) and (max-width: 800px) {
-    .big_slider{
-        display: block;
-    }
-
-    .small_slider {
-        display: none;
     }
 }
