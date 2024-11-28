@@ -48,6 +48,10 @@
     width: 40%;
 }
 
+.overview {
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 800px) {
     #minors_electives {
         display: block;

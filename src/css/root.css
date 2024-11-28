@@ -149,9 +149,6 @@ li > a{
 	justify-content: space-between;
 }
 
-#memes {
-    width: 33%;
-}
 
 #pdf {
     background-color: #151515;
@@ -163,10 +160,6 @@ li > a{
 }
 
 @media screen and (max-width: 800px) {
-    #memes {
-        width: 78vw;
-        display: flex;
-    }
     .flex {
         flex-direction: column;
     }
