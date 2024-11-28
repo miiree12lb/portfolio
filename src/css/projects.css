@@ -1,7 +1,7 @@
 #grid{
     padding-top: 30px;
     display: grid;
-    align-items: center;
+    align-items: stretch;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }

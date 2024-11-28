@@ -1,26 +1,19 @@
 #interesting{
 	display: flex;
 	justify-content: space-between;
+    flex-direction: row;
 }
 
 .content{
 	padding:1%;
 	border-radius: 10px;
 	background: black;
+    border: solid 0.5px #94692D;
 }
 
 @media screen and (max-width: 950px) {
     #interesting {
-        display: block;
+        flex-direction: column;
     }
 
-    .content {
-        width: 100%;
-        margin-top: 10px;
-        background:#151515;
-    }
-
-    #memes{
-        min-width: 300px;
-    }
 }

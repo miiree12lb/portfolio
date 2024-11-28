@@ -73,6 +73,7 @@ export default function Home(){
     ];
     const screenWidth = useScreenWidth();
     const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
+    const bigMemes = useMediaQuery({ query: "(min-width: 951px)" });
 
     return <>
         <h1>About me</h1>
@@ -231,8 +232,8 @@ export default function Home(){
                     <div>
                         <h3>Cool Nerdy Memes</h3>
                         <ImageSlider
-                            width={300}
-                            height={300}
+                            width={`${bigMemes ? 20 : 70}vw`}
+                            height={`${bigMemes ? 20 : 70}vw`}
                             images={memes}
                             showBullets={true}
                             showNavs={true}

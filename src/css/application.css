@@ -1,5 +1,6 @@
 #content_holder {
     background-color: black;
+    border: solid 1px #94692D;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
