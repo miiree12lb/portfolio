@@ -146,7 +146,7 @@ li > a{
 
 .flex{
 	display: flex;
-	justify-content: space-between;
+	justify-content: stretch;
 }
 
 
@@ -164,8 +164,9 @@ li > a{
     border: solid 1px #94692D;
     background-color: black;
     margin-top: 10px;
-    max-height: 320px;
     overflow-y: auto;
+    width: 100%;
+    max-height: 500px;
 }
 
 .song-holder {
@@ -195,14 +196,18 @@ li > a{
     min-width: 30px;
 }
 
+#music {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .music-controls {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: solid 1px #94692D;
-    border-radius: 10px;
-    padding-top: 30px;
-    background-color: black;
+    align-items: center;
+    height: 500px;
 }
 
 .arrows {
@@ -226,11 +231,65 @@ li > a{
     color: #292929;
 }
 
-#spotify{
-    width: 70vw;
+#current-title, #current-artist {
+    color: white;
+    margin: 0;
 }
 
+#current-image-holder {
+    width: 40vh;
+    height: 40vh;
+}
+
+#current-image {
+    width: 100%;
+    height: 100%;
+}
+
+input[type="range"] {
+    accent-color: #94692D;
+}
+
+.control-btn {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .control-btn:hover {
+    color: #94692D;
+    background-color: transparent;
+  }
+  
+  .control-btn svg {
+    pointer-events: none; /* Prevent accidental clicks on the icon */
+  }
+  
+
 @media screen and (max-width: 800px) {
+    #music {
+        flex-direction: column;
+        justify-content: baseline;
+    }
+
+    #songs-list {
+        margin-top: 10px;
+    }
+
+    #current-image-holder {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .music-controls {
+        width: 80wv;
+        height: auto;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
     .flex {
         flex-direction: column;
     }

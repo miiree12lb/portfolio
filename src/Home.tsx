@@ -58,8 +58,51 @@ import physics_laws from "./assets/images/memes/physics_laws.png";
 import pie from "./assets/images/memes/i_ate_some_pie.png";
 import useScreenWidth from "./useScreenWidth.tsx";
 import { useMediaQuery } from "react-responsive";
-import { Spotify } from "react-spotify-embed";
-
+import SongList from "./SongList.tsx";
+// @ts-ignore
+import bohemianRhapsody from "./assets/music/Queen - Bohemian Rhapsody (HQ).mp3";
+// @ts-ignore
+import bohemianRhapsodyImage from "./assets/music/img/Bohemian.png";
+// @ts-ignore
+import comoTeAtreves from "./assets/music/Morat - Cómo te atreves.mp3";
+// @ts-ignore
+import ComoTeAtrevesImage from "./assets/music/img/ComoTeAtreves.png";
+// @ts-ignore
+import leave from "./assets/music/Leave Her Wild.mp3";
+// @ts-ignore
+import leaveImage from "./assets/music/img/Leave.png";
+// @ts-ignore
+import ceSoir from "./assets/music/SARA'H - Ce Soir.mp3";
+// @ts-ignore
+import ceSoirImage from "./assets/music/img/ceSoir.png";
+// @ts-ignore
+import noVull from "./assets/music/Edu Esteve - No Vull Despertar.mp3";
+// @ts-ignore
+import noVullImage from "./assets/music/img/noVull.png";
+// @ts-ignore
+import vivaLaVida from "./assets/music/Coldplay - Viva La Vida (Official Video).mp3";
+// @ts-ignore
+import vivaLaVidaImage from "./assets/music/img/vivaLaVida.png";
+// @ts-ignore
+import surMaRoute from "./assets/music/Black M - Sur ma route (Audio).mp3";
+// @ts-ignore
+import surMaRouteImage from "./assets/music/img/surMaRoute.png";
+// @ts-ignore
+import seguiremBallant from "./assets/music/Doctor Prats - Seguirem Ballant (amb Stay Homas).mp3";
+// @ts-ignore
+import seguiremBallantImage from "./assets/music/img/seguiremBallant.png";
+// @ts-ignore
+import unwritten from "./assets/music/Unwritten (Audio) -Natasha Bedingfield-.mp3";
+// @ts-ignore
+import unwrittenImage from "./assets/music/img/unwritten.png";
+// @ts-ignore
+import seremMesForts from "./assets/music/Serem més forts.mp3";
+// @ts-ignore
+import seremMesFortsImage from "./assets/music/img/seremMesForts.png";
+// @ts-ignore
+import conquistar from "./assets/music/TIMØ, Andrés Cepeda - Conquistar El Planeta (Cover Audio).mp3";
+// @ts-ignore
+import conquistarImage from "./assets/music/img/conquistar.png";
 
 export default function Home(){
     const travel_images = [ny2, stonhenge, zadar, ny, athens, croatia, zagreb, hp, rome];
@@ -73,19 +116,18 @@ export default function Home(){
         { text: 'Hay cosas encerradas dentro de los muros que, si salieran de pronto a la calle y gritaran, llenarían el mundo.', author: 'Federico García Lorca'}
     ];
     let songs = [
-        {title: "Bohemian Rhapsody", artist: "Queen", url: "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb?si=bf73450581c4489d"},
-        {title: "Cómo Te Atreves", artist: "Morat", url: "https://open.spotify.com/track/7M6CFruBrM5x7u0lTMtm6r?si=8e979cda8fc94772"},
-        {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601"},
-        {title: "Ce soir", artist: "SARA'H", url: "https://open.spotify.com/track/3PUFEO6InFkkgELheBXrxj?si=cf7843f1d3f54e39"},
-        {title: "No Vull Despertar", artist: "Edu Esteve", url: "https://open.spotify.com/track/6sIGc1jYieV0itiLYrtD4I?si=8b09285feecf4aae"},
-        {title: "Viva La Vida", artist: "Coldplay", url: "https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b?si=12c5d58d70eb4c5d"},
-        {title: "Sur ma route", artist: "Black M", url: "https://open.spotify.com/track/3Uyt0WO3wOopnUBCe9BaXl?si=9cc7b8bec46f4c08"},
-        {title: "Seguirem Ballant", artist: "Doctor Prats, Stay Homas", url: "https://open.spotify.com/track/0pJeLEo1VhKasaEfNZiLG6?si=09ad63a0200d4dd6"},
-        {title: "Unwritten", artist: "Natasha Bedingfield", url: "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf?si=227203f433ed4511"},
-        {title: "Serem més forts", artist: "Miki Núñez", url: "https://open.spotify.com/track/33hasXzBCCcUDHNT7DqlE6?si=ed196425f1234a76"},
-        {title: "Conquistar El Planeta", artist: "TIMØ, Andrés Cepeda", url: "https://open.spotify.com/track/6cOGBvdT0RY3UUtEP7vRHs?si=410c56ab8a544581"},
+        {title: "Bohemian Rhapsody", artist: "Queen", url: "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb?si=bf73450581c4489d", source: bohemianRhapsody, image: bohemianRhapsodyImage},
+        {title: "Cómo Te Atreves", artist: "Morat", url: "https://open.spotify.com/track/7M6CFruBrM5x7u0lTMtm6r?si=8e979cda8fc94772", source: comoTeAtreves, image: ComoTeAtrevesImage}, 
+        {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601", source: leave, image: leaveImage},
+        {title: "Ce soir", artist: "SARA'H", url: "https://open.spotify.com/track/3PUFEO6InFkkgELheBXrxj?si=cf7843f1d3f54e39", source: ceSoir, image: ceSoirImage},
+        {title: "No Vull Despertar", artist: "Edu Esteve", url: "https://open.spotify.com/track/6sIGc1jYieV0itiLYrtD4I?si=8b09285feecf4aae", source: noVull, image: noVullImage},
+        {title: "Viva La Vida", artist: "Coldplay", url: "https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b?si=12c5d58d70eb4c5d", source: vivaLaVida, image: vivaLaVidaImage},
+        {title: "Sur ma route", artist: "Black M", url: "https://open.spotify.com/track/3Uyt0WO3wOopnUBCe9BaXl?si=9cc7b8bec46f4c08", source: surMaRoute, image:surMaRouteImage},
+        {title: "Seguirem Ballant", artist: "Doctor Prats, Stay Homas", url: "https://open.spotify.com/track/0pJeLEo1VhKasaEfNZiLG6?si=09ad63a0200d4dd6", source: seguiremBallant, image: seguiremBallantImage},
+        {title: "Unwritten", artist: "Natasha Bedingfield", url: "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf?si=227203f433ed4511", source: unwritten, image: unwrittenImage},
+        {title: "Serem més forts", artist: "Miki Núñez", url: "https://open.spotify.com/track/33hasXzBCCcUDHNT7DqlE6?si=ed196425f1234a76", source: seremMesForts, image: seremMesFortsImage},
+        {title: "Conquistar El Planeta", artist: "TIMØ, Andrés Cepeda", url: "https://open.spotify.com/track/6cOGBvdT0RY3UUtEP7vRHs?si=410c56ab8a544581", source: conquistar, image: conquistarImage},
     ];
-    const [currentSong, setCurrentSong] = useState(0);
     const screenWidth = useScreenWidth();
     const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
     const bigMemes = useMediaQuery({ query: "(min-width: 951px)" });
@@ -265,44 +307,7 @@ export default function Home(){
             </div>
         </div>
 
-        <div className="section" id="music">
-            <h2>Music</h2>
-
-            <div className="music-controls">
-                <button
-                    className="arrows"
-                    onClick={() => setCurrentSong((prev) => (prev - 1 + songs.length) % songs.length)}
-                    disabled={songs.length <= 1}
-                >
-                    &#10094;
-                </button>
-
-                <div id="spotify"><Spotify width="100%" link={songs[currentSong].url}/></div>
-                
-                <button
-                    className="arrows"        
-                    onClick={() => setCurrentSong((prev) => (prev + 1) % songs.length)}
-                    disabled={songs.length <= 1}
-                >
-                    &#10095;
-                </button>
-            </div>
-            
-            <div id="songs-list">
-                {songs.map((s) => (
-                    <div className={`song-holder ${currentSong === s.id ? "active" : ""}`} onClick={() => setCurrentSong(s.id)}>
-                        <div className="song-number">
-                            {s.id + 1}
-                        </div>
-
-                        <div>
-                            <h4 className="song-title">{s.title}</h4>
-                            <p className="song-artist">{s.artist}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
+        <SongList songs={songs}/>
 
 
         <div className="section" id='quotes'>
