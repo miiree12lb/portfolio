@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a13f2106.css",
-    "main.js": "/static/js/main.7fde55b2.js",
+    "main.css": "/static/css/main.10dfd188.css",
+    "main.js": "/static/js/main.037580e7.js",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
     "static/media/Unwritten (Audio) -Natasha Bedingfield-.mp3": "/static/media/Unwritten (Audio) -Natasha Bedingfield-.3f4a58e62b85f9302a9d.mp3",
@@ -15,6 +15,7 @@
     "static/media/Home -  Phillip Phillips (The World from the Side of the Moon (Deluxe)).mp3": "/static/media/Home -  Phillip Phillips (The World from the Side of the Moon (Deluxe)).3c6c31c12560b438b25b.mp3",
     "static/media/Leave Her Wild.mp3": "/static/media/Leave Her Wild.402f1e09ca17214b388b.mp3",
     "static/media/Amir - On dirait (paroles).mp3": "/static/media/Amir - On dirait (paroles).8d59c00006633e4d1328.mp3",
+    "static/media/Little Hollywood  Lyrics (Alle Farben feat. Janieck).mp3": "/static/media/Little Hollywood  Lyrics (Alle Farben feat. Janieck).fb66968d7d124b036e04.mp3",
     "static/media/SARA'H - Ce Soir.mp3": "/static/media/SARA'H - Ce Soir.6bb7094bd3cbf63bc0f4.mp3",
     "static/media/Doctor Prats - Seguirem Ballant (amb Stay Homas).mp3": "/static/media/Doctor Prats - Seguirem Ballant (amb Stay Homas).ce6b117cce0142b93b3e.mp3",
     "static/media/Serem més forts.mp3": "/static/media/Serem més forts.8efb0a75e83680e654aa.mp3",
@@ -27,6 +28,7 @@
     "static/media/noVull.png": "/static/media/noVull.d7fdd42238a8f20281d3.png",
     "static/media/vivaLaVida.png": "/static/media/vivaLaVida.f8c40cfe26c3339b8a53.png",
     "static/media/ComoTeAtreves.png": "/static/media/ComoTeAtreves.12cbcabf4025e1a89516.png",
+    "static/media/littleHollywood.png": "/static/media/littleHollywood.e7c01085414658e6cfd8.png",
     "static/media/tech1.png": "/static/media/tech1.25538b87acd080233e5e.png",
     "static/media/OS.png": "/static/media/OS.d2b8b309e14aebb128e9.png",
     "static/media/Bohemian.png": "/static/media/Bohemian.719bff67a74998e9cdb7.png",
@@ -130,11 +132,11 @@
     "static/media/instagram.svg": "/static/media/instagram.f1b93ec68f3f311e5c68d6085a9b479c.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
-    "main.a13f2106.css.map": "/static/css/main.a13f2106.css.map",
-    "main.7fde55b2.js.map": "/static/js/main.7fde55b2.js.map"
+    "main.10dfd188.css.map": "/static/css/main.10dfd188.css.map",
+    "main.037580e7.js.map": "/static/js/main.037580e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.a13f2106.css",
-    "static/js/main.7fde55b2.js"
+    "static/css/main.10dfd188.css",
+    "static/js/main.037580e7.js"
   ]
 }

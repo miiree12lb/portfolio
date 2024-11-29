@@ -117,6 +117,10 @@ import home from "./assets/music/Home -  Phillip Phillips (The World from the Si
 import enemy from "./assets/music/Sandro Cavazza - Enemy (Audio).mp3";
 // @ts-ignore
 import enemyImage from "./assets/music/img/enemy.png";
+// @ts-ignore
+import littleHollywood from "./assets/music/Little Hollywood  Lyrics (Alle Farben feat. Janieck).mp3";
+// @ts-ignore
+import littleHollywoodImage from "./assets/music/img/littleHollywood.png";
 
 
 export default function Home(){
@@ -131,8 +135,9 @@ export default function Home(){
         { text: 'Hay cosas encerradas dentro de los muros que, si salieran de pronto a la calle y gritaran, llenarían el mundo.', author: 'Federico García Lorca'}
     ];
     let songs = [
-        {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601", source: leave, image: leaveImage},
         {title: "Bohemian Rhapsody", artist: "Queen", url: "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb?si=bf73450581c4489d", source: bohemianRhapsody, image: bohemianRhapsodyImage},
+        {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601", source: leave, image: leaveImage},
+        {title: "Little Hollywood", artist: "Alle Farben, Janiek", url: "https://open.spotify.com/track/1f3flfdU4VDM2OBDD2FMia?si=2700163fb72e4a73", source: littleHollywood, image: littleHollywoodImage},
         {title: "Cómo Te Atreves", artist: "Morat", url: "https://open.spotify.com/track/7M6CFruBrM5x7u0lTMtm6r?si=8e979cda8fc94772", source: comoTeAtreves, image: ComoTeAtrevesImage}, 
         {title: "Ce soir", artist: "SARA'H", url: "https://open.spotify.com/track/3PUFEO6InFkkgELheBXrxj?si=cf7843f1d3f54e39", source: ceSoir, image: ceSoirImage},
         {title: "No Vull Despertar", artist: "Edu Esteve", url: "https://open.spotify.com/track/6sIGc1jYieV0itiLYrtD4I?si=8b09285feecf4aae", source: noVull, image: noVullImage},
