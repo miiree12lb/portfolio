@@ -73,11 +73,17 @@ export default function Home(){
         { text: 'Hay cosas encerradas dentro de los muros que, si salieran de pronto a la calle y gritaran, llenarían el mundo.', author: 'Federico García Lorca'}
     ];
     let songs = [
-        {title: "Serem més forts", artist: "Miki Núñez", url: "https://open.spotify.com/track/33hasXzBCCcUDHNT7DqlE6?si=ed196425f1234a76"},
+        {title: "Bohemian Rhapsody", artist: "Queen", url: "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb?si=bf73450581c4489d"},
+        {title: "Cómo Te Atreves", artist: "Morat", url: "https://open.spotify.com/track/7M6CFruBrM5x7u0lTMtm6r?si=8e979cda8fc94772"},
+        {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601"},
+        {title: "Ce soir", artist: "SARA'H", url: "https://open.spotify.com/track/3PUFEO6InFkkgELheBXrxj?si=cf7843f1d3f54e39"},
+        {title: "No Vull Despertar", artist: "Edu Esteve", url: "https://open.spotify.com/track/6sIGc1jYieV0itiLYrtD4I?si=8b09285feecf4aae"},
         {title: "Viva La Vida", artist: "Coldplay", url: "https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b?si=12c5d58d70eb4c5d"},
         {title: "Sur ma route", artist: "Black M", url: "https://open.spotify.com/track/3Uyt0WO3wOopnUBCe9BaXl?si=9cc7b8bec46f4c08"},
+        {title: "Seguirem Ballant", artist: "Doctor Prats, Stay Homas", url: "https://open.spotify.com/track/0pJeLEo1VhKasaEfNZiLG6?si=09ad63a0200d4dd6"},
         {title: "Unwritten", artist: "Natasha Bedingfield", url: "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf?si=227203f433ed4511"},
-        
+        {title: "Serem més forts", artist: "Miki Núñez", url: "https://open.spotify.com/track/33hasXzBCCcUDHNT7DqlE6?si=ed196425f1234a76"},
+        {title: "Conquistar El Planeta", artist: "TIMØ, Andrés Cepeda", url: "https://open.spotify.com/track/6cOGBvdT0RY3UUtEP7vRHs?si=410c56ab8a544581"},
     ];
     const [currentSong, setCurrentSong] = useState(0);
     const screenWidth = useScreenWidth();
@@ -271,7 +277,7 @@ export default function Home(){
                     &#10094;
                 </button>
 
-                <Spotify width="100%" link={songs[currentSong].url}/>
+                <div id="spotify"><Spotify width="100%" link={songs[currentSong].url}/></div>
                 
                 <button
                     className="arrows"        
@@ -284,7 +290,7 @@ export default function Home(){
             
             <div id="songs-list">
                 {songs.map((s) => (
-                    <div className="song-holder" onClick={() => setCurrentSong(s.id)}>
+                    <div className={`song-holder ${currentSong === s.id ? "active" : ""}`} onClick={() => setCurrentSong(s.id)}>
                         <div className="song-number">
                             {s.id + 1}
                         </div>
