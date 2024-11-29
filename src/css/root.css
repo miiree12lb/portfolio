@@ -199,15 +199,14 @@ li > a{
 #music {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
 }
 
 .music-controls {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    height: 500px;
+    justify-content: center;
 }
 
 .arrows {
@@ -237,18 +236,22 @@ li > a{
 }
 
 #current-image-holder {
-    width: 40vh;
-    height: 40vh;
+    margin: 10px;
+    width: 50vh;
+    height: 50vh;
+    position: relative;
 }
 
 #current-image {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    object-fit: cover;
 }
 
 input[type="range"] {
     accent-color: #94692D;
+    width: 80%;
 }
 
 .control-btn {
@@ -257,38 +260,64 @@ input[type="range"] {
     color: white;
     cursor: pointer;
     font-size: 18px;
-  }
+}
   
-  .control-btn:hover {
+.control-btn:hover {
     color: #94692D;
     background-color: transparent;
-  }
+}
   
-  .control-btn svg {
-    pointer-events: none; /* Prevent accidental clicks on the icon */
-  }
-  
+.control-btn svg {
+    pointer-events: none;
+}
+
+.time-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#spotify-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    pointer-events: none;
+}
 
 @media screen and (max-width: 800px) {
     #music {
         flex-direction: column;
         justify-content: baseline;
+        gap: 10px;
     }
 
     #songs-list {
-        margin-top: 10px;
+        margin-top: 0;
+        max-height: 300px;
     }
 
     #current-image-holder {
-        width: 60vw;
-        height: 60vw;
+        width: 50vw;
+        height: 50vw;
     }
 
     .music-controls {
-        width: 80wv;
+        width: 80vw;
         height: auto;
         align-items: center;
-        margin-bottom: 20px;
     }
 
     .flex {
@@ -311,6 +340,7 @@ input[type="range"] {
         left: 50%;          
         transform: translateX(-50%);
         border-radius: 40px;
+        z-index: 3;
     }
 
     .nav-text {
