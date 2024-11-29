@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a116448c.css",
-    "main.js": "/static/js/main.7f9fc3ec.js",
+    "main.css": "/static/css/main.a13f2106.css",
+    "main.js": "/static/js/main.7fde55b2.js",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
     "static/media/Unwritten (Audio) -Natasha Bedingfield-.mp3": "/static/media/Unwritten (Audio) -Natasha Bedingfield-.3f4a58e62b85f9302a9d.mp3",
@@ -10,7 +10,11 @@
     "static/media/Coldplay - Viva La Vida (Official Video).mp3": "/static/media/Coldplay - Viva La Vida (Official Video).ba9df15a5025af5ecc53.mp3",
     "static/media/Morat - Cómo te atreves.mp3": "/static/media/Morat - Cómo te atreves.1a64729074925a7b238e.mp3",
     "static/media/Edu Esteve - No Vull Despertar.mp3": "/static/media/Edu Esteve - No Vull Despertar.90b581ad6d00ca4a3e3e.mp3",
+    "static/media/Sandro Cavazza - Enemy (Audio).mp3": "/static/media/Sandro Cavazza - Enemy (Audio).dfa86db70a950c7426a6.mp3",
+    "static/media/Phillip Phillips - Gone, Gone, Gone LYRICS.mp3": "/static/media/Phillip Phillips - Gone, Gone, Gone LYRICS.7f33142fff87bcbf189a.mp3",
+    "static/media/Home -  Phillip Phillips (The World from the Side of the Moon (Deluxe)).mp3": "/static/media/Home -  Phillip Phillips (The World from the Side of the Moon (Deluxe)).3c6c31c12560b438b25b.mp3",
     "static/media/Leave Her Wild.mp3": "/static/media/Leave Her Wild.402f1e09ca17214b388b.mp3",
+    "static/media/Amir - On dirait (paroles).mp3": "/static/media/Amir - On dirait (paroles).8d59c00006633e4d1328.mp3",
     "static/media/SARA'H - Ce Soir.mp3": "/static/media/SARA'H - Ce Soir.6bb7094bd3cbf63bc0f4.mp3",
     "static/media/Doctor Prats - Seguirem Ballant (amb Stay Homas).mp3": "/static/media/Doctor Prats - Seguirem Ballant (amb Stay Homas).ce6b117cce0142b93b3e.mp3",
     "static/media/Serem més forts.mp3": "/static/media/Serem més forts.8efb0a75e83680e654aa.mp3",
@@ -30,11 +34,14 @@
     "static/media/seguiremBallant.png": "/static/media/seguiremBallant.0f1141be540fcd41404c.png",
     "static/media/ceSoir.png": "/static/media/ceSoir.f933122ebd673ef104e0.png",
     "static/media/seremMesForts.png": "/static/media/seremMesForts.3d06d0affc6d09ae0c20.png",
+    "static/media/onDirait.png": "/static/media/onDirait.e6e01c3ccdc07a6aee3a.png",
     "static/media/aula_escuela_europea.png": "/static/media/aula_escuela_europea.5214c020d6f5e805731e.png",
+    "static/media/gone.png": "/static/media/gone.c0ccf1adc87f86371400.png",
     "static/media/Leave.png": "/static/media/Leave.7d5778f85a236e421f1e.png",
     "static/media/string_theory.png": "/static/media/string_theory.446e77ce287df2ef5bec.png",
     "static/media/physics_laws.png": "/static/media/physics_laws.f5bbf0832cdc1840ef2c.png",
     "static/media/foot2.png": "/static/media/foot2.1cf5e0f08486d3be2188.png",
+    "static/media/enemy.png": "/static/media/enemy.a327660ca45747691d9e.png",
     "static/media/conquistar.png": "/static/media/conquistar.0cc9f58ecaa6fd84a634.png",
     "static/media/hp.png": "/static/media/hp.139b34cca743b27e4f07.png",
     "static/media/i_ate_some_pie.png": "/static/media/i_ate_some_pie.d4580e6eed56b640274f.png",
@@ -123,11 +130,11 @@
     "static/media/instagram.svg": "/static/media/instagram.f1b93ec68f3f311e5c68d6085a9b479c.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
-    "main.a116448c.css.map": "/static/css/main.a116448c.css.map",
-    "main.7f9fc3ec.js.map": "/static/js/main.7f9fc3ec.js.map"
+    "main.a13f2106.css.map": "/static/css/main.a13f2106.css.map",
+    "main.7fde55b2.js.map": "/static/js/main.7fde55b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.a116448c.css",
-    "static/js/main.7f9fc3ec.js"
+    "static/css/main.a13f2106.css",
+    "static/js/main.7fde55b2.js"
   ]
 }

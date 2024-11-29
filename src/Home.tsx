@@ -103,6 +103,21 @@ import seremMesFortsImage from "./assets/music/img/seremMesForts.png";
 import conquistar from "./assets/music/TIMØ, Andrés Cepeda - Conquistar El Planeta (Cover Audio).mp3";
 // @ts-ignore
 import conquistarImage from "./assets/music/img/conquistar.png";
+// @ts-ignore
+import onDirait from "./assets/music/Amir - On dirait (paroles).mp3";
+// @ts-ignore
+import onDiraitImage from "./assets/music/img/onDirait.png";
+// @ts-ignore
+import gone from "./assets/music/Phillip Phillips - Gone, Gone, Gone LYRICS.mp3";
+// @ts-ignore
+import goneImage from "./assets/music/img/gone.png";
+// @ts-ignore
+import home from "./assets/music/Home -  Phillip Phillips (The World from the Side of the Moon (Deluxe)).mp3";
+// @ts-ignore
+import enemy from "./assets/music/Sandro Cavazza - Enemy (Audio).mp3";
+// @ts-ignore
+import enemyImage from "./assets/music/img/enemy.png";
+
 
 export default function Home(){
     const travel_images = [ny2, stonhenge, zadar, ny, athens, croatia, zagreb, hp, rome];
@@ -116,17 +131,21 @@ export default function Home(){
         { text: 'Hay cosas encerradas dentro de los muros que, si salieran de pronto a la calle y gritaran, llenarían el mundo.', author: 'Federico García Lorca'}
     ];
     let songs = [
+        {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601", source: leave, image: leaveImage},
         {title: "Bohemian Rhapsody", artist: "Queen", url: "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb?si=bf73450581c4489d", source: bohemianRhapsody, image: bohemianRhapsodyImage},
         {title: "Cómo Te Atreves", artist: "Morat", url: "https://open.spotify.com/track/7M6CFruBrM5x7u0lTMtm6r?si=8e979cda8fc94772", source: comoTeAtreves, image: ComoTeAtrevesImage}, 
-        {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601", source: leave, image: leaveImage},
         {title: "Ce soir", artist: "SARA'H", url: "https://open.spotify.com/track/3PUFEO6InFkkgELheBXrxj?si=cf7843f1d3f54e39", source: ceSoir, image: ceSoirImage},
         {title: "No Vull Despertar", artist: "Edu Esteve", url: "https://open.spotify.com/track/6sIGc1jYieV0itiLYrtD4I?si=8b09285feecf4aae", source: noVull, image: noVullImage},
+        {title: "Gone, Gone, Gone", artist: "Phillip Phillips", url: "https://open.spotify.com/track/56sxN1yKg1dgOZXBcAHkJG?si=a1daa4cff6d8474a", source: gone, image: goneImage},
+        {title: "Enemy", artist: "Sandro Cavazza", url: "https://open.spotify.com/track/3YOl49rulPzu6LHbeDicuT?si=620a218f3364489c", source: enemy, image: enemyImage},
+        {title: "Home", artist: "Phillip Phillips", url: "https://open.spotify.com/track/1EAgPzRbK9YmdOESSMUm6P?si=20c38dad5a354c5f", source: home, image: goneImage},
         {title: "Viva La Vida", artist: "Coldplay", url: "https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b?si=12c5d58d70eb4c5d", source: vivaLaVida, image: vivaLaVidaImage},
         {title: "Sur ma route", artist: "Black M", url: "https://open.spotify.com/track/3Uyt0WO3wOopnUBCe9BaXl?si=9cc7b8bec46f4c08", source: surMaRoute, image:surMaRouteImage},
         {title: "Seguirem Ballant", artist: "Doctor Prats, Stay Homas", url: "https://open.spotify.com/track/0pJeLEo1VhKasaEfNZiLG6?si=09ad63a0200d4dd6", source: seguiremBallant, image: seguiremBallantImage},
         {title: "Unwritten", artist: "Natasha Bedingfield", url: "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf?si=227203f433ed4511", source: unwritten, image: unwrittenImage},
         {title: "Serem més forts", artist: "Miki Núñez", url: "https://open.spotify.com/track/33hasXzBCCcUDHNT7DqlE6?si=ed196425f1234a76", source: seremMesForts, image: seremMesFortsImage},
         {title: "Conquistar El Planeta", artist: "TIMØ, Andrés Cepeda", url: "https://open.spotify.com/track/6cOGBvdT0RY3UUtEP7vRHs?si=410c56ab8a544581", source: conquistar, image: conquistarImage},
+        {title: "On Dirait", artist: "Amir", url: "https://open.spotify.com/track/54vtz2MeGYtbvOG440hsYQ?si=a9493485648c49f2", source: onDirait, image: onDiraitImage},
     ];
     const screenWidth = useScreenWidth();
     const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
