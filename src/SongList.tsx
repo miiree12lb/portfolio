@@ -35,10 +35,10 @@ const SongList = ({ songs }) => {
   
     const changeSong = (newSongIndex) => {
       setCurrentSong(newSongIndex);
-      setIsPlaying(false); // Pause the audio and reset the state
+      setIsPlaying(false);
       if (audioRef.current) {
         audioRef.current.pause();
-        audioRef.current.currentTime = 0; // Reset the playback time
+        audioRef.current.currentTime = 0;
       }
     };
   
@@ -61,11 +61,13 @@ const SongList = ({ songs }) => {
               <h2 id="current-title">{songs[currentSong].title}</h2>
               <h3 id="current-artist">{songs[currentSong].artist}</h3>
               <div id="current-image-holder">
-                <img
-                  id="current-image"
-                  alt={songs[currentSong].title}
-                  src={songs[currentSong].image}
-                />
+                <Link to={songs[currentSong].url}>
+					<img
+					id="current-image"
+					alt={songs[currentSong].title}
+					src={songs[currentSong].image}
+					/>
+				</Link>
               </div>
               <div>
                 <audio
