@@ -58,6 +58,7 @@ import physics_laws from "./assets/images/memes/physics_laws.png";
 import pie from "./assets/images/memes/i_ate_some_pie.png";
 import useScreenWidth from "./useScreenWidth.tsx";
 import { useMediaQuery } from "react-responsive";
+import { Spotify } from "react-spotify-embed";
 
 
 export default function Home(){
@@ -71,9 +72,24 @@ export default function Home(){
         { text: 'On ne voit bien qu\'avec le coeur. L\'essentiel est invisuble pour les yeux.', author: 'Antoine de Saint-Exupéry' },
         { text: 'Hay cosas encerradas dentro de los muros que, si salieran de pronto a la calle y gritaran, llenarían el mundo.', author: 'Federico García Lorca'}
     ];
+    let songs = [
+        {title: "Serem més forts", artist: "Miki Núñez", url: "https://open.spotify.com/track/33hasXzBCCcUDHNT7DqlE6?si=ed196425f1234a76"},
+        {title: "Viva La Vida", artist: "Coldplay", url: "https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b?si=12c5d58d70eb4c5d"},
+        {title: "Sur ma route", artist: "Black M", url: "https://open.spotify.com/track/3Uyt0WO3wOopnUBCe9BaXl?si=9cc7b8bec46f4c08"},
+        {title: "Unwritten", artist: "Natasha Bedingfield", url: "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf?si=227203f433ed4511"},
+        
+    ];
+    const [currentSong, setCurrentSong] = useState(0);
     const screenWidth = useScreenWidth();
     const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
     const bigMemes = useMediaQuery({ query: "(min-width: 951px)" });
+
+    function assignSongIds(songs) {
+        return songs.map((song, id) => ({ ...song, id }));
+    }
+
+    songs = assignSongIds(songs);
+
 
     return <>
         <h1>About me</h1>
@@ -240,6 +256,45 @@ export default function Home(){
                         />
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div className="section" id="music">
+            <h2>Music</h2>
+
+            <div className="music-controls">
+                <button
+                    className="arrows"
+                    onClick={() => setCurrentSong((prev) => (prev - 1 + songs.length) % songs.length)}
+                    disabled={songs.length <= 1}
+                >
+                    &#10094;
+                </button>
+
+                <Spotify width="100%" link={songs[currentSong].url}/>
+                
+                <button
+                    className="arrows"        
+                    onClick={() => setCurrentSong((prev) => (prev + 1) % songs.length)}
+                    disabled={songs.length <= 1}
+                >
+                    &#10095;
+                </button>
+            </div>
+            
+            <div id="songs-list">
+                {songs.map((s) => (
+                    <div className="song-holder" onClick={() => setCurrentSong(s.id)}>
+                        <div className="song-number">
+                            {s.id + 1}
+                        </div>
+
+                        <div>
+                            <h4 className="song-title">{s.title}</h4>
+                            <p className="song-artist">{s.artist}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
 
