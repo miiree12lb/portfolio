@@ -222,7 +222,7 @@ export default function Achievements(){
                     <h4>Second summer (2022)</h4>
                     <h4>Geneva, NY, USA</h4>
                     <p>
-                        I was 1 of the 46 selected studies into the 2 week summer course in environmental science through scientific, social, 
+                        I was 1 of the 46 selected students into the 2 week summer course in environmental science through scientific, social, 
                         economic, philosophical, ethical, and political perspectives.
                     </p>
                     <p className="read_more_inline" onClick={openSecondSummerJic}>Read More</p>

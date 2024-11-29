@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.339ea217.css",
-    "main.js": "/static/js/main.edb5c4eb.js",
+    "main.css": "/static/css/main.a116448c.css",
+    "main.js": "/static/js/main.7f9fc3ec.js",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
     "static/media/Unwritten (Audio) -Natasha Bedingfield-.mp3": "/static/media/Unwritten (Audio) -Natasha Bedingfield-.3f4a58e62b85f9302a9d.mp3",
@@ -123,11 +123,11 @@
     "static/media/instagram.svg": "/static/media/instagram.f1b93ec68f3f311e5c68d6085a9b479c.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
-    "main.339ea217.css.map": "/static/css/main.339ea217.css.map",
-    "main.edb5c4eb.js.map": "/static/js/main.edb5c4eb.js.map"
+    "main.a116448c.css.map": "/static/css/main.a116448c.css.map",
+    "main.7f9fc3ec.js.map": "/static/js/main.7f9fc3ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.339ea217.css",
-    "static/js/main.edb5c4eb.js"
+    "static/css/main.a116448c.css",
+    "static/js/main.7f9fc3ec.js"
   ]
 }
