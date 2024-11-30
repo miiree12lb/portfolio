@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.10dfd188.css",
-    "main.js": "/static/js/main.037580e7.js",
+    "main.css": "/static/css/main.5c961d05.css",
+    "main.js": "/static/js/main.13ac88ae.js",
+    "static/media/OQUES GRASSES - ELEFANTS.mp3": "/static/media/OQUES GRASSES - ELEFANTS.868a8d14bef36009b149.mp3",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
     "static/media/Unwritten (Audio) -Natasha Bedingfield-.mp3": "/static/media/Unwritten (Audio) -Natasha Bedingfield-.3f4a58e62b85f9302a9d.mp3",
@@ -9,6 +10,7 @@
     "static/media/rome.PNG": "/static/media/rome.5e640ac71d964d5a16b2.PNG",
     "static/media/Coldplay - Viva La Vida (Official Video).mp3": "/static/media/Coldplay - Viva La Vida (Official Video).ba9df15a5025af5ecc53.mp3",
     "static/media/Morat - Cómo te atreves.mp3": "/static/media/Morat - Cómo te atreves.1a64729074925a7b238e.mp3",
+    "static/media/OQUES GRASSES - LA GENT QUE ESTIMO & Rita Payés.mp3": "/static/media/OQUES GRASSES - LA GENT QUE ESTIMO & Rita Payés.8ffe7985687ac1bdd3b2.mp3",
     "static/media/Edu Esteve - No Vull Despertar.mp3": "/static/media/Edu Esteve - No Vull Despertar.90b581ad6d00ca4a3e3e.mp3",
     "static/media/Sandro Cavazza - Enemy (Audio).mp3": "/static/media/Sandro Cavazza - Enemy (Audio).dfa86db70a950c7426a6.mp3",
     "static/media/Phillip Phillips - Gone, Gone, Gone LYRICS.mp3": "/static/media/Phillip Phillips - Gone, Gone, Gone LYRICS.7f33142fff87bcbf189a.mp3",
@@ -36,6 +38,7 @@
     "static/media/seguiremBallant.png": "/static/media/seguiremBallant.0f1141be540fcd41404c.png",
     "static/media/ceSoir.png": "/static/media/ceSoir.f933122ebd673ef104e0.png",
     "static/media/seremMesForts.png": "/static/media/seremMesForts.3d06d0affc6d09ae0c20.png",
+    "static/media/laGent.png": "/static/media/laGent.0e0c427365f15e1a77d4.png",
     "static/media/onDirait.png": "/static/media/onDirait.e6e01c3ccdc07a6aee3a.png",
     "static/media/aula_escuela_europea.png": "/static/media/aula_escuela_europea.5214c020d6f5e805731e.png",
     "static/media/gone.png": "/static/media/gone.c0ccf1adc87f86371400.png",
@@ -56,10 +59,10 @@
     "static/media/TechMed-Centre-UT.png": "/static/media/TechMed-Centre-UT.17b2ff630d056dc6168a.png",
     "static/media/EM33qcnXsAA8vJi.png": "/static/media/EM33qcnXsAA8vJi.5289009c275ad1c22404.png",
     "static/media/stack_overflow.png": "/static/media/stack_overflow.0972465385374299629b.png",
+    "static/media/logo.png": "/static/media/logo.76cf9eda8eea70c787d8.png",
     "static/media/schrodingers_cat.png": "/static/media/schrodingers_cat.245a5f4042c5ed86a63b.png",
     "static/media/foot3.png": "/static/media/foot3.e3486db7c121c99aef6c.png",
     "static/media/c++_python.png": "/static/media/c++_python.5dd73801eac875febea7.png",
-    "static/media/logo.png": "/static/media/logo.41cfb9e489f010ce62b5.png",
     "static/media/foot4.png": "/static/media/foot4.e681c616d3450c3495e8.png",
     "static/media/athens.png": "/static/media/athens.2471ffd25c75b54fd2c9.png",
     "static/media/forces.png": "/static/media/forces.68fa41691c967654551a.png",
@@ -132,11 +135,11 @@
     "static/media/instagram.svg": "/static/media/instagram.f1b93ec68f3f311e5c68d6085a9b479c.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
-    "main.10dfd188.css.map": "/static/css/main.10dfd188.css.map",
-    "main.037580e7.js.map": "/static/js/main.037580e7.js.map"
+    "main.5c961d05.css.map": "/static/css/main.5c961d05.css.map",
+    "main.13ac88ae.js.map": "/static/js/main.13ac88ae.js.map"
   },
   "entrypoints": [
-    "static/css/main.10dfd188.css",
-    "static/js/main.037580e7.js"
+    "static/css/main.5c961d05.css",
+    "static/js/main.13ac88ae.js"
   ]
 }

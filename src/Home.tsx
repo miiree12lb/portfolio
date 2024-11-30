@@ -121,6 +121,12 @@ import enemyImage from "./assets/music/img/enemy.png";
 import littleHollywood from "./assets/music/Little Hollywood  Lyrics (Alle Farben feat. Janieck).mp3";
 // @ts-ignore
 import littleHollywoodImage from "./assets/music/img/littleHollywood.png";
+// @ts-ignore
+import laGent from "./assets/music/OQUES GRASSES - LA GENT QUE ESTIMO & Rita Payés.mp3";
+// @ts-ignore
+import laGentImage from "./assets/music/img/laGent.png";
+// @ts-ignore
+import elefants from "./assets/music/OQUES GRASSES - ELEFANTS.mp3";
 
 
 export default function Home(){
@@ -138,6 +144,7 @@ export default function Home(){
         {title: "Bohemian Rhapsody", artist: "Queen", url: "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb?si=bf73450581c4489d", source: bohemianRhapsody, image: bohemianRhapsodyImage},
         {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601", source: leave, image: leaveImage},
         {title: "Little Hollywood", artist: "Alle Farben, Janiek", url: "https://open.spotify.com/track/1f3flfdU4VDM2OBDD2FMia?si=2700163fb72e4a73", source: littleHollywood, image: littleHollywoodImage},
+        {title: "La Gent Que Estimo", artist: "Oques Grasses, Rita Payés", url: "https://open.spotify.com/track/2aTvlIMGoo2L9x5YzJNjj5?si=8a84441b3e0f400c", source: laGent, image: laGentImage},
         {title: "Cómo Te Atreves", artist: "Morat", url: "https://open.spotify.com/track/7M6CFruBrM5x7u0lTMtm6r?si=8e979cda8fc94772", source: comoTeAtreves, image: ComoTeAtrevesImage}, 
         {title: "Ce soir", artist: "SARA'H", url: "https://open.spotify.com/track/3PUFEO6InFkkgELheBXrxj?si=cf7843f1d3f54e39", source: ceSoir, image: ceSoirImage},
         {title: "No Vull Despertar", artist: "Edu Esteve", url: "https://open.spotify.com/track/6sIGc1jYieV0itiLYrtD4I?si=8b09285feecf4aae", source: noVull, image: noVullImage},
@@ -151,6 +158,7 @@ export default function Home(){
         {title: "Serem més forts", artist: "Miki Núñez", url: "https://open.spotify.com/track/33hasXzBCCcUDHNT7DqlE6?si=ed196425f1234a76", source: seremMesForts, image: seremMesFortsImage},
         {title: "Conquistar El Planeta", artist: "TIMØ, Andrés Cepeda", url: "https://open.spotify.com/track/6cOGBvdT0RY3UUtEP7vRHs?si=410c56ab8a544581", source: conquistar, image: conquistarImage},
         {title: "On Dirait", artist: "Amir", url: "https://open.spotify.com/track/54vtz2MeGYtbvOG440hsYQ?si=a9493485648c49f2", source: onDirait, image: onDiraitImage},
+        {title: "Elefants", artist: "Oques Grasses", url: "https://open.spotify.com/track/7aMxgxCCbkmtRpNNB5OWgY?si=9cf82640536647a6", source: elefants, image: laGentImage},
     ];
     const screenWidth = useScreenWidth();
     const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
