@@ -1,14 +1,15 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaPlay, FaPause, FaFastBackward, FaFastForward } from "react-icons/fa";
-//@ts-ignore
-import spotify from "./assets/music/spotify.png"
+// @ts-ignore
+import spotify from "./assets/music/spotify.png";
 
 const SongList = ({ songs }) => {
     const [currentSong, setCurrentSong] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
+    const [autoplay, setAutoplay] = useState(false);
 
     const audioRef = useRef(null);
 
@@ -27,12 +28,38 @@ const SongList = ({ songs }) => {
 
     const handleLoadedMetadata = () => {
         setDuration(audioRef.current.duration);
+
+        // If autoplay is enabled, play the new song when loaded
+        if (autoplay && audioRef.current) {
+            audioRef.current
+                .play()
+                .then(() => setIsPlaying(true))
+                .catch((error) => {
+                    console.error("Playback error: ", error);
+                });
+        }
     };
 
     const handleSeek = (e) => {
         const newTime = (e.target.value / 100) * duration;
         audioRef.current.currentTime = newTime;
         setCurrentTime(newTime);
+    };
+
+    const handleSongEnd = () => {
+        const nextSongIndex = (currentSong + 1) % songs.length;
+        changeSong(nextSongIndex);
+
+        if (autoplay) {
+            setTimeout(() => {
+                if (audioRef.current) {
+                    audioRef.current.play().catch((error) => {
+                        console.error("Playback error: ", error);
+                    });
+                }
+                setIsPlaying(true);
+            }, 100);
+        }
     };
 
     const changeSong = (newSongIndex) => {
@@ -61,11 +88,11 @@ const SongList = ({ songs }) => {
                                 />
                             </Link>
 
-							<img
-								id="spotify-logo"
-								alt="Spotify"
-								src={spotify}
-							/>
+                            <img
+                                id="spotify-logo"
+                                alt="Spotify"
+                                src={spotify}
+                            />
                         </div>
                         <div>
                             <audio
@@ -73,9 +100,7 @@ const SongList = ({ songs }) => {
                                 src={songs[currentSong].source}
                                 onTimeUpdate={handleTimeUpdate}
                                 onLoadedMetadata={handleLoadedMetadata}
-                                onEnded={() =>
-                                    changeSong((currentSong + 1) % songs.length)
-                                }
+                                onEnded={handleSongEnd}
                             />
                             <div className="time-controls">
                                 {Math.floor(currentTime / 60)}:
@@ -94,7 +119,12 @@ const SongList = ({ songs }) => {
                             </div>
                         </div>
                         <div className="player-controls">
-							<button className="control-btn" onClick={() => changeSong((currentSong - 1 + songs.length) % songs.length)}>
+                            <button
+                                className="control-btn"
+                                onClick={() =>
+                                    changeSong((currentSong - 1 + songs.length) % songs.length)
+                                }
+                            >
                                 <FaFastBackward size={20} />
                             </button>
 
@@ -102,36 +132,51 @@ const SongList = ({ songs }) => {
                                 {isPlaying ? <FaPause size={20} /> : <FaPlay size={20} />}
                             </button>
 
-							<button className="control-btn" onClick={() => changeSong((currentSong + 1) % songs.length)}>
+                            <button
+                                className="control-btn"
+                                onClick={() => changeSong((currentSong + 1) % songs.length)}
+                            >
                                 <FaFastForward size={20} />
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div id="songs-list">
-                    {songs.map((s, index) => (
-                        <div
-                            key={s.id}
-                            className={`song-holder ${
-                                currentSong === index ? "active" : ""
-                            }`}
-                            onClick={() => changeSong(index)}
-                        >
-                            <div className="song-number">{index + 1}</div>
-                            <img
-                                alt={s.title}
-                                src={s.image}
-                                className="song-image"
-                                width="50px" 
-                                height="50px"
-                            />
-                            <div>
-                                <h4 className="song-title">{s.title}</h4>
-                                <p className="song-artist">{s.artist}</p>
+                <div id="songs-list-and-autoplay">
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="autoplay"
+                            checked={autoplay}
+                            onChange={() => setAutoplay(!autoplay)}
+                        />
+                        <label htmlFor="autoplay">Play songs automatically</label>
+                    </div>
+
+                    <div id="songs-list">
+                        {songs.map((s, index) => (
+                            <div
+                                key={s.id}
+                                className={`song-holder ${
+                                    currentSong === index ? "active" : ""
+                                }`}
+                                onClick={() => changeSong(index)}
+                            >
+                                <div className="song-number">{index + 1}</div>
+                                <img
+                                    alt={s.title}
+                                    src={s.image}
+                                    className="song-image"
+                                    width="50px"
+                                    height="50px"
+                                />
+                                <div>
+                                    <h4 className="song-title">{s.title}</h4>
+                                    <p className="song-artist">{s.artist}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
