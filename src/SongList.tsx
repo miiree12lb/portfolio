@@ -80,7 +80,7 @@ const SongList = ({ songs }) => {
                         <h2 id="current-title">{songs[currentSong].title}</h2>
                         <h3 id="current-artist">{songs[currentSong].artist}</h3>
                         <div id="current-image-holder">
-                            <Link to={songs[currentSong].url}>
+                            <Link to={songs[currentSong].url} target="_blank" rel="noopener noreferrer">
                                 <img
                                     id="current-image"
                                     alt={songs[currentSong].title}

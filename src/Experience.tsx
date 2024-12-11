@@ -55,7 +55,7 @@ export default function Experience(){
         <p>2021</p>
         <p>
             As part of the CAS subject in the IB program, a group of students in my school collected some old computers in our school that weren't used anymore to see
-            if they could be given to people or schools that cannot afford new computers. Our initial idea was to give the computers to <a href="https://www.labdoo.org/ca/" className="link">
+            if they could be given to people or schools that cannot afford new computers. Our initial idea was to give the computers to <a href="https://www.labdoo.org/ca/" className="link" target="_blank" rel="noopener noreferrer">
             Labdoo</a>, we tried to contact them to get some information and see when we could sent the repaired computers, but we never received an answer.
         </p>
         <p>

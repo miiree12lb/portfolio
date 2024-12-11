@@ -598,7 +598,7 @@ export default function Education(){
             </div>
 
             <div className="content">
-                <h3><a href="https://www.ibo.org/">International Baccalaureate</a></h3>
+                <h3><a href="https://www.ibo.org/" target="_blank" rel="noopener noreferrer">International Baccalaureate</a></h3>
                 <p>Duration: 2 years</p>
                 <p>Grade: 34/45</p>
                 <p className="read_more_inline" onClick={openInternationalBaccalaureatePopup}>Read More</p>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./css/application.css";
 
 export interface Application {
@@ -8,14 +8,20 @@ export interface Application {
     link: string;
 }
 
-const ApplicationInterface: React.FC<Application> = ({title, languages, app_type, link}) => {
+const ApplicationInterface: React.FC<Application> = ({ title, languages, app_type, link }) => {
+    const handleClick = () => {
+        if (link !== "") {
+            window.open(link, "_blank", "noopener,noreferrer");
+        }
+    };
+
     return (
-        <div onClick={()=> {if (link !== "") window.location.href = link}} id="content_holder">
+        <div onClick={handleClick} id="content_holder">
             <h3>{title}</h3>
             <p><b>Languages:</b> {languages.join(", ")}</p>
             <p><b>Type:</b> {app_type}</p>
         </div>
     );
-}
+};
 
 export default ApplicationInterface;
