@@ -192,10 +192,10 @@ export default function Home(){
                     <p>
                         I started to program at school when I was 11 with Scratch. Since the first day, I have known that I really like to program. Since then, I have programmed with eseeCode, C, C++, Java, Python, Html, CSS, and a little bit of JavaScript. I have participated in several olympiads in Catalonia and Spain:
                         <ul>
-                            <li><a href="https://olimpiada-informatica.cat/"> OICat:</a> Catalan Informatics Olympiad</li>
-                            <li><a href="https://olimpiada-informatica.org/"> OI:</a> Spanish Informatics Olympiad</li>
-                            <li><a href="https://oifem.es/"> OIFem:</a> Spanish Women's Informatics Olympiad</li>
-                            <li><a href="https://sites.google.com/aldini.istruzioneer.it/iiot"> IIOT:</a> International Informatics Olympiad in Teams</li>
+                            <li><a href="https://olimpiada-informatica.cat/" target="_blank" rel="noopener noreferrer"> OICat:</a> Catalan Informatics Olympiad</li>
+                            <li><a href="https://olimpiada-informatica.org/" target="_blank" rel="noopener noreferrer"> OI:</a> Spanish Informatics Olympiad</li>
+                            <li><a href="https://oifem.es/" target="_blank" rel="noopener noreferrer"> OIFem:</a> Spanish Women's Informatics Olympiad</li>
+                            <li><a href="https://sites.google.com/aldini.istruzioneer.it/iiot" target="_blank" rel="noopener noreferrer"> IIOT:</a> International Informatics Olympiad in Teams</li>
                         </ul>
                     </p>
                 </div>
@@ -302,11 +302,11 @@ export default function Home(){
                 <div id="youtube" className="content">
                     <h3>Youtube Channels</h3>
                     <ul>
-                        <li><a href="https://www.youtube.com/@QuantumFracture">QuantumFracture</a></li>
-                        <li><a href="https://www.youtube.com/@dateunvlog">Date un Vlog</a></li>
-                        <li><a href="https://www.youtube.com/@cs50">CS50 (CS from Harvard)</a></li>
-                        <li><a href="https://www.youtube.com/@Derivando">Derivando</a></li>
-                        <li><a href="https://www.youtube.com/@veritasium">Veritasium</a></li>
+                        <li><a href="https://www.youtube.com/@QuantumFracture" target="_blank" rel="noopener noreferrer">QuantumFracture</a></li>
+                        <li><a href="https://www.youtube.com/@dateunvlog" target="_blank" rel="noopener noreferrer">Date un Vlog</a></li>
+                        <li><a href="https://www.youtube.com/@cs50" target="_blank" rel="noopener noreferrer">CS50 (CS from Harvard)</a></li>
+                        <li><a href="https://www.youtube.com/@Derivando" target="_blank" rel="noopener noreferrer">Derivando</a></li>
+                        <li><a href="https://www.youtube.com/@veritasium" target="_blank" rel="noopener noreferrer">Veritasium</a></li>
                     </ul>
                 </div>
                 
@@ -314,12 +314,12 @@ export default function Home(){
                 <div id="code" className="content">
                     <h3>Webs/courses to learn how to code</h3>
                     <ul>
-                        <li><a href="https://jutge.org/">Jutge.org</a></li>
-                        <li><a href="https://www.hackerrank.com/">HackerRank</a></li>
-                        <li><a href="https://www.edx.org/school/harvardx">CS50 from HardvardX on edX</a></li>
-                        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
-                        <li><a href="https://www.geeksforgeeks.org/">GeeksForGeeks</a></li>
-                        <li><a href="https://stackoverflow.com/">StackOverflow</a></li>
+                        <li><a href="https://jutge.org/"  target="_blank" rel="noopener noreferrer">Jutge.org</a></li>
+                        <li><a href="https://www.hackerrank.com/" target="_blank" rel="noopener noreferrer">HackerRank</a></li>
+                        <li><a href="https://www.edx.org/school/harvardx" target="_blank" rel="noopener noreferrer">CS50 from HardvardX on edX</a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/" target="_blank" rel="noopener noreferrer">GeeksForGeeks</a></li>
+                        <li><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">StackOverflow</a></li>
                     </ul>
                 </div>
 

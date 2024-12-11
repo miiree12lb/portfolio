@@ -41,7 +41,7 @@ export default function Achievements(){
             pollution has on the growth of urban trees. You can take a look to the article below. Thanks to the article I was assigned to the program in Geneva, NY
             during summer 2022.
         </p>
-        <a className="read_more_inline" href="https://drive.google.com/file/d/1_YvJ4za5SmY7GrqMH3CNjQNX1AtdQxy1/view?usp=sharing">Read Article</a>
+        <a className="read_more_inline" href="https://drive.google.com/file/d/1_YvJ4za5SmY7GrqMH3CNjQNX1AtdQxy1/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read Article</a>
     </div>
 
     //second summer popup jic
@@ -194,7 +194,7 @@ export default function Achievements(){
 
         <h1>Achievements</h1>
         <div id="jic">
-			<h2><a href="https://www.fundaciocatalunya-lapedrera.com/en/youth-and-science">Youth and Science</a></h2>
+			<h2><a href="https://www.fundaciocatalunya-lapedrera.com/en/youth-and-science" target="_blank" rel="noopener noreferrer">Youth and Science</a></h2>
             <p>
                 Youth and Science program of the 'La Pedrera' Foundation is a gifted program aimed at talented young students in the 4th year 
                 of compulsory secondary education (ESO) to promote their scientific careers. Every year many grade 10 (4th of ESO) students 
@@ -218,7 +218,7 @@ export default function Achievements(){
                 </div>
 
                 <div className="content">
-                    <h3><a href="http://essyi.hws.edu/">ESSYI</a></h3>
+                    <h3><a href="http://essyi.hws.edu/" target="_blank" rel="noopener noreferrer">ESSYI</a></h3>
                     <h4>Second summer (2022)</h4>
                     <h4>Geneva, NY, USA</h4>
                     <p>
@@ -229,7 +229,7 @@ export default function Achievements(){
                 </div>
 
                 <div className="content">
-                    <h3><a href="https://www.lmh.ox.ac.uk/prospective-students/lmh-summer-programmes">LMH, Oxford</a></h3>
+                    <h3><a href="https://www.lmh.ox.ac.uk/prospective-students/lmh-summer-programmes" target="_blank" rel="noopener noreferrer">LMH, Oxford</a></h3>
                     <h4>Third summer (2023)</h4>
                     <h4>Oxford, UK</h4>
                     <p>
@@ -242,7 +242,7 @@ export default function Achievements(){
         </div>
 
         <div id="oifem">
-            <h2><a href="https://oifem.es/">OIFem</a></h2>
+            <h2><a href="https://oifem.es/" target="_blank" rel="noopener noreferrer">OIFem</a></h2>
             <p>
                 As mentioned in the <Link to="/" id="link">'About me'</Link> page, the last years of high school I participated in several Informatics olympiads. One of them is
 				OIFem (<i>Olimpiada Informática Femenina</i>, Women's Spanish Informatics Olympiads). In 2021 OIFem had two phases: the classificatorials 
@@ -253,7 +253,7 @@ export default function Achievements(){
         </div>
 
         <div>
-            <h2><a href="https://fisidabo.upc.edu/ca">Fisidabo Hypatia</a></h2>
+            <h2><a href="https://fisidabo.upc.edu/ca" target="_blank" rel="noopener noreferrer">Fisidabo Hypatia</a></h2>
             <p>
                 On the mountain of Collserola, in Barcelona, there is an amusement park, the Tibidabo. The FIsidabo project involves doing physics experiments 
 				at Tibidabo. They offer four different activities:
