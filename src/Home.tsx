@@ -127,7 +127,10 @@ import laGent from "./assets/music/OQUES GRASSES - LA GENT QUE ESTIMO & Rita Pay
 import laGentImage from "./assets/music/img/laGent.png";
 // @ts-ignore
 import elefants from "./assets/music/OQUES GRASSES - ELEFANTS.mp3";
-
+// @ts-ignore
+import quan from "./assets/music/Txarango - Quan cau el sol (Audio Oficial) [ ezmp3.cc ].mp3";
+// @ts-ignore
+import quanImage from "./assets/music/img/quan.png";
 
 export default function Home(){
     const travel_images = [ny2, stonhenge, zadar, ny, athens, croatia, zagreb, hp, rome];
@@ -143,6 +146,7 @@ export default function Home(){
     let songs = [
         {title: "Bohemian Rhapsody", artist: "Queen", url: "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb?si=bf73450581c4489d", source: bohemianRhapsody, image: bohemianRhapsodyImage},
         {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601", source: leave, image: leaveImage},
+        {title: "Quan Cau el Sol", artist: "Txarango", url: "https://open.spotify.com/track/2QDGkItEgctkeIR0fHGMa1?si=11c5551e8047463b", source: quan, image:quanImage},
         {title: "Little Hollywood", artist: "Alle Farben, Janiek", url: "https://open.spotify.com/track/1f3flfdU4VDM2OBDD2FMia?si=2700163fb72e4a73", source: littleHollywood, image: littleHollywoodImage},
         {title: "La Gent Que Estimo", artist: "Oques Grasses, Rita Payés", url: "https://open.spotify.com/track/2aTvlIMGoo2L9x5YzJNjj5?si=8a84441b3e0f400c", source: laGent, image: laGentImage},
         {title: "Cómo Te Atreves", artist: "Morat", url: "https://open.spotify.com/track/7M6CFruBrM5x7u0lTMtm6r?si=8e979cda8fc94772", source: comoTeAtreves, image: ComoTeAtrevesImage}, 
