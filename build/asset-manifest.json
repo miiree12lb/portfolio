@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2f6adaa0.css",
-    "main.js": "/static/js/main.c4898ef7.js",
+    "main.css": "/static/css/main.7b276ea9.css",
+    "main.js": "/static/js/main.cf23cc35.js",
     "static/media/OQUES GRASSES - ELEFANTS.mp3": "/static/media/OQUES GRASSES - ELEFANTS.868a8d14bef36009b149.mp3",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
@@ -22,6 +22,7 @@
     "static/media/Doctor Prats - Seguirem Ballant (amb Stay Homas).mp3": "/static/media/Doctor Prats - Seguirem Ballant (amb Stay Homas).ce6b117cce0142b93b3e.mp3",
     "static/media/Serem més forts.mp3": "/static/media/Serem més forts.8efb0a75e83680e654aa.mp3",
     "static/media/TIMØ, Andrés Cepeda - Conquistar El Planeta (Cover Audio).mp3": "/static/media/TIMØ, Andrés Cepeda - Conquistar El Planeta (Cover Audio).d16e1c3ab1c224f80c47.mp3",
+    "static/media/Txarango - Quan cau el sol (Audio Oficial) [ ezmp3.cc ].mp3": "/static/media/Txarango - Quan cau el sol (Audio Oficial) [ ezmp3.cc ].476b3a00fd67aa7c88b5.mp3",
     "static/media/ny.png": "/static/media/ny.bab0877b58dc89731c33.png",
     "static/media/foot1.png": "/static/media/foot1.0dde731c88429dc69da1.png",
     "static/media/ut_me.png": "/static/media/ut_me.3d111dc6355ac6bc4882.png",
@@ -42,6 +43,7 @@
     "static/media/onDirait.png": "/static/media/onDirait.e6e01c3ccdc07a6aee3a.png",
     "static/media/aula_escuela_europea.png": "/static/media/aula_escuela_europea.5214c020d6f5e805731e.png",
     "static/media/gone.png": "/static/media/gone.c0ccf1adc87f86371400.png",
+    "static/media/quan.png": "/static/media/quan.74c787b485361dc7a944.png",
     "static/media/Leave.png": "/static/media/Leave.7d5778f85a236e421f1e.png",
     "static/media/string_theory.png": "/static/media/string_theory.446e77ce287df2ef5bec.png",
     "static/media/physics_laws.png": "/static/media/physics_laws.f5bbf0832cdc1840ef2c.png",
@@ -135,11 +137,11 @@
     "static/media/instagram.svg": "/static/media/instagram.f1b93ec68f3f311e5c68d6085a9b479c.svg",
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
-    "main.2f6adaa0.css.map": "/static/css/main.2f6adaa0.css.map",
-    "main.c4898ef7.js.map": "/static/js/main.c4898ef7.js.map"
+    "main.7b276ea9.css.map": "/static/css/main.7b276ea9.css.map",
+    "main.cf23cc35.js.map": "/static/js/main.cf23cc35.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f6adaa0.css",
-    "static/js/main.c4898ef7.js"
+    "static/css/main.7b276ea9.css",
+    "static/js/main.cf23cc35.js"
   ]
 }
