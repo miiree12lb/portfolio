@@ -87,9 +87,8 @@ export default function Projects() {
 
     return (
         <>
+            <h1>Personal projects</h1>
             <div id="sticky">
-                <h1 className={scrolled ? "scrolled" : "not-scrolled"}>Personal projects</h1>
-
                 <div id="filter">
                     <h2>Search and filter</h2>
                     <div id="filter_components">
