@@ -23,6 +23,8 @@ import twente3 from "./assets/images/twente/ut-tower.png";
 import twente4 from "./assets/images/twente/ut.png";
 import useScreenWidth from "./useScreenWidth.tsx";
 import { useMediaQuery } from "react-responsive";
+import { RiH4 } from "react-icons/ri";
+import CircularProgress from "./CircularProgress.tsx";
 
 export default function Education(){
     const screenWidth = useScreenWidth();
@@ -443,6 +445,60 @@ export default function Education(){
         </ol>
     </div>
 
+    const [isDSAIPopupOpen, setIsDSAIPopupOpen] = useState(false);
+
+    const openDSAIPopup = () => {
+        setIsDSAIPopupOpen(true);
+    }
+
+    const closeDSAIPopup = () => {
+        setIsDSAIPopupOpen(false);
+    }
+
+    const DSAIPopupContent = <div>
+        <ul>
+            <li>The module's learning objectives are formulated using Bloom's taxonomy. The learning objectives are mapped to Programme Intended Learning Outcomes</li>
+            <li>Understand the data analytics workflow (based on CRISP-DM (Wirth, & Hipp, 2000))</li>
+            <li>Assess data quality and ability to scrape, cleanse, and ethically maintain data</li>
+            <li>Assess and compare the suitability of different data modeling methods/algorithms for optimal performance and evaluate results objectively.</li>
+            <li>Familiarity with infrastructures and distributed systems used to deal with them, such as Hadoop and MapReduce</li>
+            <li>Analyze and apply the most advanced and relevant statistic and mathematical techniques for business purposes, specifically</li>
+            <li>Fundamental algorithms and mathematical models for processing natural language</li>
+            <li>The fundamentals of the neural network as applied to the analysis of images</li>
+            <li>Mathematical methods of decision analysis and modeling ML/AI algorithms</li>
+            <li>Apply new frameworks and advanced fundamental knowledge, reflect on how frameworks work and motivate choice, integrate different parts of ML/AI</li>
+            <li>Build an automated workflow to scrap, clean, and ethically maintain data and result's privacy</li>
+        </ul>
+    </div>
+
+    const [isProgrammingParadigmsPopupOpen, setIsProgrammingParadigmsPopupOpen] = useState(false);
+
+    const openProgrammingParadigmsPopup = () => {
+        setIsProgrammingParadigmsPopupOpen(true);
+    }
+
+    const closeProgrammingParadigmsPopup = () => {
+        setIsProgrammingParadigmsPopupOpen(false);
+    }
+
+    const programmingParadigmsPopupContent = <div>
+        After successful completion of this module, the student is able to:
+        <ul>
+            <li>Describe the major programming paradigms (FP, LP and CP) and their essential characteristics and differences</li>
+            <li>Write basic programs in all major programming paradigms</li>
+            <li>Solve non-trivial programming problems in FP and CP</li>
+            <li>Explain the concepts and importance of typing, in terms of FP and CC</li>
+            <li>Explain and use the typical types and data structures in FP and CP</li>
+            <li>Explain and take advantage of the evaluation and execution mechanisms of FP (lazy evaluation) and CP (hardware-related aspects, concurrency models)</li>
+            <li>Explain and use the following concepts of FP: recursion, list comprehension, higher order functions, function composition, lazy evaluation</li>
+            <li>Explain and use the following concepts of CP: interleaving, fairness, deadlock, memory models, synchronisation, locking</li>
+            <li>Explain and use the following concepts of CC: syntactic and semantic analysis, scanning, parsing, run-time organisation, code generation, optimisation</li>
+            <li>Write a compiler for a non-trivial imperative language with concurrency features generating a given (dedicated) instruction set</li>
+        </ul>
+    </div>
+
+    const credits = 101;
+
     return <>
         <Popup isOpen={isSpanishBaccalaureatePopupOpen} onRequestClose={closeSpanishBaccalaureatePopup} title="Spanish Baccalaureate" content={spanishBaccalaureatePopupContent} />
         <Popup isOpen={isInternationalBaccalaureatePopupOpen} onRequestClose={closeInternationalBaccalaureatePopup} title="International Baccalaureate" content={internationalBaccalaureatePopupContent} />
@@ -451,6 +507,8 @@ export default function Education(){
         <Popup isOpen={isSPGPopupOpen} onRequestClose={closeSPGPopup} title="Spatial Planning for Governance (SPG)" content={spgPopupContent} />
         <Popup isOpen={isTEPopupOpen} onRequestClose={closeTEPopup} title="Technical Engineering (TE)" content={tePopupContent} />
         <Popup isOpen={isChallengeQ2PopupOpen} onRequestClose={closeChallengeQ2Popup} title="Challenge Q2" content={challengeQ2Content} />
+        <Popup isOpen={isDSAIPopupOpen} onRequestClose={closeDSAIPopup} title="DS & AI: Seeing through the hype" content={DSAIPopupContent} />
+        <Popup isOpen={isProgrammingParadigmsPopupOpen} onRequestClose={closeProgrammingParadigmsPopup} title="Programming Paradigms" content={programmingParadigmsPopupContent} />
 
         <h1>Education</h1>
 
@@ -477,8 +535,16 @@ export default function Education(){
                 </p>
                 <p className="read_more_inline" onClick={openSubjectSummaryUTPopup}>View subject summary</p>
 
-                <h3>Minor</h3>
-                <h4>Adapting to Climate Change with Spatial Engineering</h4>
+                <h4>Progress</h4>
+                <CircularProgress credits={credits} totalCredits={180} />
+            </div>
+        </div>
+        
+        <h3>Minors and Electives</h3>
+        <div id="minors_electives">
+            <div>
+                <h3>Adapting to Climate Change with Spatial Engineering</h3>
+                <h4>Minor</h4>
                 <p>
                     This minor is offered by 'Master Spatial Engineering' and participants can choose one of three core course units:
                     <ul>
@@ -489,35 +555,20 @@ export default function Education(){
                     Participants also need to complete the <p className="read_more_inline" onClick={openChallengeQ2Popup}>Challenge Q2</p>
                 </p>
             </div>
-        </div>
-        
-        <h3>Elective(s)</h3>
-        <div id="minors_electives">
             
-            
-            <div className="half_div">
-                <h4>Data Science & Artificial Intelligence: Seeing through the hype</h4>
+            <div>
+                <h3>Data Science & Artificial Intelligence: Seeing through the hype</h3>
+                <h4>Elective</h4>
                 <p>
                     The aim is to teach the fundamentals together with advanced concepts to increase technical knowledge as well as foster students' critical thinking on DS & AI.
-
-                    <ul>
-                        <li>The module's learning objectives are formulated using Bloom's taxonomy. The learning objectives are mapped to Programme Intended Learning Outcomes</li>
-                        <li>Understand the data analytics workflow (based on CRISP-DM (Wirth, & Hipp, 2000))</li>
-                        <li>Assess data quality and ability to scrape, cleanse, and ethically maintain data</li>
-                        <li>Assess and compare the suitability of different data modeling methods/algorithms for optimal performance and evaluate results objectively.</li>
-                        <li>Familiarity with infrastructures and distributed systems used to deal with them, such as Hadoop and MapReduce</li>
-                        <li>Analyze and apply the most advanced and relevant statistic and mathematical techniques for business purposes, specifically</li>
-                        <li>Fundamental algorithms and mathematical models for processing natural language</li>
-                        <li>The fundamentals of the neural network as applied to the analysis of images</li>
-                        <li>Mathematical methods of decision analysis and modeling ML/AI algorithms</li>
-                        <li>Apply new frameworks and advanced fundamental knowledge, reflect on how frameworks work and motivate choice, integrate different parts of ML/AI</li>
-                        <li>Build an automated workflow to scrap, clean, and ethically maintain data and result's privacy</li>
-                    </ul>
                 </p>
+
+                <p className="read_more_inline" onClick={openDSAIPopup}>Read More</p>
             </div>
 
-            <div className="half_div">
-                <h4>Programming paradigms</h4>
+            <div>
+                <h3>Programming paradigms</h3>
+                <h4>Elective/Minor</h4>
                 <p>
                     Up until this point, the students have mainly learned imperative, object-oriented programming. This module will extend their awareness and ability in the following directions:
                     <ul>
@@ -528,22 +579,7 @@ export default function Education(){
                     These three strands are initially taught separately and come together in the module project, where the students develop a compiler for their own language with support for parallelism, 
                     generating code that runs on an extensible hardware emulator written in a functional language.
                 </p>
-
-                <p>
-                    After successful completion of this module, the student is able to:
-                    <ul>
-                        <li>Describe the major programming paradigms (FP, LP and CP) and their essential characteristics and differences</li>
-                        <li>Write basic programs in all major programming paradigms</li>
-                        <li>Solve non-trivial programming problems in FP and CP</li>
-                        <li>Explain the concepts and importance of typing, in terms of FP and CC</li>
-                        <li>Explain and use the typical types and data structures in FP and CP</li>
-                        <li>Explain and take advantage of the evaluation and execution mechanisms of FP (lazy evaluation) and CP (hardware-related aspects, concurrency models)</li>
-                        <li>Explain and use the following concepts of FP: recursion, list comprehension, higher order functions, function composition, lazy evaluation</li>
-                        <li>Explain and use the following concepts of CP: interleaving, fairness, deadlock, memory models, synchronisation, locking</li>
-                        <li>Explain and use the following concepts of CC: syntactic and semantic analysis, scanning, parsing, run-time organisation, code generation, optimisation</li>
-                        <li>Write a compiler for a non-trivial imperative language with concurrency features generating a given (dedicated) instruction set</li>
-                    </ul>
-                </p>
+                <p className="read_more_inline" onClick={openProgrammingParadigmsPopup}>Read More</p>
             </div>
         </div>
 

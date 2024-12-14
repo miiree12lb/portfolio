@@ -41,23 +41,59 @@
 
 #minors_electives {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px
 }
 
-.half_div {
-    width: 40%;
+#minors_electives > div {
+    width: 25vw;
+    background-color: black;
+    border-radius: 10px;
+    border: solid 1px #94692d;
+    padding: 0 10px;
 }
 
 .overview {
     margin-top: 20px;
 }
 
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.progress div {
+    font-size: xx-large;
+    text-decoration: bold;
+}
+
+.progress-bar-outer {
+    background-color: #d9d9d9;
+    height: 10px;
+    width: 200px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar-inner {
+    background-color: #94692d;
+    height: 100%;
+    border-radius: 5px;
+}
+
+
 @media screen and (max-width: 800px) {
     #minors_electives {
         display: block;
     }
 
-    .half_div {
+    #minors_electives > div {
         width: 100%;
+        margin-bottom: 20px;
     }
 }
