@@ -86,6 +86,15 @@
     border-radius: 5px;
 }
 
+#bac, #ib {
+    width: 35vw;
+}
+
+@media screen and (max-width: 950px) {
+    #bac, #ib {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 800px) {
     #minors_electives {

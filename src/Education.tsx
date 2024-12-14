@@ -626,14 +626,14 @@ export default function Education(){
         </div>
 
         <div className="overview">
-            <div className="content">
+            <div className="content" id="bac">
                 <h3>Spanish National Baccalaureate</h3>
                 <p>Duration: 2 years</p>
                 <p>Grade: 8.18/10</p>
                 <p className="read_more_inline" onClick={openSpanishBaccalaureatePopup}>Read More</p>
             </div>
 
-            <div className="content">
+            <div className="content" id="ib">
                 <h3><a href="https://www.ibo.org/" target="_blank" rel="noopener noreferrer">International Baccalaureate</a></h3>
                 <p>Duration: 2 years</p>
                 <p>Grade: 34/45</p>

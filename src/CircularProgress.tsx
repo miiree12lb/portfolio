@@ -18,9 +18,11 @@ const CircularProgress = ({ credits, totalCredits }) => {
                 }}
             >
                 <div className="circular-progress-inner">
-                    <p className="progress-text">
+                    <div className="progress-text">
                         {credits}/{totalCredits}
-                    </p>
+                        <p>credits</p>
+                    </div>
+                    
                 </div>
             </div>
         </div>
