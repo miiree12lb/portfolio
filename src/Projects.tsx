@@ -13,6 +13,12 @@ export default function Projects() {
 
     const applications = [
         {
+            title: "Designs",
+            languages: ["JavaScript", "CSS", "HTML"],
+            app_type: "Web Application",
+            link: "https://miiree12lb.github.io/designs",
+        },
+        {
             title: "Video Gallery",
             languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
