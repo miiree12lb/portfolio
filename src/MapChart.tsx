@@ -44,14 +44,15 @@ export default function MapChart() {
       </ComposableMap>
 
       <div id="map-info">
+      <div>
+          <b>Last country you clicked: </b> {clickedCountry}
+        </div>
+
         <div>
           <b>Visited countries: </b>
           {visitedCountries.map((country, idx) => (
             country + (idx !== visitedCountries.length - 1 ? ", " : "")
           ))}
-        </div>
-        <div>
-          <b>Last country you clicked: </b> {clickedCountry}
         </div>
       </div>
         

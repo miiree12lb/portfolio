@@ -13,11 +13,12 @@
 
 #world-map {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
     align-items: center;
     border-radius: 10px;
     border: solid 1px #94692D;
     background-color: black;
+    padding: 20px;
 }
 #map-info {
     max-width: "40vw";
@@ -30,8 +31,8 @@
 }
 
 .composable-map {
-    height: "70vh";
-    width: "80vw";
+    height: 60vh;
+    width: auto;
 }
 
 @media screen and (max-width: 950px) {
@@ -39,13 +40,13 @@
         flex-direction: column;
     }
 
-    #world-map {
-        flex-direction: column;
-        padding:10px;
+    #map-info {
+        width: 100%;
     }
 
-    #world-map div {
-        width: 100%;
+    .composable-map {
+        width: 60vw;
+        height: auto;
     }
 
 }

@@ -2,6 +2,8 @@
     background: black;
     text-align: center;
     display: flex;
+    border: solid 1px #94692D;
+    border-radius: 10px;
 }
 
 #quote {
@@ -12,6 +14,10 @@
 #next_quote, #previous_quote {
     background-color: transparent;
     border: none;
-    color: white;
+    color: #94692D;
     border-radius: 10px;
+}
+
+#next_quote:hover, #previous_quote:hover {
+    color: #FF4136;
 }
