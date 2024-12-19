@@ -331,8 +331,15 @@ export default function Home(){
 
                 
                 <div id="memes" className="content">
-                    <div>
-                        <h3>Cool Nerdy Memes</h3>
+                <h3>Cool Nerdy Memes</h3>
+                    <div
+                        style = {{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "center",
+                        }}
+                    >
+                        
                         <ImageSlider
                             width={`${isDesktop ? 20 : 70}vw`}
                             height={`${isDesktop ? 20 : 70}vw`}
