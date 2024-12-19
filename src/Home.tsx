@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import ImageSlider from "react-simple-image-slider";
+import MapChart from "./MapChart.tsx";
 // @ts-ignore
 import "./css/root.css";
 // @ts-ignore
@@ -165,8 +166,7 @@ export default function Home(){
         {title: "Elefants", artist: "Oques Grasses", url: "https://open.spotify.com/track/7aMxgxCCbkmtRpNNB5OWgY?si=9cf82640536647a6", source: elefants, image: laGentImage},
     ];
     const screenWidth = useScreenWidth();
-    const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
-    const bigMemes = useMediaQuery({ query: "(min-width: 951px)" });
+    const isDesktop = useMediaQuery({ query: "(min-width: 951px)" });
 
     function assignSongIds(songs) {
         return songs.map((song, id) => ({ ...song, id }));
@@ -264,6 +264,8 @@ export default function Home(){
                     </p>
                 </div>
             </div>
+            <h3>Visited countries</h3>
+            <MapChart />
         </div>
 
         <div className="section" id="football">
@@ -332,8 +334,8 @@ export default function Home(){
                     <div>
                         <h3>Cool Nerdy Memes</h3>
                         <ImageSlider
-                            width={`${bigMemes ? 20 : 70}vw`}
-                            height={`${bigMemes ? 20 : 70}vw`}
+                            width={`${isDesktop ? 20 : 70}vw`}
+                            height={`${isDesktop ? 20 : 70}vw`}
                             images={memes}
                             showBullets={true}
                             showNavs={true}

@@ -11,9 +11,41 @@
     border: solid 0.5px #94692D;
 }
 
+#world-map {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border-radius: 10px;
+    border: solid 1px #94692D;
+    background-color: black;
+}
+#map-info {
+    max-width: "40vw";
+    display: "flex";
+    flex-direction: "column";
+}
+
+#world-map div {
+    margin-bottom: 10px;
+}
+
+.composable-map {
+    height: "70vh";
+    width: "80vw";
+}
+
 @media screen and (max-width: 950px) {
     #interesting {
         flex-direction: column;
+    }
+
+    #world-map {
+        flex-direction: column;
+        padding:10px;
+    }
+
+    #world-map div {
+        width: 100%;
     }
 
 }
