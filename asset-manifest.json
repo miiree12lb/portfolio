@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.941ff95b.css",
-    "main.js": "/static/js/main.346c032b.js",
+    "main.js": "/static/js/main.953d30bd.js",
     "static/media/OQUES GRASSES - ELEFANTS.mp3": "/static/media/OQUES GRASSES - ELEFANTS.868a8d14bef36009b149.mp3",
     "static/media/zagreb.png": "/static/media/zagreb.2afb21bb06ee79afa9fa.png",
     "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
@@ -138,10 +138,10 @@
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.3f6d644cac1e5dd5bb4675ccea3d9ff3.svg",
     "main.941ff95b.css.map": "/static/css/main.941ff95b.css.map",
-    "main.346c032b.js.map": "/static/js/main.346c032b.js.map"
+    "main.953d30bd.js.map": "/static/js/main.953d30bd.js.map"
   },
   "entrypoints": [
     "static/css/main.941ff95b.css",
-    "static/js/main.346c032b.js"
+    "static/js/main.953d30bd.js"
   ]
 }
