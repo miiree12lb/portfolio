@@ -8,7 +8,7 @@ export default function Contact(){
                 <div id="form">
                     <h2>Contact Me!</h2>
                 
-                    <form target="_blank" rel="noopener noreferrer" action="https://formsubmit.co/48948502f7102889a4911f12ab0a0a90" method="POST">
+                    <form target="_blank" rel="noopener noreferrer" action="https://formspree.io/f/mldeqdjb" method="POST">
                         <label htmlFor="firstName">First Name</label>
                         <input type="text"id="firstName"name="First Name:" required />
 
