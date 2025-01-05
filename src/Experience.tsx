@@ -1,16 +1,23 @@
-import React, { useState, useContext } from "react";
-// @ts-ignore
+import React, {useState} from "react";
 import "./css/root.css";
-// @ts-ignore
 import "./css/experience.css";
+//@ts-ignore
+import Popup from "./PopupInterface.tsx";
 
-export default function Experience(){
-    return <>
-        <h1>Experience</h1>
+export default function Experience() {
+    const [isMacsPopupOpen, setIsMacsPopupOpen] = useState(false);
 
-        <h2>Work</h2>
-        <h3>M.A.C.S Lake Delton</h3>
-        <h4>Wisconsin USA</h4>
+    const openMacsPopup = () => {
+      setIsMacsPopupOpen(true);
+    }
+  
+    const closeMacsPopup = () => {
+      setIsMacsPopupOpen(false);
+    }
+
+    const macsPopupContent = <div>
+        <h4>Work</h4>
+        <h4>Wisconsin, USA</h4>
         <p>15/06/2024 - 02/09/2024</p>
 
         <p>
@@ -31,17 +38,41 @@ export default function Experience(){
                 <li>Refill the fridge and ensure it's well-stocked with beverages and other items.</li>
             </ul>
         </p>
+    </div>
 
-        <h3>GoStudent</h3>
-        <p> 11/11/2022 - current</p>
+    const [isGoStudentPopupOpen, setIsGoStudentPopupOpen] = useState(false);
+
+    const openGoStudentPopup = () => {
+        setIsGoStudentPopupOpen(true);
+    }
+
+    const closeGoStudentPopup = () => {
+        setIsGoStudentPopupOpen(false);
+    }
+
+    const goStudentPopupContent = <div>
+        <h4>Work</h4>
+        <p>11/11/2022 - current</p>
+
         <p>
             I am a private tutor of Math, Catalan and English of High School students in the platform GoStudent. 
         </p>
+    </div>
 
+    const [isOifemPopupOpen, setIsOifemPopupOpen] = useState(false);
 
-        <h2>Volunteering</h2>
-        <h3>OIFem</h3>
-        <p> 2022 - current</p>
+    const openOifemPopup = () => {
+        setIsOifemPopupOpen(true);
+    }
+
+    const closeOifemPopup = () => {
+        setIsOifemPopupOpen(false);
+    }
+
+    const oifemPopupContent = <div>
+        <h4>Volunteering</h4>
+        <p>2022 - current</p>
+
         <p>
             I am a volunteer for the Women's informatics olympiad in spain (OIFem). As I have already mentioned, I was a participant of the first edition of this olympiad,
             and I think it has a very important role to atract young women in to technology. To prepare for the olympiad there are free classes given in 4 different levels.
@@ -50,9 +81,22 @@ export default function Experience(){
         <p>
             My role is to propose problems and their tests, to check if the solutions provided by the participants are right, when a olympiad is approaching.
         </p>
+    </div>
 
-        <h3>Repair and distribution of computers</h3>
+    const [isComputersPopupOpen, setIsComputersPopupOpen] = useState(false);
+
+    const openComputersPopup = () => {
+        setIsComputersPopupOpen(true);
+    }
+
+    const closeComputersPopup = () => {
+        setIsComputersPopupOpen(false);
+    }
+
+    const computersPopupContent = <div>
+        <h4>Volunteering</h4>
         <p>2021</p>
+
         <p>
             As part of the CAS subject in the IB program, a group of students in my school collected some old computers in our school that weren't used anymore to see
             if they could be given to people or schools that cannot afford new computers. Our initial idea was to give the computers to <a href="https://www.labdoo.org/ca/" className="link" target="_blank" rel="noopener noreferrer">
@@ -68,10 +112,22 @@ export default function Experience(){
             2020 and Ubuntu requires less resources to work properly than windows 11. When we had all the working computers ready, with a charger and with ubuntu installed, we
             contacted again the principal of the school in <i>El Raval</i> to give him the computers.
         </p>
+    </div>
 
+    const [isPhonesPopupOpen, setIsPhonesPopupOpen] = useState(false);
 
-        <h3>Repair and distribution of phones</h3>
+    const openPhonesPopup = () => {
+        setIsPhonesPopupOpen(true);
+    }
+
+    const closePhonesPopup = () => {
+        setIsPhonesPopupOpen(false);
+    }
+
+    const phonesPopupContent = <div>
+        <h4>Volunteering</h4>
         <p>2020</p>
+
         <p>
             During 10th grade in high school I had the opportunity to participate in a project that collected unused phones, check that they worked properly and then give it to 
             homeless people living in a shelter in Barcelona. They couldn't afford buying a phone, and a lot of times when they would apply to get a job they would be asked to provide
@@ -81,5 +137,95 @@ export default function Experience(){
             Firstly, we did a mobile collection campaign with their chargers. We managed to collect around 20 unused mobile phones and started to repair then. However, due to covid the 
             project had to be cancelled and we couldn't give them those phones and help them to get used to using the phones.
         </p>
+    </div>
+
+
+    const currentYear = new Date().getFullYear();
+
+    const experiences = [
+        { title: "M.A.C.S Lake Delton", startTime: 2024, endTime: 2024, type: "work", open: openMacsPopup},
+        { title: "GoStudent", startTime: 2022, endTime: currentYear, type: "work", open: openGoStudentPopup},
+        { title: "OIFem", startTime: 2022, endTime: currentYear, type: "volunteer", open: openOifemPopup},
+        { title: "Repair of Computers", startTime: 2021, endTime: 2021, type: "volunteer", open: openComputersPopup },
+        { title: "Repair of Phones", startTime: 2020, endTime: 2020, type: "volunteer", open: openPhonesPopup},
+    ];
+
+    const minYear = Math.min(...experiences.map((exp) => exp.startTime));
+    const maxYear = Math.max(...experiences.map((exp) => exp.endTime));
+    const totalYears = maxYear - minYear + 1;
+
+
+ 
+
+    return (
+    <> 
+        <Popup
+            title = "M.A.C.S Lake Delton"
+            isOpen={isMacsPopupOpen}
+            onRequestClose={closeMacsPopup}
+            content={macsPopupContent}
+        />
+
+        <Popup
+            title = "GoStudent"
+            isOpen={isGoStudentPopupOpen}
+            onRequestClose={closeGoStudentPopup}
+            content={goStudentPopupContent}
+        />
+
+        <Popup
+            title = "OIFem"
+            isOpen={isOifemPopupOpen}
+            onRequestClose={closeOifemPopup}
+            content={oifemPopupContent}
+        />
+
+        <Popup
+            title = "Repair and distribution of computers"
+            isOpen={isComputersPopupOpen}
+            onRequestClose={closeComputersPopup}
+            content={computersPopupContent}
+        />
+
+        <Popup
+            title = "Repair and distribution of phones"
+            isOpen={isPhonesPopupOpen}
+            onRequestClose={closePhonesPopup}
+            content={phonesPopupContent}
+        />
+
+        <h1>Experience</h1>
+        <div className="timeline-container">
+            <div className="timeline-grid">
+                {experiences.map((exp, index) => {
+                    const startColumn = exp.startTime - minYear + 1; // Grid starts at 1
+                    const spanColumns = exp.endTime - exp.startTime + 1;
+
+                    return (
+                        <div
+                        onClick = {exp.open}
+                        key={index}
+                        className={`timeline-grid-item ${exp.type}`}
+                        style={{
+                            gridColumn: `${startColumn} / span ${spanColumns}`,
+                            gridRow: `${index + 1}`,
+                        }}
+                        >
+                            {exp.title}
+                        </div>
+                    );
+                })}
+            </div>
+
+            <div className="timeline-grid-header">
+            {Array.from({ length: totalYears }, (_, i) => (
+            <div key={i} className="timeline-grid-year">
+                {minYear + i}
+            </div>
+            ))}
+        </div>
+        </div>
+
     </>
+    );
 }
