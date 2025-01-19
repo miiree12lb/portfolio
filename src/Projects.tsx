@@ -13,6 +13,12 @@ export default function Projects() {
 
     const applications = [
         {
+            title: "React How To",
+            languages: ["JavaScript", "CSS", "HTML"],
+            app_type: "Web Application",
+            link: "https://miiree12lb.github.io/how-to/",
+        },
+        {
             title: "Designs",
             languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
