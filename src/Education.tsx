@@ -497,7 +497,7 @@ export default function Education(){
         </ul>
     </div>
 
-    const credits = 120;
+    const credits = 125;
 
     return <>
         <Popup isOpen={isSpanishBaccalaureatePopupOpen} onRequestClose={closeSpanishBaccalaureatePopup} title="Spanish Baccalaureate" content={spanishBaccalaureatePopupContent} />
