@@ -7,7 +7,7 @@ const geoUrl =
 const visitedCountries = [
   "United States of America", "Spain", "France", "Italy", "Germany", "United Kingdom",
   "Belgium", "Ireland", "Netherlands", "Switzerland", "Norway", "Sweden", "Turkey", "Greece",
-  "Croatia", "Slovenia", "Luxembourg", "Monaco", "Andorra", "Portugal"
+  "Croatia", "Slovenia", "Luxembourg", "Monaco", "Andorra", "Portugal", "Hungary", "Czechia", "Slovakia", "Austria"
 ];
 
 export default function MapChart() {
