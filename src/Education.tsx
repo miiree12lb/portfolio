@@ -513,7 +513,7 @@ export default function Education(){
         <h1>Education</h1>
 
         <h2>University of Twente</h2>
-        <h3>2022-current</h3>
+        <h3>September 2022-current</h3>
         <div className="flex">
             <div className="image_slider_container">
                 <div>
@@ -580,6 +580,29 @@ export default function Education(){
                     generating code that runs on an extensible hardware emulator written in a functional language.
                 </p>
                 <p className="read_more_inline" onClick={openProgrammingParadigmsPopup}>Read More</p>
+            </div>
+        </div>
+
+        <h3>Graduation Semester</h3>
+        <div id="graduation-semester">
+            <div>
+                <h4>Design Project</h4>
+
+                <p>This is a 10 week project in groups of 5-6 students.</p>
+
+                <p>Our case is about recognizing LEGO bricks in a video stream. The application has two main use cases:</p>
+
+                <ul>
+                    <li><b>Digitalization:</b> Recognize the bricks on the stream and add them to a .bsx file</li>
+                    <li><b>Production accuracy support:</b> Given a .bsx check if the bricks in the video stream match the brick in the file</li>
+                </ul>
+
+                <p>This project has been proposed by a non-profit enterprise and the end product will be for them.</p>
+            </div>
+            <div>
+                <h4>Research Project</h4>
+
+               <p>To be added</p>
             </div>
         </div>
 

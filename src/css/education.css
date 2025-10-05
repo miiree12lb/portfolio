@@ -39,7 +39,7 @@
     padding-top: 20px;
 }
 
-#minors_electives {
+#minors_electives, #graduation-semester {
     display: flex;
     flex-direction: row;
     gap: 20px
@@ -47,6 +47,14 @@
 
 #minors_electives > div {
     width: 25vw;
+    background-color: black;
+    border-radius: 10px;
+    border: solid 1px #94692d;
+    padding: 0 10px;
+}
+
+#graduation-semester > div {
+    width: 40vw;
     background-color: black;
     border-radius: 10px;
     border: solid 1px #94692d;
