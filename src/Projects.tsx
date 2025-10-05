@@ -13,6 +13,12 @@ export default function Projects() {
 
     const applications = [
         {
+            title: "OIFem",
+            languages: ["JavaScript, CSS, HTML"],
+            app_type: "Web Application",
+            link: "https://oifem.es"
+        },
+        {
             title: "React How To",
             languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
@@ -28,7 +34,7 @@ export default function Projects() {
             title: "Video Gallery",
             languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
-            link: "https://miiree12lb.github.io/video-gallery/",
+            link: "https://miiree12lb-video-gallery.com/",
         },
         {
             title: "Color Palette Generator",
