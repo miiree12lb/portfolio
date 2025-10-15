@@ -14,7 +14,7 @@ export default function Projects() {
     const applications = [
         {
             title: "OIFem",
-            languages: ["JavaScript, CSS, HTML"],
+            languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
             link: "https://oifem.es"
         },
