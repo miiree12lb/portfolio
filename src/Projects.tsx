@@ -13,6 +13,12 @@ export default function Projects() {
 
     const applications = [
         {
+            title: "Math Functions Viewer",
+            languages: ["JavaScript", "CSS", "HTML"],
+            app_type: "Web Application",
+            link: "https://miiree12lb.github.io/math-viewer/"
+        },
+        {
             title: "OIFem",
             languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
