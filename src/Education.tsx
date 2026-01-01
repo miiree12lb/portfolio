@@ -497,7 +497,7 @@ export default function Education(){
         </ul>
     </div>
 
-    const credits = 150;
+    const credits = 165;
 
     return <>
         <Popup isOpen={isSpanishBaccalaureatePopupOpen} onRequestClose={closeSpanishBaccalaureatePopup} title="Spanish Baccalaureate" content={spanishBaccalaureatePopupContent} />
@@ -602,7 +602,21 @@ export default function Education(){
             <div>
                 <h4>Research Project</h4>
 
-               <p>To be added</p>
+               <p>
+                    This is a 10 week project where I have to develop an imperative with strong static types programming language. The Minimum Viable Product (MVP) consists of 
+                    functions, control flow, primitive types: (ints, floats, chars, bools), and finally input and output. It is implemented using ANTLR4 and LLVM with C++.
+                </p>
+
+                <p>
+                    Extra features have been considered:
+                </p>
+
+                <ul>
+                    <li>Data Structures: strings, lists and maps</li>
+                    <li>Overloading or redefinition of operators</li>
+                    <li>List comprehension</li>
+                    <li>Basic Object Oriented Programming (OOP)</li>
+                </ul>
             </div>
         </div>
 
