@@ -5,9 +5,9 @@ const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
 
 const visitedCountries = [
-  "United States of America", "Spain", "France", "Italy", "Germany", "United Kingdom",
+  "United States of America", "Spain", "France", "Italy", "Vatican City", "Germany", "United Kingdom",
   "Belgium", "Ireland", "Netherlands", "Switzerland", "Norway", "Sweden", "Turkey", "Greece",
-  "Croatia", "Slovenia", "Luxembourg", "Monaco", "Andorra", "Portugal", "Hungary", "Czechia", "Slovakia", "Austria"
+  "Croatia", "Slovenia", "Luxembourg", "Monaco", "Andorra", "Portugal", "Hungary", "Czechia", "Slovakia", "Austria", "Denmark"
 ];
 
 export default function MapChart() {
