@@ -513,7 +513,7 @@ export default function Education(){
         <h1>Education</h1>
 
         <h2>University of Twente</h2>
-        <h3>September 2022-current</h3>
+        <h3>September 2022-January 2026</h3>
         <div className="flex">
             <div className="image_slider_container">
                 <div>
@@ -535,8 +535,14 @@ export default function Education(){
                 </p>
                 <p className="read_more_inline" onClick={openSubjectSummaryUTPopup}>View subject summary</p>
 
-                <h4>Progress</h4>
-                <CircularProgress credits={credits} totalCredits={180} />
+                {/* <h4>Progress</h4>
+                <CircularProgress credits={credits} totalCredits={180} /> */}
+
+                <div id="tcs-summary">
+                    <h3>Overview</h3>
+                    <p>Duration: 3.5 years</p>
+                    <p>Grade: 7.54/10</p>
+                </div>
             </div>
         </div>
         
@@ -617,6 +623,8 @@ export default function Education(){
                     <li>List comprehension</li>
                     <li>Basic Object Oriented Programming (OOP)</li>
                 </ul>
+
+                <a id="utwente-essays" className="read_more_inline" href=" https://purl.utwente.nl/essays/109398">Read abstract/paper</a>
             </div>
         </div>
 
