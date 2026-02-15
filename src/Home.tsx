@@ -145,25 +145,25 @@ export default function Home(){
         { text: 'Hay cosas encerradas dentro de los muros que, si salieran de pronto a la calle y gritaran, llenarían el mundo.', author: 'Federico García Lorca'}
     ];
     let songs = [
-        {title: "Bohemian Rhapsody", artist: "Queen", url: "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb?si=bf73450581c4489d", source: bohemianRhapsody, image: bohemianRhapsodyImage},
-        {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://open.spotify.com/track/4oFAJvXFB2W9FWgaww9cQo?si=9862d79d38d24601", source: leave, image: leaveImage},
-        {title: "Quan Cau el Sol", artist: "Txarango", url: "https://open.spotify.com/track/2QDGkItEgctkeIR0fHGMa1?si=11c5551e8047463b", source: quan, image:quanImage},
-        {title: "Little Hollywood", artist: "Alle Farben, Janiek", url: "https://open.spotify.com/track/1f3flfdU4VDM2OBDD2FMia?si=2700163fb72e4a73", source: littleHollywood, image: littleHollywoodImage},
-        {title: "La Gent Que Estimo", artist: "Oques Grasses, Rita Payés", url: "https://open.spotify.com/track/2aTvlIMGoo2L9x5YzJNjj5?si=8a84441b3e0f400c", source: laGent, image: laGentImage},
-        {title: "Cómo Te Atreves", artist: "Morat", url: "https://open.spotify.com/track/7M6CFruBrM5x7u0lTMtm6r?si=8e979cda8fc94772", source: comoTeAtreves, image: ComoTeAtrevesImage}, 
-        {title: "Ce soir", artist: "SARA'H", url: "https://open.spotify.com/track/3PUFEO6InFkkgELheBXrxj?si=cf7843f1d3f54e39", source: ceSoir, image: ceSoirImage},
-        {title: "No Vull Despertar", artist: "Edu Esteve", url: "https://open.spotify.com/track/6sIGc1jYieV0itiLYrtD4I?si=8b09285feecf4aae", source: noVull, image: noVullImage},
-        {title: "Gone, Gone, Gone", artist: "Phillip Phillips", url: "https://open.spotify.com/track/56sxN1yKg1dgOZXBcAHkJG?si=a1daa4cff6d8474a", source: gone, image: goneImage},
-        {title: "Enemy", artist: "Sandro Cavazza", url: "https://open.spotify.com/track/3YOl49rulPzu6LHbeDicuT?si=620a218f3364489c", source: enemy, image: enemyImage},
-        {title: "Home", artist: "Phillip Phillips", url: "https://open.spotify.com/track/1EAgPzRbK9YmdOESSMUm6P?si=20c38dad5a354c5f", source: home, image: goneImage},
-        {title: "Viva La Vida", artist: "Coldplay", url: "https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b?si=12c5d58d70eb4c5d", source: vivaLaVida, image: vivaLaVidaImage},
-        {title: "Sur ma route", artist: "Black M", url: "https://open.spotify.com/track/3Uyt0WO3wOopnUBCe9BaXl?si=9cc7b8bec46f4c08", source: surMaRoute, image:surMaRouteImage},
-        {title: "Seguirem Ballant", artist: "Doctor Prats, Stay Homas", url: "https://open.spotify.com/track/0pJeLEo1VhKasaEfNZiLG6?si=09ad63a0200d4dd6", source: seguiremBallant, image: seguiremBallantImage},
-        {title: "Unwritten", artist: "Natasha Bedingfield", url: "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf?si=227203f433ed4511", source: unwritten, image: unwrittenImage},
-        {title: "Serem més forts", artist: "Miki Núñez", url: "https://open.spotify.com/track/33hasXzBCCcUDHNT7DqlE6?si=ed196425f1234a76", source: seremMesForts, image: seremMesFortsImage},
-        {title: "Conquistar El Planeta", artist: "TIMØ, Andrés Cepeda", url: "https://open.spotify.com/track/6cOGBvdT0RY3UUtEP7vRHs?si=410c56ab8a544581", source: conquistar, image: conquistarImage},
-        {title: "On Dirait", artist: "Amir", url: "https://open.spotify.com/track/54vtz2MeGYtbvOG440hsYQ?si=a9493485648c49f2", source: onDirait, image: onDiraitImage},
-        {title: "Elefants", artist: "Oques Grasses", url: "https://open.spotify.com/track/7aMxgxCCbkmtRpNNB5OWgY?si=9cf82640536647a6", source: elefants, image: laGentImage},
+        {title: "Bohemian Rhapsody", artist: "Queen", url: "https://music.youtube.com/playlist?list=OLAK5uy_kPmvbW7SIcqYc2_RHCnaOYtImxo5vnZTg&si=2j0SzadGRcGV-Ci5", source: bohemianRhapsody, image: bohemianRhapsodyImage},
+        {title: "Leave Her Wild", artist: "Tyler Rich", url: "https://music.youtube.com/watch?v=Q2KQp367ljg&si=YzXoHULyjrO-NYhd", source: leave, image: leaveImage},
+        {title: "Quan Cau el Sol", artist: "Txarango", url: "https://music.youtube.com/watch?v=gdirO-27rz4&si=fsugXQDievSYvPim", source: quan, image:quanImage},
+        {title: "Little Hollywood", artist: "Alle Farben, Janiek", url: "https://music.youtube.com/watch?v=dkjqekm-Vyw&si=BsWMF9ZTNyWzMxnk", source: littleHollywood, image: littleHollywoodImage},
+        {title: "La Gent Que Estimo", artist: "Oques Grasses, Rita Payés", url: "https://music.youtube.com/watch?v=pCViWKL6T_Q&si=qxTgGmLr-sl3u255", source: laGent, image: laGentImage},
+        {title: "Cómo Te Atreves", artist: "Morat", url: "https://music.youtube.com/watch?v=pCViWKL6T_Q&si=qxTgGmLr-sl3u255", source: comoTeAtreves, image: ComoTeAtrevesImage}, 
+        {title: "Ce soir", artist: "SARA'H", url: "https://music.youtube.com/watch?v=6Kbzbf-dWXI&si=f0k1AXxxDe4YZcuB", source: ceSoir, image: ceSoirImage},
+        {title: "No Vull Despertar", artist: "Edu Esteve", url: "https://music.youtube.com/watch?v=y4vf2diiH08&si=1VifrhsQavhpD9qA", source: noVull, image: noVullImage},
+        {title: "Gone, Gone, Gone", artist: "Phillip Phillips", url: "https://music.youtube.com/watch?v=y4vf2diiH08&si=1VifrhsQavhpD9qA", source: gone, image: goneImage},
+        {title: "Enemy", artist: "Sandro Cavazza", url: "https://music.youtube.com/watch?v=_pbByGqjN_0&si=c_TOnc2G3c9i8oiO", source: enemy, image: enemyImage},
+        {title: "Home", artist: "Phillip Phillips", url: "https://music.youtube.com/watch?v=_pbByGqjN_0&si=c_TOnc2G3c9i8oiO", source: home, image: goneImage},
+        {title: "Viva La Vida", artist: "Coldplay", url: "https://music.youtube.com/watch?v=ALsvdSA9tOU&si=PcYpA-5WEIrSYeRx", source: vivaLaVida, image: vivaLaVidaImage},
+        {title: "Sur ma route", artist: "Black M", url: "https://music.youtube.com/watch?v=EVdY7LrcZgE&si=HezlQ2PkXgdT55tM", source: surMaRoute, image:surMaRouteImage},
+        {title: "Seguirem Ballant", artist: "Doctor Prats, Stay Homas", url: "https://music.youtube.com/watch?v=cTDpDHm8A7Q&si=AZ0rIrlsYqTaQx-r", source: seguiremBallant, image: seguiremBallantImage},
+        {title: "Unwritten", artist: "Natasha Bedingfield", url: "https://music.youtube.com/watch?v=cTDpDHm8A7Q&si=AZ0rIrlsYqTaQx-r", source: unwritten, image: unwrittenImage},
+        {title: "Serem més forts", artist: "Miki Núñez", url: "https://music.youtube.com/watch?v=cTDpDHm8A7Q&si=AZ0rIrlsYqTaQx-r", source: seremMesForts, image: seremMesFortsImage},
+        {title: "Conquistar El Planeta", artist: "TIMØ, Andrés Cepeda", url: "https://music.youtube.com/watch?v=d5gmV_WETCg&si=VvITnVrVKmasEX7e", source: conquistar, image: conquistarImage},
+        {title: "On Dirait", artist: "Amir", url: "https://music.youtube.com/watch?v=d5gmV_WETCg&si=VvITnVrVKmasEX7e", source: onDirait, image: onDiraitImage},
+        {title: "Elefants", artist: "Oques Grasses", url: "https://music.youtube.com/watch?v=YVXaSiroAA8&si=fbyVprbx6RvMMdWP", source: elefants, image: laGentImage},
     ];
     const screenWidth = useScreenWidth();
     const isDesktop = useMediaQuery({ query: "(min-width: 951px)" });
@@ -178,10 +178,10 @@ export default function Home(){
     return <>
         <h1>About me</h1>
         <p>
-            My name is Mireia Lopez Bruch and I was born and raised in Barcelona, although I am now pursuing a degree in Technical Computer Science in the Netherlands. 
+            My name is Mireia Lopez Bruch and I was born and raised in Barcelona, although I have pursued a Bachelor's degree in Technical Computer Science at the University of Twente in the Netherlands. 
             From a very young age, I have been interested in the STEM subjects and I am highly motivated to engage in opportunities that allow me to develop my knowledge 
             and passion for science and technology further. I also really enjoy playing football and I am a very curious person that is always seeking to discover new things, people and especially places and cultures, that's is why I really love traveling around 
-            the world. In this page you will find information about my interests, education, and experience.
+            the world. In this page you will find information about my interests, education, achievements, personal projects, and experience.
         </p>
 
         <div className="section" id='science'>

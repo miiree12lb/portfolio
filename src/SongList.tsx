@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaPlay, FaPause, FaFastBackward, FaFastForward } from "react-icons/fa";
 // @ts-ignore
-import spotify from "./assets/music/spotify.png";
+import ytMusic from "./assets/music/ytMusic.png";
 
 const SongList = ({ songs }) => {
     const [currentSong, setCurrentSong] = useState(0);
@@ -91,7 +91,7 @@ const SongList = ({ songs }) => {
                             <img
                                 id="spotify-logo"
                                 alt="Spotify"
-                                src={spotify}
+                                src={ytMusic}
                             />
                         </div>
                         <div>
