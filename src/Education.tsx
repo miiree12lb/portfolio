@@ -529,8 +529,8 @@ export default function Education(){
             <div className="text_container">
                 <h3>Major</h3>
                 <p>
-                    I am majoring in Technical Computer Science (TCS) at the University of Twente, in Enschede, The Netherlands.
-                    This is a three-year Bachelor's programme that focuses on software engineering and computer science fundamentals 
+                    I have majored in Technical Computer Science (TCS) at the University of Twente, in Enschede, The Netherlands.
+                    This is a three-year Bachelor's program that focuses on software engineering and computer science fundamentals 
                     such as algorithms, data structures, networks, web programming, security, etc.
                 </p>
                 <p className="read_more_inline" onClick={openSubjectSummaryUTPopup}>View subject summary</p>

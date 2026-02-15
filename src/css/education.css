@@ -59,6 +59,7 @@
     border-radius: 10px;
     border: solid 1px #94692d;
     padding: 0 10px;
+    padding-bottom: 20px;
 }
 
 .overview {
@@ -127,6 +128,10 @@
 
     #graduation-semester > div {
         width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #tcs-summary {
         margin-bottom: 20px;
     }
 }
