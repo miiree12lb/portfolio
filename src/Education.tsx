@@ -512,7 +512,34 @@ export default function Education(){
 
         <h1>Education</h1>
 
-        <h2>University of Twente</h2>
+        {/* <h2>TU Delft - Master's Program</h2>
+        <h3>September 2026-August 2028</h3>
+        <div className="flex">
+            <div className="text_container">
+                <p>
+                    The master's program starts with a common core that aims to further develop your knowledge and mastery of advanced concepts and theories in Computer Science 
+                    and fosters a responsible mindset preparing you for your future career. In addition to the mandatory courses in Software Architecture and Responsible Computer Science, 
+                    you can choose three courses from the following list: Machine and Deep Learning, Formal Reasoning about Software, 3D Computer Graphics & Animation, Security and Cryptography, 
+                    Web-Scale Data Management and High Performance Data Networking.
+                </p>
+
+                <h4>Progress</h4>
+                <CircularProgress credits={credits} totalCredits={0} />
+            </div>
+            <div className="image_slider_container">
+                <div>
+                    <ImageSlider
+                        width= {`${isDesktop ? 40 : 80}vw`}
+                        height={isDesktop ? (screenWidth * 40 * 362)/(500 * 100) : (screenWidth * 80 * 362)/(500 * 100)}
+                        images={twente_images}
+                        showBullets={true}
+                        showNavs={true}
+                    />
+                </div>
+            </div>
+        </div> */}
+        
+        <h2>University of Twente - Bachelor's Program</h2>
         <h3>September 2022-January 2026</h3>
         <div className="flex">
             <div className="image_slider_container">
