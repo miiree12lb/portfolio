@@ -1,0 +1,74 @@
+.theme-switch {
+  display: inline-block;
+  width: 64px;
+  height: 32px;
+  position: relative;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--bg-color);
+  border: 1px solid #94692d;
+  border-radius: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.icon {
+  z-index: 1;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Icones segons estat */
+.sun-icon {
+  color: #94692d;
+}
+
+.moon-icon {
+  color: #666666;
+}
+
+/* El cercle de selecció (Thumb) */
+.thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #94692d;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+  z-index: 2;
+}
+
+.slider:hover .thumb {
+  background-color: #FF4136; 
+}
+
+.theme-switch input:checked + .slider {
+  background-color: #000000;
+  border-color: #94692d;
+}
+
+.theme-switch input:checked + .slider .moon-icon {
+  color: #94692D;
+}
+
+.theme-switch input:checked + .slider .sun-icon {
+  color: #666666;
+}
+
+.theme-switch input:checked + .slider .thumb {
+  transform: translateX(32px);
+}

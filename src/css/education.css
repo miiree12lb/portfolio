@@ -1,137 +1,253 @@
-.table {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #94692d;
+.education-page {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
-.table  tr{
-    text-align: left;
-    padding: 30px;
-    border: 1px solid #94692d;
+.education-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 6px;
 }
 
-.table td, .table th {
-    padding: 10px;
+.sub-header {
+    color: var(--text-muted, #a1a1aa);
+    font-size: 1.05rem;
 }
 
-.table thead{
-    background-color:#151515;
+/* Card Principal */
+.education-card {
+    background-color: var(--panel-bg, #000000);
+    border: 1px solid var(--accent-gold, #94692d);
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.table > tbody > tr:hover{
-    background-color: #292929;
-}
-
-#filter {
-    border: solid 1px #94692d;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-#filter input {
-    width: 50px;
-}
-
-#filter_components {
+.card-header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(148, 105, 45, 0.2);
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.institution-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.degree-title {
+    color: var(--accent-gold, #94692d);
+    margin: 4px 0 0 0;
+    font-size: 1rem;
+}
+
+.date-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--hover-bg, #292929);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-color, #ffffff);
+}
+
+.icon-gold {
+    color: var(--accent-gold, #94692d);
+}
+
+/* Cos de la Card */
+.card-body {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.slider-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.details-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.details-container.full-width {
+    width: 100%;
+}
+
+.summary-pills {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+.pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--hover-bg, #292929);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color, #333333);
+}
+
+/* Botons Acció */
+.btn-inline {
+    background: none;
+    border: none;
+    color: var(--accent-gold, #94692d);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 6px;
+    transition: color 0.2s ease;
+}
+
+.btn-inline:hover {
+    color: var(--accent-red, #FF4136);
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--accent-gold, #94692d);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+    transition: color 0.2s ease;
+}
+
+.btn-text:hover {
+    color: var(--accent-red, #FF4136);
+}
+
+/* Sub-seccions i Grids */
+.sub-section {
+    border-top: 1px dashed rgba(148, 105, 45, 0.3);
     padding-top: 20px;
 }
 
-#minors_electives, #graduation-semester {
-    display: flex;
-    flex-direction: row;
-    gap: 20px
-}
-
-#minors_electives > div {
-    width: 25vw;
-    background-color: black;
-    border-radius: 10px;
-    border: solid 1px #94692d;
-    padding: 0 10px;
-}
-
-#graduation-semester > div {
-    width: 40vw;
-    background-color: black;
-    border-radius: 10px;
-    border: solid 1px #94692d;
-    padding: 0 10px;
-    padding-bottom: 20px;
-}
-
-.overview {
-    margin-top: 20px;
-}
-
-.progress {
+.sub-section h3 {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
+    gap: 8px;
+    margin-bottom: 16px;
 }
 
-.progress div {
-    font-size: xx-large;
-    text-decoration: bold;
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
 }
 
-.progress-bar-outer {
-    background-color: #d9d9d9;
-    height: 10px;
-    width: 200px;
-    border-radius: 5px;
+.info-box, .project-box {
+    background-color: var(--bg-color, #151515);
+    border: 1px solid rgba(148, 105, 45, 0.3);
+    border-radius: 12px;
+    padding: 16px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-type {
+    font-size: 0.8rem;
+    color: var(--accent-gold, #94692d);
+    font-weight: 600;
+    margin: -6px 0 8px 0;
+}
+
+.box-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted, #a1a1aa);
+}
+
+.badge-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.badge-group span {
+    font-size: 0.75rem;
+    background-color: var(--hover-bg, #292929);
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--accent-gold, #94692d);
+    border: 1px solid rgba(148, 105, 45, 0.3);
+    transition: all 0.2s ease;
+}
+
+.badge-group span:hover {
+    background-color: var(--accent-red, #FF4136);
+    color: #ffffff;
+    border-color: var(--accent-red, #FF4136);
+}
+
+.paper-link {
+    color: var(--accent-red, #FF4136);
+    text-decoration: none;
+    display: inline-flex;
     align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    font-weight: 600;
 }
 
-.progress-bar-inner {
-    background-color: #94692d;
-    height: 100%;
-    border-radius: 5px;
+.overview-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
 }
 
-#bac, #ib {
-    width: 35vw;
+.overview-card {
+    flex: 1;
+    background-color: var(--hover-bg, #292929);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--accent-gold, #94692d);
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-#tcs-summary {
-    background-color: black;
-    border: solid 1px #94692d;
-    padding: 10px;
-    border-radius: 10px;
+.overview-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-red, #FF4136);
 }
 
-@media screen and (max-width: 950px) {
-    #bac, #ib {
-        width: 100%;
-    }
+.overview-card span {
+    font-size: 0.85rem;
+    color: var(--accent-gold, #94692d);
+    font-weight: 600;
 }
 
-@media screen and (max-width: 800px) {
-    #minors_electives {
-        display: block;
+@media (max-width: 800px) {
+    .card-body {
+        flex-direction: column;
     }
 
-    #minors_electives > div {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #graduation-semester {
-        display: block;
-    }
-
-    #graduation-semester > div {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #tcs-summary {
-        margin-bottom: 20px;
+    .overview-row {
+        flex-direction: column;
     }
 }

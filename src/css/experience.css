@@ -1,50 +1,190 @@
+.experience-page {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 60px;
+}
+
+.experience-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 6px;
+}
+
+/* --- LÍNIA DE TEMPS --- */
+.timeline-section {
+    background-color: var(--panel-bg, #000000);
+    border: 1px solid var(--accent-gold, #94692d);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.timeline-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--accent-gold, #94692d);
+}
+
 .timeline-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    overflow-x: auto; /* Enable horizontal scrolling */
-  }
-  
-  .timeline-grid {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.timeline-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Columns for years */
-    gap: 10px;
-    position: relative;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    gap: 12px;
     align-items: center;
-  }
-  
-  .timeline-grid-item {
-    background-color: #6cb2eb;
-    color: white;
+}
+
+.timeline-grid-item {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
     text-align: center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timeline-grid-item:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+/* Colors segons el tipus d'experiència */
+.timeline-grid-item.work {
+    background-color: var(--accent-gold, #94692d);
+    color: #ffffff;
+}
+
+.timeline-grid-item.volunteer {
+    background-color: var(--hover-bg, #292929);
+    border: 1px solid var(--accent-gold, #94692d);
+    color: var(--accent-gold, #94692d);
+}
+
+.timeline-year {
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-muted, #a1a1aa);
+    padding-top: 10px;
+    border-top: 1px dashed rgba(148, 105, 45, 0.3);
+    font-size: 0.85rem;
+}
+
+/* --- TARGETES D'EXPERIÈNCIA --- */
+.category-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.category-title {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 20px 10px;
-  }
-  
-  .timeline-grid-item.work {
-    background-color: #94692d;
-  }
-  
-  .timeline-grid-item.volunteer {
-    background-color: black;
-    border:#94692d solid 1px;
-  }
+    gap: 10px;
+    font-size: 1.4rem;
+    color: var(--text-color, #ffffff);
+    margin: 0;
+}
 
-  .timeline-grid-item:hover {
-    background-color: #292929;
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+}
+
+.exp-card {
+    background-color: var(--panel-bg, #000000);
+    border: 1px solid rgba(148, 105, 45, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
-  }
-  
-  .timeline-year {
-    border: solid 1px #94692d;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-    font-weight: bold;
-  }
-  
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-red, #FF4136);
+}
+
+.exp-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.exp-card-header h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--text-color, #ffffff);
+}
+
+.exp-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.exp-badge.work {
+    background-color: var(--accent-gold, #94692d);
+    color: #ffffff;
+}
+
+.exp-badge.volunteer {
+    background-color: var(--hover-bg, #292929);
+    color: var(--accent-gold, #94692d);
+    border: 1px solid var(--accent-gold, #94692d);
+}
+
+.exp-role {
+    font-size: 0.9rem;
+    color: var(--accent-gold, #94692d);
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.exp-summary {
+    font-size: 0.9rem;
+    color: var(--text-muted, #a1a1aa);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.btn-read-more {
+    background: none;
+    border: none;
+    color: var(--accent-gold, #94692d);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.exp-card:hover .btn-read-more {
+    color: var(--accent-red, #FF4136);
+}
+
+.popup-period {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-gold, #94692d);
+    font-weight: 600;
+    font-size: 0.9rem;
+}

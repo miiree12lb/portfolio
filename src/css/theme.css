@@ -1,0 +1,28 @@
+:root,
+html.dark-mode {
+  --bg-color: #151515;
+  --panel-bg: #000000;
+  --panel-bg-st: #00000080;
+  --hover-bg: #292929;
+  --text-color: #ffffff;
+  --text-muted: #a1a1aa;
+  
+  --accent-gold: #94692d;
+  --accent-red: #FF4136;
+  --border-color: #94692d;
+  --nav-bg: #94692d50;
+}
+
+html.light-mode {
+  --bg-color: #f4f4f5;
+  --panel-bg: #ffffff;
+  --panel-bg-st: #ffffff80;
+  --hover-bg: #e4e4e7;
+  --text-color: #18181b;
+  --text-muted: #71717a;
+  
+  --accent-gold: #94692d;
+  --accent-red: #FF4136;
+  --border-color: #94692d;
+  --nav-bg: #94692d50;
+}
