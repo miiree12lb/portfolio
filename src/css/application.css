@@ -1,17 +1,95 @@
 #content_holder {
-    background-color: black;
-    border: solid 1px #94692D;
-    padding: 10px;
-    border-radius: 10px;
+    background-color: var(--panel-bg, #000000);
+    border: 1px solid var(--accent-gold, #94692d);
+    padding: 20px;
+    border-radius: 12px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    p, h3 {
+        margin: 0;
+    }
 }
 
-#content_holder:hover{
-    background-color: #292929;
+#content_holder:hover {
+    background-color: var(--hover-bg, #292929);
+    border-color: var(--accent-red, #FF4136);
+    transform: translateY(-3px);
+}
+
+.app-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.app-card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-color, #ffffff);
+    transition: color 0.2s ease;
+}
+
+#content_holder:hover .app-card-header h3 {
+    color: var(--accent-gold, #94692d);
+}
+
+.icon-link {
+    color: var(--accent-gold, #94692d);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#content_holder:hover .icon-link {
+    color: var(--accent-red, #FF4136);
+    transform: translate(2px, -2px);
+}
+
+.app-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-type-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--accent-gold, #94692d);
+    font-weight: 600;
+}
+
+.app-languages {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-code {
+    color: var(--text-muted, #a1a1aa);
+}
+
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.lang-tag {
+    background-color: var(--bg-color, #151515);
+    color: var(--text-color, #ffffff);
+    border: 1px solid rgba(148, 105, 45, 0.3);
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 6px;
 }
 
 @media screen and (max-width: 800px) {
     #content_holder {
-        margin-bottom: 20px;
+        margin-bottom: 0px; /* Gestionat per la graella flex/grid de Projects */
     }
 }

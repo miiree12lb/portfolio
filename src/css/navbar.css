@@ -1,0 +1,58 @@
+#nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 20px;
+    border: solid 1px var(--border-color);
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    z-index: 9999;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-bg);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.nav-icon {
+    padding-top: 10px;
+    align-items: center;
+    margin-right: 2px;
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+#links {
+    display: flex;
+    gap: 30px;
+
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    a.active {
+        color: var(--accent-gold);
+    }
+    a:hover {
+        color: var(--accent-red);
+    }
+}
+
+#mireia-container {
+    p {
+        margin: 0px;
+    }
+}
+
+@media(max-width: 450px) {
+    #links {
+        gap: 20px;
+    }
+}

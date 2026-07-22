@@ -1,14 +1,7 @@
 import React from 'react';
 import "./css/application.css";
 
-export interface Application {
-    title: string;
-    languages: string[];
-    app_type: string;
-    link: string;
-}
-
-const ApplicationInterface: React.FC<Application> = ({ title, languages, app_type, link }) => {
+const ApplicationInterface= ({ title, languages, app_type, link }) => {
     const handleClick = () => {
         if (link !== "") {
             window.open(link, "_blank", "noopener,noreferrer");

@@ -1,80 +1,173 @@
-#grid{
-    padding-top: 30px;
+.projects-page {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+.projects-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 6px;
+}
+
+/* Contenidor Sticky per al Cercador */
+#sticky {
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+    background-color: var(--bg-color, #151515);
+    padding: 10px 0;
+    transition: all 0.2s ease;
+}
+
+#sticky.scrolled {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.filter-card {
+    border-radius: 12px;
+    padding: 18px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filter-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-title h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--accent-gold, #94692d);
+}
+
+/* Layout del contenidor de filtres */
+#filter_components {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Cerca Input */
+.search-input-wrapper {
+    position: relative;
+    flex: 1 1 240px;
+    min-width: 200px;
+    box-sizing: border-box;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-gold, #94692d);
+    pointer-events: none;
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    padding: 10px 14px 10px 38px;
+    background-color: var(--bg-color, #151515);
+    border: 1px solid rgba(148, 105, 45, 0.4);
+    border-radius: 8px;
+    color: var(--text-color, #ffffff);
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.search-input-wrapper input:focus {
+    border-color: var(--accent-red, #FF4136);
+}
+
+/* Dropdowns i Etiquetes */
+.opts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.opts label {
+    font-size: 0.9rem;
+    color: var(--text-muted, #a1a1aa);
+    font-weight: 500;
+}
+
+.opts select {
+    background-color: var(--bg-color, #151515);
+    border: 1px solid rgba(148, 105, 45, 0.4);
+    border-radius: 8px;
+    color: var(--text-color, #ffffff);
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    min-width: 130px;
+    box-sizing: border-box;
+}
+
+.opts select:focus {
+    border-color: var(--accent-red, #FF4136);
+}
+
+/* Graella de Projectes */
+#grid {
     display: grid;
-    align-items: stretch;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
-#filter{
-    border: none;
-    margin: 0;
-    padding-top: 5px;
-}
-
-#filter input[type=text], #filter select {
-    border-radius: 10px;
-    padding-left: 5px;
-    width: 250px;
-}
-
-#filter_components {
+/* Missatge quan no hi ha resultats */
+.no-results {
     display: flex;
-    justify-content: space-between;
-    padding-top:0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: var(--panel-bg, #000000);
+    border: 1px dashed rgba(148, 105, 45, 0.3);
+    border-radius: 12px;
+    color: var(--text-muted, #a1a1aa);
+    gap: 12px;
 }
 
-.opts > label {
-    margin-right: 10px;
-}
-
-@media screen and (max-width: 1260px) {
-    #filter input[type=text] {
-        width: 200px;
-    }
-
-    #filter select {
-        width: 100px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #sticky {
-        background-color: #151515;
-        top: 0;
-        z-index: 1;
-        width: 100%;
-    }
-
-    .scrolled {
-        padding-top: 70px;
-        transition: padding 0.3s ease;
-    }
-
-    .not-scrolled {
-        padding-top: 0;
+/* --- CORRECCIÓ PER A MÒBILS (Mapeig adaptatiu) --- */
+@media (max-width: 800px) {
+    .filter-card {
+        padding: 14px 16px;
     }
 
     #filter_components {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
-        gap: 5px;
-        left: 0;
-        right: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
     }
 
-    #filter input[type=text] {
-        width: 20vw;
+    .search-input-wrapper {
+        width: 100%;
+        min-width: 0;
+        flex: 1 1 auto;
     }
-    
-    #filter select {
-        width: 20vw;
+
+    .opts {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    #grid {
-        display: block;
-    }
-    label, #filter select, input[type="text"] {
-        font-size: x-small;
+
+    .opts select {
+        flex: 1;
+        max-width: 60%; /* Evita que el desplegable ocupi massa espai si el text de la label és llarg */
     }
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Application from "./ApplicationInterface.tsx";
+import { Search, Filter, Code2, ExternalLink } from "lucide-react";
+import Application from "./ApplicationInterface.jsx";
 import "./css/projects.css";
 
 export default function Projects() {
@@ -9,7 +10,7 @@ export default function Projects() {
         appType: "none",
     });
 
-    const [scrolled, setScrolled] = useState<boolean>(false);
+    const [scrolled, setScrolled] = useState(false);
 
     const applications = [
         {
@@ -84,15 +85,15 @@ export default function Projects() {
         return titleMatch && languageMatch && appTypeMatch;
     });
 
-    const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleSearchInputChange = (event) => {
         setFilterCriteria({ ...filterCriteria, searchTerm: event.target.value });
     };
 
-    const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleLanguageChange = (event) => {
         setFilterCriteria({ ...filterCriteria, language: event.target.value });
     };
 
-    const handleAppTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleAppTypeChange = (event) => {
         setFilterCriteria({ ...filterCriteria, appType: event.target.value });
     };
 
@@ -110,22 +111,37 @@ export default function Projects() {
     }, []);
 
     return (
-        <>
-            <h1>Personal projects</h1>
-            <div id="sticky">
-                <div id="filter">
-                    <h2>Search and filter</h2>
-                    <div id="filter_components">
-                        <input
-                            type="text"
-                            placeholder="Search by title"
-                            onInput={handleSearchInputChange}
-                        />
+        <div className="projects-page">
+            <header className="projects-header">
+                <h1>Personal Projects</h1>
+                <p className="sub-header">Web applications, tools, and desktop software built from scratch.</p>
+            </header>
 
+            {/* Sticky Filter Bar */}
+            <div id="sticky" className={scrolled ? "scrolled" : ""}>
+                <div id="filter" className="filter-card">
+                    <div className="filter-title">
+                        <Filter size={20} className="icon-gold" />
+                        <h2>Search & Filter</h2>
+                    </div>
+
+                    <div id="filter_components">
+                        {/* Input cerca amb icona */}
+                        <div className="search-input-wrapper">
+                            <Search size={18} className="search-icon" />
+                            <input
+                                type="text"
+                                placeholder="Search project title..."
+                                value={filterCriteria.searchTerm}
+                                onChange={handleSearchInputChange}
+                            />
+                        </div>
+
+                        {/* Selector d'idioma */}
                         <div className="opts">
                             <label htmlFor="language">Language:</label>
-                            <select id="language" onChange={handleLanguageChange}>
-                                <option value="none">No filter</option>
+                            <select id="language" value={filterCriteria.language} onChange={handleLanguageChange}>
+                                <option value="none">All Languages</option>
                                 {global_languages.map((language) => (
                                     <option key={language} value={language}>
                                         {language}
@@ -134,10 +150,11 @@ export default function Projects() {
                             </select>
                         </div>
 
+                        {/* Selector de tipus d'app */}
                         <div className="opts">
                             <label htmlFor="app_type">App Type:</label>
-                            <select id="app_type" onChange={handleAppTypeChange}>
-                                <option value="none">No filter</option>
+                            <select id="app_type" value={filterCriteria.appType} onChange={handleAppTypeChange}>
+                                <option value="none">All Types</option>
                                 {global_app_types.map((appType) => (
                                     <option key={appType} value={appType}>
                                         {appType}
@@ -149,17 +166,25 @@ export default function Projects() {
                 </div>
             </div>
 
-            <div id="grid">
-                {filteredApplications.map((app, index) => (
-                    <Application
-                        key={index}
-                        title={app.title}
-                        languages={app.languages}
-                        app_type={app.app_type}
-                        link={app.link}
-                    />
-                ))}
-            </div>
-        </>
+            {/* Graella de Projectes */}
+            {filteredApplications.length > 0 ? (
+                <div id="grid">
+                    {filteredApplications.map((app, index) => (
+                        <Application
+                            key={index}
+                            title={app.title}
+                            languages={app.languages}
+                            app_type={app.app_type}
+                            link={app.link}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <div className="no-results">
+                    <Code2 size={40} className="icon-gold" />
+                    <p>No projects match your current filter criteria.</p>
+                </div>
+            )}
+        </div>
     );
 }
