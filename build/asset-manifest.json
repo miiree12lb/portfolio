@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4e258832.css",
-    "main.js": "/static/js/main.9df281b3.js",
+    "main.js": "/static/js/main.d328cb26.js",
     "static/media/OQUES GRASSES - ELEFANTS.mp3": "/static/media/OQUES GRASSES - ELEFANTS.868a8d14bef36009b149.mp3",
     "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
     "static/media/Unwritten (Audio) -Natasha Bedingfield-.mp3": "/static/media/Unwritten (Audio) -Natasha Bedingfield-.3f4a58e62b85f9302a9d.mp3",
@@ -124,10 +124,10 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
     "main.4e258832.css.map": "/static/css/main.4e258832.css.map",
-    "main.9df281b3.js.map": "/static/js/main.9df281b3.js.map"
+    "main.d328cb26.js.map": "/static/js/main.d328cb26.js.map"
   },
   "entrypoints": [
     "static/css/main.4e258832.css",
-    "static/js/main.9df281b3.js"
+    "static/js/main.d328cb26.js"
   ]
 }

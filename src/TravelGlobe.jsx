@@ -52,9 +52,6 @@ export default function TravelGlobe({ theme = "dark" }) {
                 ref={globeRef}
                 globeMaterial={customGlobeMaterial} // Assignem el material del mar aquí
                 backgroundColor="rgba(0,0,0,0)" // Fons transparent per al contenidor
-                showAtmosphere={theme === "dark"}
-                atmosphereColor="#3a228a"
-                atmosphereAltitude={0.15}
                 
                 polygonsData={countriesGeo.features}
                 polygonCapColor={(d) => {
@@ -73,7 +70,7 @@ export default function TravelGlobe({ theme = "dark" }) {
                     return theme === "dark" ? "#444444" : "#a0a0a0";
                 }}
 
-                polygonAltitude={0.005}
+                polygonAltitude={0.05}
                 polygonLabel={({ properties: d }) => {
                     const iso = getCountryISO(d);
                     return `
