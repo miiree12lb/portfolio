@@ -14,11 +14,11 @@ import { BlockMath, InlineMath } from 'react-katex';
 
 import Popup from "./PopupInterface.jsx";
 
-// @ts-ignore
+
 import "./css/achievements.css";
-// @ts-ignore
+
 import diagram from "./assets/images/theoretical-diagram.png";
-// @ts-ignore
+
 import diploma from "./assets/images/Diploma_Mireia.png";
 
 export default function Achievements() {
