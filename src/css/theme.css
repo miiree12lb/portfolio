@@ -6,6 +6,7 @@ html.dark-mode {
   --hover-bg: #292929;
   --text-color: #ffffff;
   --text-muted: #a1a1aa;
+  --play-btn: #000000;
   
   --accent-gold: #94692d;
   --accent-red: #FF4136;
@@ -20,6 +21,7 @@ html.light-mode {
   --hover-bg: #e4e4e7;
   --text-color: #18181b;
   --text-muted: #71717a;
+  --play-btn: #ffffff;
   
   --accent-gold: #94692d;
   --accent-red: #FF4136;

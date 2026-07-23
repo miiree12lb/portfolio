@@ -1,0 +1,124 @@
+.section-title {
+    font-size: 1.8rem;
+    color: var(--text-color, #ffffff);
+    margin-bottom: 24px;
+}
+
+/* Graella de 3 columnes */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+/* Targeta Principal */
+.content-card {
+    background-color: var(--panel-bg, #000000);
+    border: 1px solid var(--accent-gold, #94692d);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.content-card:hover {
+    border-color: var(--accent-red, #FF4136);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(148, 105, 45, 0.2);
+}
+
+.card-icon {
+    color: var(--accent-gold, #94692d);
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--accent-gold, #94692d);
+}
+
+/* Llista d'enllaços */
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background-color: var(--bg-color, #151515);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.resource-item:hover {
+    background-color: var(--hover-bg, #292929);
+    border-color: rgba(148, 105, 45, 0.4);
+    transform: translateX(4px);
+}
+
+.resource-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.resource-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color, #ffffff);
+}
+
+.resource-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted, #a1a1aa);
+}
+
+.link-icon {
+    color: var(--text-muted, #a1a1aa);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.resource-item:hover .link-icon {
+    color: var(--accent-gold, #94692d);
+    transform: scale(1.1);
+}
+
+/* Secció del Slider de Memes */
+.memes-card {
+    align-items: center;
+}
+
+.memes-card .card-header {
+    width: 100%;
+}
+
+.slider-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media (max-width: 768px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}

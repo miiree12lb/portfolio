@@ -1,0 +1,126 @@
+.quotes-carousel-container {
+    width: 100%;
+    margin: 0 auto 30px auto;
+}
+
+.quotes-card {
+    position: relative;
+    background-color: var(--panel-bg, #000000);
+    border: 1px solid var(--accent-gold, #94692d);
+    border-radius: 16px;
+    padding: 36px 50px 28px 50px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.quotes-card:hover {
+    border-color: var(--accent-red, #FF4136);
+}
+
+.quote-icon {
+    color: var(--accent-gold, #94692d);
+    margin-bottom: 12px;
+    opacity: 0.8;
+}
+
+.quote-content {
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.quote-text {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--text-color, #ffffff);
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+.quote-author {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent-gold, #94692d);
+    letter-spacing: 0.5px;
+}
+
+/* Botons de navegació (Left / Right) */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-color, #151515);
+    border: 1px solid rgba(148, 105, 45, 0.4);
+    color: var(--accent-gold, #94692d);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+    background-color: var(--hover-bg, #292929);
+    border-color: var(--accent-red, #FF4136);
+    color: var(--accent-red, #FF4136);
+}
+
+.prev-btn {
+    left: 12px;
+}
+
+.next-btn {
+    right: 12px;
+}
+
+/* Indicadors de punts (Dots) */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(148, 105, 45, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.dot.active {
+    background-color: var(--accent-gold, #94692d);
+    width: 24px;
+    border-radius: 6px;
+}
+
+.dot:hover {
+    background-color: var(--accent-red, #FF4136);
+}
+
+/* Adaptació per a dispositius mòbils */
+@media (max-width: 600px) {
+    .quotes-card {
+        padding: 28px 20px 24px 20px;
+    }
+
+    .quote-text {
+        font-size: 1rem;
+    }
+
+    .carousel-btn {
+        display: none; /* En mòbils s'utilitzen els punts inferiors */
+    }
+}

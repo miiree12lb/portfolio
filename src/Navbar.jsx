@@ -9,14 +9,16 @@ import education from "./assets/images/nav icons/educationBlack.png";
 import experience from "./assets/images/nav icons/experienceBlack.png";
 import achievements from "./assets/images/nav icons/achievementsBlack.png";
 import projects from "./assets/images/nav icons/projectsBlack.png";
+import interests from "./assets/images/nav icons/interestBlack.png";
 import selected_about_me from "./assets/images/nav icons/about_me.png";
 import selected_education from "./assets/images/nav icons/education.png";
 import selected_experience from "./assets/images/nav icons/experience.png";
 import selected_achievements from "./assets/images/nav icons/achievements.png";
 import selected_projects from "./assets/images/nav icons/projects.png";
+import selected_interests from "./assets/images/nav icons/interest.png";
 
 export default function Navbar ({theme, toggleTheme}) {
-    const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
+    const isDesktop = useMediaQuery({ query: "(min-width: 901px)" });
     const textLinks = useMediaQuery({ query: "(min-width: 771px)" });
 
     const navItems = [
@@ -24,7 +26,8 @@ export default function Navbar ({theme, toggleTheme}) {
         { path: "/education", name: "Education", icon: education, selectedIcon: selected_education },
         { path: "/experience", name: "Experience", icon: experience, selectedIcon: selected_experience },
         { path: "/achievements", name: "Achievements", icon: achievements, selectedIcon: selected_achievements },
-        { path: "/projects", name: "Projects", icon: projects, selectedIcon: selected_projects }
+        { path: "/projects", name: "Projects", icon: projects, selectedIcon: selected_projects },
+        { path: "/interests", name: "Interests", icon: interests, selectedIcon: selected_interests }
     ];
 
     return (<div id="nav-container">

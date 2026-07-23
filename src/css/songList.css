@@ -1,0 +1,317 @@
+.modern-player-wrapper {
+    width: 100%;
+    margin: 0 auto 30px auto;
+}
+
+.modern-player-card {
+    display: flex;
+    background-color: var(--panel-bg, #000000);
+    border: 1px solid var(--accent-gold, #94692d);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Reproductor Esquerra */
+.player-main {
+    flex: 1.1;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgba(148, 105, 45, 0.2);
+}
+
+.cover-art-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+}
+
+.cover-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.yt-music-badge {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    width: 36px;
+    height: 36px;
+    background: var(--panel-bg);
+    border: 1px solid var(--accent-gold, #94692d);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.yt-music-badge:hover {
+    transform: scale(1.1);
+}
+
+.yt-music-badge img {
+    width: 20px;
+    height: 20px;
+}
+
+.song-details {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.player-title {
+    margin: 0 0 4px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color, #ffffff);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player-artist {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted, #a1a1aa);
+}
+
+/* Progress Bar Custom */
+.progress-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(var(--accent-gold, #94692d), var(--accent-gold, #94692d));
+    background-repeat: no-repeat;
+    outline: none;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.time-stamps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-muted, #a1a1aa);
+    margin-top: 6px;
+}
+
+/* Controls */
+.controls-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted, #a1a1aa);
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.action-btn:hover {
+    color: var(--accent-gold, #94692d);
+    transform: scale(1.1);
+}
+
+.play-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--accent-gold, #94692d);
+    border: none;
+    color: var(--play-btn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(148, 105, 45, 0.4);
+}
+
+.play-btn:hover {
+    background-color: #a87937;
+    transform: scale(1.06);
+}
+
+.play-icon-shift {
+    margin-left: 2px;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+}
+
+.volume-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted, #a1a1aa);
+    cursor: pointer;
+}
+
+.volume-bar {
+    accent-color: var(--accent-gold, #94692d);
+    height: 4px;
+    flex: 1;
+    cursor: pointer;
+}
+
+/* Llista Dreta */
+.playlist-section {
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--panel-bg);
+}
+
+.playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.playlist-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--accent-gold, #94692d);
+}
+
+.autoplay-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--text-muted, #a1a1aa);
+    cursor: pointer;
+}
+
+.playlist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.playlist-item:hover {
+    background-color: var(--hover-bg, #292929);
+}
+
+.playlist-item.active {
+    background-color: rgba(148, 105, 45, 0.15);
+    border: 1px solid rgba(148, 105, 45, 0.4);
+}
+
+.item-index {
+    width: 18px;
+    font-size: 0.8rem;
+    color: var(--text-muted, #a1a1aa);
+    text-align: center;
+}
+
+.item-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.item-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.item-title {
+    margin: 0;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-color, #ffffff);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-artist {
+    margin: 2px 0 0 0;
+    font-size: 0.75rem;
+    color: var(--text-muted, #a1a1aa);
+}
+
+/* Animació de barres de música en reproducció */
+.playing-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 12px;
+}
+
+.playing-bars span {
+    width: 3px;
+    background-color: var(--accent-gold, #94692d);
+    animation: bounce 0.8s infinite ease-in-out alternate;
+}
+
+.playing-bars span:nth-child(2) { animation-delay: 0.2s; }
+.playing-bars span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    0% { height: 3px; }
+    100% { height: 12px; }
+}
+
+@media (max-width: 700px) {
+    .modern-player-card {
+        flex-direction: column;
+    }
+
+    .player-main {
+        border-right: none;
+        border-bottom: 1px solid rgba(148, 105, 45, 0.2);
+    }
+}

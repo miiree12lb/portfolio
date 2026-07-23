@@ -53,6 +53,7 @@ export default function Home () {
 
                     <div className="interest-tags">
                         <span><GraduationCap size={14}/> BSc TCS</span>
+                        <span>🎧 Music</span>
                         <span>⚽ Sports</span>
                         <span>🌍 Travel</span>
                         <span>📹 Video Editing</span>

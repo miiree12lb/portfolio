@@ -1,0 +1,71 @@
+.globe-wrapper {
+    height: 30dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--panel-bg, #000000);
+    border: 1px solid var(--accent-gold, #94692d);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+}
+
+/* Targeta flotant quan es clica un país */
+.selected-country-card {
+    position: absolute;
+    background-color: var(--panel-bg, #151515);
+    border: 1px solid var(--accent-gold, #94692d);
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: var(--text-color, #ffffff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 180px;
+    animation: fadeIn 0.3s ease;
+    z-index: 10;
+}
+
+.country-flag {
+    font-size: 2.2rem;
+}
+
+.selected-country-card h4 {
+    margin: 0;
+    color: var(--accent-gold, #94692d);
+    font-size: 1.1rem;
+}
+
+.selected-country-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted, #a1a1aa);
+}
+
+.close-btn {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--text-muted, #a1a1aa);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--accent-red, #FF4136);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
