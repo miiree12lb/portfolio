@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { 
     Award, 
-    Sparkles, 
+    Microscope, 
     FileText, 
     ExternalLink, 
     ChevronRight, 
@@ -161,7 +161,7 @@ export default function Achievements() {
             <section className="achievement-card">
                 <div className="card-header">
                     <div className="title-group">
-                        <Sparkles className="icon-gold" size={26} />
+                        <Microscope className="icon-gold" size={26} />
                         <div>
                             <h2>
                                 <a href="https://www.fundaciocatalunya-lapedrera.com/en/youth-and-science" target="_blank" rel="noopener noreferrer">
@@ -247,14 +247,13 @@ export default function Achievements() {
                     <span className="year-badge">2021</span>
                 </div>
 
-                <div className="card-content-split">
-                    <p className="description-text">
-                        Participated in the inaugural edition of the Women's Spanish Informatics Olympiad. Successfully qualified in the top 15 candidates nationally during the classification round to advance to the national finals.
-                    </p>
-                    <button className="btn-secondary-action" onClick={() => setActivePopup("diploma")}>
-                        <FileText size={16} /> View Finalist Diploma
-                    </button>
-                </div>
+                <p className="description-text">
+                    Participated in the inaugural edition of the Women's Spanish Informatics Olympiad. Successfully qualified in the top 15 candidates nationally during the classification round to advance to the national finals.
+                </p>
+                <button className="btn-secondary-action" onClick={() => setActivePopup("diploma")}>
+                    <FileText size={16} /> View Finalist Diploma
+                </button>
+                
             </section>
 
             {/* --- SECCIÓ 3: FISIDABO --- */}

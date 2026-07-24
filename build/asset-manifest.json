@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4e258832.css",
-    "main.js": "/static/js/main.d328cb26.js",
+    "main.css": "/static/css/main.69dfc266.css",
+    "main.js": "/static/js/main.cb0f6226.js",
     "static/media/OQUES GRASSES - ELEFANTS.mp3": "/static/media/OQUES GRASSES - ELEFANTS.868a8d14bef36009b149.mp3",
     "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
     "static/media/Unwritten (Audio) -Natasha Bedingfield-.mp3": "/static/media/Unwritten (Audio) -Natasha Bedingfield-.3f4a58e62b85f9302a9d.mp3",
@@ -22,6 +22,7 @@
     "static/media/TIMØ, Andrés Cepeda - Conquistar El Planeta (Cover Audio).mp3": "/static/media/TIMØ, Andrés Cepeda - Conquistar El Planeta (Cover Audio).d16e1c3ab1c224f80c47.mp3",
     "static/media/Txarango - Quan cau el sol (Audio Oficial) [ ezmp3.cc ].mp3": "/static/media/Txarango - Quan cau el sol (Audio Oficial) [ ezmp3.cc ].476b3a00fd67aa7c88b5.mp3",
     "static/media/ut_me.png": "/static/media/ut_me.3d111dc6355ac6bc4882.png",
+    "static/media/mireia.png": "/static/media/mireia.a9d2c0dd8d2fab1c8089.png",
     "static/media/surMaRoute.png": "/static/media/surMaRoute.bfdfd4f2d9e6d30e8178.png",
     "static/media/noVull.png": "/static/media/noVull.d7fdd42238a8f20281d3.png",
     "static/media/vivaLaVida.png": "/static/media/vivaLaVida.f8c40cfe26c3339b8a53.png",
@@ -54,7 +55,9 @@
     "static/media/EM33qcnXsAA8vJi.png": "/static/media/EM33qcnXsAA8vJi.5289009c275ad1c22404.png",
     "static/media/stack_overflow.png": "/static/media/stack_overflow.0972465385374299629b.png",
     "static/media/logo.png": "/static/media/logo.76cf9eda8eea70c787d8.png",
+    "static/media/rotterdam_hero.png": "/static/media/rotterdam_hero.f136f21ee5529c1dedee.png",
     "static/media/schrodingers_cat.png": "/static/media/schrodingers_cat.245a5f4042c5ed86a63b.png",
+    "static/media/enschede_hero.png": "/static/media/enschede_hero.badceb4bc75251b99548.png",
     "static/media/c++_python.png": "/static/media/c++_python.5dd73801eac875febea7.png",
     "static/media/forces.png": "/static/media/forces.68fa41691c967654551a.png",
     "static/media/dualitat_patro.png": "/static/media/dualitat_patro.96dfeb4a6f070a76607a.png",
@@ -123,11 +126,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
-    "main.4e258832.css.map": "/static/css/main.4e258832.css.map",
-    "main.d328cb26.js.map": "/static/js/main.d328cb26.js.map"
+    "main.69dfc266.css.map": "/static/css/main.69dfc266.css.map",
+    "main.cb0f6226.js.map": "/static/js/main.cb0f6226.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e258832.css",
-    "static/js/main.d328cb26.js"
+    "static/css/main.69dfc266.css",
+    "static/js/main.cb0f6226.js"
   ]
 }
