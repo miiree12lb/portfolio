@@ -88,6 +88,19 @@
     border-radius: 6px;
 }
 
+.application-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+        color: var(--accent-gold);
+    }
+    .application-link-icon {
+        color: var(--accent-gold);
+    }
+}
+
 @media screen and (max-width: 800px) {
     #content_holder {
         margin-bottom: 0px; /* Gestionat per la graella flex/grid de Projects */

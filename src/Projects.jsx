@@ -57,7 +57,7 @@ export default function Projects() {
         },
         {
             title: "My Portfolio",
-            languages: ["TypeScript", "CSS", "HTML"],
+            languages: ["JavaScript", "CSS", "HTML"],
             app_type: "Web Application",
             link: "https://miiree12lb.site",
         },

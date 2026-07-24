@@ -46,7 +46,14 @@
 }
 
 #mireia-container {
-    p {
+    display: flex;
+    gap: 10px;
+
+    img {
+        border-radius: 25px;
+    }
+
+    p, h3 {
         margin: 0px;
     }
 }

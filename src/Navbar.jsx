@@ -17,8 +17,10 @@ import selected_achievements from "./assets/images/nav icons/achievements.png";
 import selected_projects from "./assets/images/nav icons/projects.png";
 import selected_interests from "./assets/images/nav icons/interest.png";
 
+import mireia from "./assets/images/nav icons/mireia.png";
+
 export default function Navbar ({theme, toggleTheme}) {
-    const isDesktop = useMediaQuery({ query: "(min-width: 901px)" });
+    const isDesktop = useMediaQuery({ query: "(min-width: 961px)" });
     const textLinks = useMediaQuery({ query: "(min-width: 771px)" });
 
     const navItems = [
@@ -34,8 +36,11 @@ export default function Navbar ({theme, toggleTheme}) {
         <div id="nav">
             {textLinks && <div>
                 {isDesktop && <div id="mireia-container">
-                    <p>MIREIA LOPEZ BRUCH</p>
-                    <p>MSc CS at TU Delft</p>
+                    <img src={mireia} height={50}/>
+                    <div>
+                        <h3>Mireia Lopez Bruch</h3>
+                        <p>MSc CS at TU Delft</p>
+                    </div>
                 </div>}
             </div>  }  
             

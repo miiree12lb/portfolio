@@ -354,14 +354,6 @@ export default function Education() {
                 </div>
 
                 <div className="card-body">
-                    <div className="details-container full-width">
-                        <ul>
-                            <li><strong>Early CS Passion:</strong> Mandatory Computer Science up to 10th grade laid the foundation for programming (Scratch, C++, Java).</li>
-                            <li><strong>Trilingual Environment:</strong> Achieved fluency in English and French (B2+ level achieved by age 16).</li>
-                            <li><strong>Dual Baccalaureate:</strong> Completed both national and international rigorous programs simultaneously.</li>
-                        </ul>
-                    </div>
-
                     <div className="slider-container">
                         <ImageSlider
                             width={`${isDesktop ? 38 : 80}vw`}
@@ -370,6 +362,14 @@ export default function Education() {
                             showBullets={true}
                             showNavs={true}
                         />
+                    </div>
+                    
+                    <div className="details-container full-width">
+                        <ul>
+                            <li><strong>Early CS Passion:</strong> Mandatory Computer Science up to 10th grade laid the foundation for programming (Scratch, C++, Java).</li>
+                            <li><strong>Trilingual Environment:</strong> Achieved fluency in English and French (B2+ level achieved by age 16).</li>
+                            <li><strong>Dual Baccalaureate:</strong> Completed both national and international rigorous programs simultaneously.</li>
+                        </ul>
                     </div>
                 </div>
 
