@@ -57,12 +57,12 @@ export default function TravelGlobe({ theme = "dark" }) {
                 polygonCapColor={(d) => {
                     const iso = getCountryISO(d.properties);
                     const isVisited = visitedISO.includes(iso);
-                    if (isVisited) return "rgba(148, 105, 45, 0.95)";
+                    if (isVisited) return "rgb(148, 105, 45)";
                     return theme === "dark" 
-                        ? "rgba(30, 30, 30, 0.8)" 
-                        : "rgba(255, 255, 255, 0.9)"; // Països en blanc/gris clar
+                        ? "rgb(30, 30, 30)" 
+                        : "rgb(255, 255, 255)"; // Països en blanc/gris clar
                 }}
-                polygonSideColor={() => "rgba(20, 20, 20, 0.15)"}
+                polygonSideColor={() => "rgb(20, 20, 20)"}
                 polygonStrokeColor={(d) => {
                     const iso = getCountryISO(d.properties);
                     const isVisited = visitedISO.includes(iso);
@@ -70,7 +70,7 @@ export default function TravelGlobe({ theme = "dark" }) {
                     return theme === "dark" ? "#444444" : "#a0a0a0";
                 }}
 
-                polygonAltitude={0.05}
+                polygonAltitude={0.005}
                 polygonLabel={({ properties: d }) => {
                     const iso = getCountryISO(d);
                     return `
@@ -81,7 +81,6 @@ export default function TravelGlobe({ theme = "dark" }) {
                             border-radius: 6px; 
                             border: 1px solid #94692d; 
                             font-family: sans-serif;
-                            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
                         ">
                             <b>${d.NAME || d.ADMIN}</b> ${visitedISO.includes(iso) ? " (Visited)" : ""}
                         </div>

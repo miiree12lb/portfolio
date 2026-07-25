@@ -81,7 +81,6 @@ export default function Home() {
                     </p>
 
                     <div className="interest-tags">
-                        <span>🎓 BSc TCS</span>
                         <span>🎧 Music</span>
                         <span>⚽ Sports</span>
                         <span>🌍 Travel</span>
