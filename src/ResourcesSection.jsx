@@ -1,6 +1,6 @@
 import React from "react";
 import { Play, Code, Smile, ExternalLink } from "lucide-react";
-import ImageSlider from "react-simple-image-slider";
+import GenericSlider from "./GenericSlider";
 import "./css/resources.css";
 
 export default function ResourcesSection({ memes, isDesktop }) {
@@ -83,12 +83,10 @@ export default function ResourcesSection({ memes, isDesktop }) {
                         <h3>Cool Nerdy Memes</h3>
                     </div>
                     <div className="slider-wrapper">
-                        <ImageSlider
-                            width={`${isDesktop ? 20 : 70}vw`}
-                            height={`${isDesktop ? 20 : 70}vw`}
-                            images={memes}
-                            showBullets={true}
-                            showNavs={true}
+                        <GenericSlider
+                            width={`${isDesktop ? 20 : 60}vw`}
+                            height={`${isDesktop ? 20 : 60}vw`}
+                            items={memes}
                         />
                     </div>
                 </div>

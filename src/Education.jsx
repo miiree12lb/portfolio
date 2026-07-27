@@ -1,15 +1,6 @@
 import React, { useState } from "react";
-import ImageSlider from "react-simple-image-slider";
-import { 
-    GraduationCap, 
-    Calendar, 
-    Award, 
-    BookOpen, 
-    ExternalLink, 
-    Code, 
-    Layers, 
-    ChevronRight 
-} from "lucide-react";
+import GenericSlider from "./GenericSlider.jsx";
+import { GraduationCap, Calendar, Award, BookOpen, ExternalLink, Code, Layers, ChevronRight } from "lucide-react";
 import "./css/root.css";
 import "./css/education.css";
 import aula1 from "./assets/images/aula/aula_escuela_europea.png";
@@ -255,12 +246,10 @@ export default function Education() {
 
                 <div className="card-body">
                     <div className="slider-container">
-                        <ImageSlider
-                            width={`${isDesktop ? 38 : 80}vw`}
+                        <GenericSlider
+                            width={`${isDesktop ? 38 : 60}vw`}
                             height={isDesktop ? (screenWidth * 38 * 362) / (500 * 100) : (screenWidth * 80 * 362) / (500 * 100)}
-                            images={twente_images}
-                            showBullets={true}
-                            showNavs={true}
+                            items={twente_images}
                         />
                     </div>
 
@@ -355,12 +344,10 @@ export default function Education() {
 
                 <div className="card-body">
                     <div className="slider-container">
-                        <ImageSlider
-                            width={`${isDesktop ? 38 : 80}vw`}
+                        <GenericSlider
+                            width={`${isDesktop ? 38 : 60}vw`}
                             height={isDesktop ? (screenWidth * 38 * 362) / (500 * 100) : (screenWidth * 80 * 362) / (500 * 100)}
-                            images={aula_images}
-                            showBullets={true}
-                            showNavs={true}
+                            items={aula_images}
                         />
                     </div>
                     
