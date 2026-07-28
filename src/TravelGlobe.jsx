@@ -63,14 +63,8 @@ export default function TravelGlobe({ theme = "dark" }) {
                         : "rgb(255, 255, 255)"; // Països en blanc/gris clar
                 }}
                 polygonSideColor={() => "rgb(20, 20, 20)"}
-                polygonStrokeColor={(d) => {
-                    const iso = getCountryISO(d.properties);
-                    const isVisited = visitedISO.includes(iso);
-                    if (isVisited) return "#94692d";
-                    return theme === "dark" ? "#444444" : "#a0a0a0";
-                }}
-
-                polygonAltitude={0.005}
+                polygonStrokeColor={() => { return theme === "dark" ? "#444444" : "#a0a0a0"}}
+                polygonAltitude={0.007}
                 polygonLabel={({ properties: d }) => {
                     const iso = getCountryISO(d);
                     return `
