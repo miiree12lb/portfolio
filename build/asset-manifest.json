@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b9dfa4e8.css",
-    "main.js": "/static/js/main.badfffb7.js",
+    "main.css": "/static/css/main.59d098b7.css",
+    "main.js": "/static/js/main.ae335ba1.js",
     "static/media/OQUES GRASSES - ELEFANTS.mp3": "/static/media/OQUES GRASSES - ELEFANTS.868a8d14bef36009b149.mp3",
     "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
     "static/media/Unwritten (Audio) -Natasha Bedingfield-.mp3": "/static/media/Unwritten (Audio) -Natasha Bedingfield-.3f4a58e62b85f9302a9d.mp3",
@@ -126,11 +126,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
-    "main.b9dfa4e8.css.map": "/static/css/main.b9dfa4e8.css.map",
-    "main.badfffb7.js.map": "/static/js/main.badfffb7.js.map"
+    "main.59d098b7.css.map": "/static/css/main.59d098b7.css.map",
+    "main.ae335ba1.js.map": "/static/js/main.ae335ba1.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9dfa4e8.css",
-    "static/js/main.badfffb7.js"
+    "static/css/main.59d098b7.css",
+    "static/js/main.ae335ba1.js"
   ]
 }
