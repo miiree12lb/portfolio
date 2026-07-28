@@ -84,8 +84,8 @@ export default function ResourcesSection({ memes, isDesktop }) {
                     </div>
                     <div className="slider-wrapper">
                         <GenericSlider
-                            width={`${isDesktop ? 20 : 60}vw`}
-                            height={`${isDesktop ? 20 : 60}vw`}
+                            width={`${isDesktop ? 20 : 40}vw`}
+                            height={`${isDesktop ? 20 : 40}vw`}
                             items={memes}
                         />
                     </div>
