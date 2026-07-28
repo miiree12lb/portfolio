@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GenericSlider from "./GenericSlider.jsx";
-import { GraduationCap, Calendar, Award, BookOpen, ExternalLink, Code, Layers, ChevronRight } from "lucide-react";
+import { GraduationCap, Calendar, Award, BookOpen, ExternalLink, Code, Layers, ChevronRight, ClockFading } from "lucide-react";
 import "./css/root.css";
 import "./css/education.css";
 import aula1 from "./assets/images/aula/aula_escuela_europea.png";
@@ -229,6 +229,21 @@ export default function Education() {
                 <p className="sub-header">Academic background, majors, electives, and certifications.</p>
             </header>
 
+            <section className="education-card">
+                <div className="card-header">
+                    <div className="institution-info">
+                        <ClockFading className="icon-gold" size={28} />
+                        <div>
+                            <h2>TU Delft</h2>
+                            <p className="degree-title">Master's Degree in Computer Science (CS)</p>
+                        </div>
+                    </div>
+                    <div className="date-badge">
+                        <Calendar size={14} /> Sept 2026 – Jul 2028
+                    </div>
+                </div>
+            </section>
+
             {/* --- SECCIÓ 1: UNIVERSITY OF TWENTE --- */}
             <section className="education-card">
                 <div className="card-header">
@@ -317,7 +332,7 @@ export default function Education() {
 
                         <div className="project-box">
                             <h4>Research Project (Thesis)</h4>
-                            <p>Created a strongly-typed imperative programming language with ANTLR4, C++, and LLVM. Features structs, operator overloading, and list comprehensions.</p>
+                            <p>Created a strongly-typed imperative programming language with ANTLR4, C++, and LLVM.</p>
                             <a href="https://purl.utwente.nl/essays/109398" target="_blank" rel="noopener noreferrer" className="paper-link">
                                 Read Research Paper <ExternalLink size={14} />
                             </a>
@@ -354,7 +369,7 @@ export default function Education() {
                     <div className="details-container full-width">
                         <ul>
                             <li><strong>Early CS Passion:</strong> Mandatory Computer Science up to 10th grade laid the foundation for programming (Scratch, C++, Java).</li>
-                            <li><strong>Trilingual Environment:</strong> Achieved fluency in English and French (B2+ level achieved by age 16).</li>
+                            <li><strong>Plurilingual Environment:</strong> Achieved fluency in English and French (B2+ level achieved by age 16).</li>
                             <li><strong>Dual Baccalaureate:</strong> Completed both national and international rigorous programs simultaneously.</li>
                         </ul>
                     </div>
