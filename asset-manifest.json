@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.003f7cd1.css",
-    "main.js": "/static/js/main.6dbf1a77.js",
+    "main.css": "/static/css/main.55dbcad5.css",
+    "main.js": "/static/js/main.136db4ca.js",
     "static/media/ut_me.png": "/static/media/ut_me.3d111dc6355ac6bc4882.png",
     "static/media/mireia.png": "/static/media/mireia.a9d2c0dd8d2fab1c8089.png",
     "static/media/surMaRoute.png": "/static/media/surMaRoute.bfdfd4f2d9e6d30e8178.png",
@@ -107,11 +107,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
-    "main.003f7cd1.css.map": "/static/css/main.003f7cd1.css.map",
-    "main.6dbf1a77.js.map": "/static/js/main.6dbf1a77.js.map"
+    "main.55dbcad5.css.map": "/static/css/main.55dbcad5.css.map",
+    "main.136db4ca.js.map": "/static/js/main.136db4ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.003f7cd1.css",
-    "static/js/main.6dbf1a77.js"
+    "static/css/main.55dbcad5.css",
+    "static/js/main.136db4ca.js"
   ]
 }
