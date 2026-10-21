@@ -11,6 +11,7 @@ import Projects from "./Projects.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import Footer from "./Footer.jsx";
 import Interests from "./Interests.jsx";
+import Privacy from "./Privacy.jsx";
 
 import "./css/theme.css";
 import "./css/root.css";
@@ -52,6 +53,7 @@ function Root() {
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/interests" element={<Interests theme={theme} />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </div>
 

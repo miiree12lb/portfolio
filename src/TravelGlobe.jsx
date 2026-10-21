@@ -25,7 +25,8 @@ export default function TravelGlobe({ theme = "dark" }) {
     };
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson")
+        // Served from /public so visitors don't make a request to a third party
+        fetch(`${process.env.PUBLIC_URL}/countries.geojson`)
             .then((res) => res.json())
             .then((data) => setCountriesGeo(data));
     }, []);
