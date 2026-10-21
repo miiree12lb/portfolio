@@ -332,3 +332,18 @@
 .song-link:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
 .song-link .item-info { flex: 1; min-width: 0; }
 .song-link-icon { color: var(--text-muted); flex-shrink: 0; }
+
+/* Small-screen fixes for the link playlist */
+.song-links-card .playlist-section { box-sizing: border-box; min-width: 0; }
+.song-links-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+}
+.song-links-grid li { min-width: 0; }
+.song-link { box-sizing: border-box; width: 100%; }
+
+@media (max-width: 600px) {
+    .song-links-card .playlist-section { padding: 14px 10px; }
+    .song-links-grid { max-height: 360px; gap: 2px; }
+    .song-link { gap: 10px; padding: 8px 6px; }
+    .song-link .item-index { display: none; }
+}

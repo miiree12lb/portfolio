@@ -242,6 +242,42 @@ export default function Education() {
                         <Calendar size={14} /> Sept 2026 – Jul 2028
                     </div>
                 </div>
+
+                <div className="card-body">
+                    <div className="details-container">
+                        <h3>Programme Overview</h3>
+                        <p>
+                            Two-year MSc in Computer Science, combining core courses in computer graphics,
+                            software architecture and machine learning with two specialisation themes (to be chosen).
+                        </p>
+
+                        <div className="summary-pills">
+                            <div className="pill"><Layers size={16} /> Duration: <strong>2 Years</strong></div>
+                            <div className="pill"><BookOpen size={16} /> Credits: <strong>120 ECTS</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="sub-section">
+                    <h3><BookOpen size={20} className="icon-gold" /> Core Courses</h3>
+                    <div className="grid-cards">
+                        <div className="info-box">
+                            <h4>Computer Graphics</h4>
+                            <p className="box-type">Core</p>
+                            <p className="box-desc">Rendering, geometry and the algorithms behind real-time and photorealistic images.</p>
+                        </div>
+                        <div className="info-box">
+                            <h4>Software Architecture</h4>
+                            <p className="box-type">Core</p>
+                            <p className="box-desc">Designing, documenting and evaluating the structure of large software systems.</p>
+                        </div>
+                        <div className="info-box">
+                            <h4>Machine and Deep Learning</h4>
+                            <p className="box-type">Core</p>
+                            <p className="box-desc">Foundations of machine learning and deep neural networks, from theory to practice.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             {/* --- SECCIÓ 1: UNIVERSITY OF TWENTE --- */}
@@ -278,6 +314,7 @@ export default function Education() {
                         <div className="summary-pills">
                             <div className="pill"><Award size={16} /> Grade: <strong>7.54/10</strong></div>
                             <div className="pill"><Layers size={16} /> Duration: <strong>3.5 Years</strong></div>
+                            <div className="pill"><BookOpen size={16} /> Credits: <strong>160 ECTS</strong></div>
                         </div>
 
                         <button className="btn-inline" onClick={openSubjectSummaryUTPopup}>
