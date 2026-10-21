@@ -1,26 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.59d098b7.css",
-    "main.js": "/static/js/main.ae335ba1.js",
-    "static/media/OQUES GRASSES - ELEFANTS.mp3": "/static/media/OQUES GRASSES - ELEFANTS.868a8d14bef36009b149.mp3",
-    "static/media/Queen - Bohemian Rhapsody (HQ).mp3": "/static/media/Queen - Bohemian Rhapsody (HQ).fe55f8d2dd3942876648.mp3",
-    "static/media/Unwritten (Audio) -Natasha Bedingfield-.mp3": "/static/media/Unwritten (Audio) -Natasha Bedingfield-.3f4a58e62b85f9302a9d.mp3",
-    "static/media/Black M - Sur ma route (Audio).mp3": "/static/media/Black M - Sur ma route (Audio).271d0dfb705217e51837.mp3",
-    "static/media/Coldplay - Viva La Vida (Official Video).mp3": "/static/media/Coldplay - Viva La Vida (Official Video).ba9df15a5025af5ecc53.mp3",
-    "static/media/Morat - Cómo te atreves.mp3": "/static/media/Morat - Cómo te atreves.1a64729074925a7b238e.mp3",
-    "static/media/OQUES GRASSES - LA GENT QUE ESTIMO & Rita Payés.mp3": "/static/media/OQUES GRASSES - LA GENT QUE ESTIMO & Rita Payés.8ffe7985687ac1bdd3b2.mp3",
-    "static/media/Edu Esteve - No Vull Despertar.mp3": "/static/media/Edu Esteve - No Vull Despertar.90b581ad6d00ca4a3e3e.mp3",
-    "static/media/Sandro Cavazza - Enemy (Audio).mp3": "/static/media/Sandro Cavazza - Enemy (Audio).dfa86db70a950c7426a6.mp3",
-    "static/media/Phillip Phillips - Gone, Gone, Gone LYRICS.mp3": "/static/media/Phillip Phillips - Gone, Gone, Gone LYRICS.7f33142fff87bcbf189a.mp3",
-    "static/media/Home -  Phillip Phillips (The World from the Side of the Moon (Deluxe)).mp3": "/static/media/Home -  Phillip Phillips (The World from the Side of the Moon (Deluxe)).3c6c31c12560b438b25b.mp3",
-    "static/media/Leave Her Wild.mp3": "/static/media/Leave Her Wild.402f1e09ca17214b388b.mp3",
-    "static/media/Amir - On dirait (paroles).mp3": "/static/media/Amir - On dirait (paroles).8d59c00006633e4d1328.mp3",
-    "static/media/Little Hollywood  Lyrics (Alle Farben feat. Janieck).mp3": "/static/media/Little Hollywood  Lyrics (Alle Farben feat. Janieck).fb66968d7d124b036e04.mp3",
-    "static/media/SARA'H - Ce Soir.mp3": "/static/media/SARA'H - Ce Soir.6bb7094bd3cbf63bc0f4.mp3",
-    "static/media/Doctor Prats - Seguirem Ballant (amb Stay Homas).mp3": "/static/media/Doctor Prats - Seguirem Ballant (amb Stay Homas).ce6b117cce0142b93b3e.mp3",
-    "static/media/Serem més forts.mp3": "/static/media/Serem més forts.8efb0a75e83680e654aa.mp3",
-    "static/media/TIMØ, Andrés Cepeda - Conquistar El Planeta (Cover Audio).mp3": "/static/media/TIMØ, Andrés Cepeda - Conquistar El Planeta (Cover Audio).d16e1c3ab1c224f80c47.mp3",
-    "static/media/Txarango - Quan cau el sol (Audio Oficial) [ ezmp3.cc ].mp3": "/static/media/Txarango - Quan cau el sol (Audio Oficial) [ ezmp3.cc ].476b3a00fd67aa7c88b5.mp3",
+    "main.css": "/static/css/main.003f7cd1.css",
+    "main.js": "/static/js/main.6dbf1a77.js",
     "static/media/ut_me.png": "/static/media/ut_me.3d111dc6355ac6bc4882.png",
     "static/media/mireia.png": "/static/media/mireia.a9d2c0dd8d2fab1c8089.png",
     "static/media/surMaRoute.png": "/static/media/surMaRoute.bfdfd4f2d9e6d30e8178.png",
@@ -126,11 +107,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
-    "main.59d098b7.css.map": "/static/css/main.59d098b7.css.map",
-    "main.ae335ba1.js.map": "/static/js/main.ae335ba1.js.map"
+    "main.003f7cd1.css.map": "/static/css/main.003f7cd1.css.map",
+    "main.6dbf1a77.js.map": "/static/js/main.6dbf1a77.js.map"
   },
   "entrypoints": [
-    "static/css/main.59d098b7.css",
-    "static/js/main.ae335ba1.js"
+    "static/css/main.003f7cd1.css",
+    "static/js/main.6dbf1a77.js"
   ]
 }
