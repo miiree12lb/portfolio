@@ -117,6 +117,7 @@
 
 /* Featured case studies on /projects */
 .featured-studies { margin-bottom: 36px; }
+.featured-studies:last-child { margin-bottom: 0; }
 .featured-studies h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; }
 .featured-grid {
     display: grid;
