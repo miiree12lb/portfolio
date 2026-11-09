@@ -42,9 +42,13 @@
     gap: 14px;
 }
 
+.institution-info p, .institution-info h2 {
+    margin: 0;
+    padding: 0;
+}
+
 .degree-title {
     color: var(--accent-gold, #94692d);
-    margin: 4px 0 0 0;
     font-size: 1rem;
 }
 
