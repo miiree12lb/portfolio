@@ -99,26 +99,13 @@
     transform: scale(1.1);
 }
 
-/* Secció del Slider de Memes */
-.memes-card {
-    align-items: center;
-}
-
-.memes-card .card-header {
-    width: 100%;
-}
-
-.slider-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
 @media (max-width: 768px) {
     .resources-grid {
         grid-template-columns: 1fr;
     }
+}
+/* Keep the icon and title together (another page also styles .card-header) */
+.content-card .card-header {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 }

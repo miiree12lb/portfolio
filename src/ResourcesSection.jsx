@@ -1,9 +1,8 @@
 import React from "react";
-import { Play, Code, Smile, ExternalLink } from "lucide-react";
-import GenericSlider from "./GenericSlider";
+import { Play, Code, ExternalLink } from "lucide-react";
 import "./css/resources.css";
 
-export default function ResourcesSection({ memes, isDesktop }) {
+export default function ResourcesSection() {
     const youtubeChannels = [
         { name: "QuantumFracture", desc: "Physics & Science animation", url: "https://www.youtube.com/@QuantumFracture" },
         { name: "Date un Vlog", desc: "Astrophysics & Physics", url: "https://www.youtube.com/@dateunvlog" },
@@ -73,21 +72,6 @@ export default function ResourcesSection({ memes, isDesktop }) {
                                 <ExternalLink size={16} className="link-icon" />
                             </a>
                         ))}
-                    </div>
-                </div>
-
-                {/* Bloc 3: Memes Slider */}
-                <div id="memes" className="content-card memes-card">
-                    <div className="card-header">
-                        <Smile className="card-icon" size={24} />
-                        <h3>Cool Nerdy Memes</h3>
-                    </div>
-                    <div className="slider-wrapper">
-                        <GenericSlider
-                            width={`${isDesktop ? 20 : 40}vw`}
-                            height={`${isDesktop ? 20 : 40}vw`}
-                            items={memes}
-                        />
                     </div>
                 </div>
             </div>
