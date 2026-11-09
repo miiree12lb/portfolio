@@ -1,115 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Search, Filter, Code2, ExternalLink } from "lucide-react";
-import Application from "./ApplicationInterface.jsx";
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, BookOpen } from "lucide-react";
+import { visibleCaseStudies } from "./caseStudies.js";
+import "./css/caseStudy.css";
 import "./css/projects.css";
 
 export default function Projects() {
-    const [filterCriteria, setFilterCriteria] = useState({
-        searchTerm: "",
-        language: "none",
-        appType: "none",
-    });
-
-    const [scrolled, setScrolled] = useState(false);
-
-    const applications = [
-        {
-            title: "Math Functions Viewer",
-            languages: ["JavaScript", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://miiree12lb.github.io/math-viewer/"
-        },
-        {
-            title: "OIFem",
-            languages: ["JavaScript", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://oifem.es"
-        },
-        {
-            title: "React How To",
-            languages: ["JavaScript", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://miiree12lb.github.io/how-to/",
-        },
-        {
-            title: "Designs",
-            languages: ["JavaScript", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://miiree12lb.github.io/designs",
-        },
-        {
-            title: "Video Gallery",
-            languages: ["JavaScript", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://miiree12lb-video-gallery.com/",
-        },
-        {
-            title: "Color Palette Generator",
-            languages: ["JavaScript", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://miiree12lb.github.io/color-picker/",
-        },
-        {
-            title: "Text Summarizer",
-            languages: ["JavaScript", "Python", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://text-summarizer-rho.vercel.app/",
-        },
-        {
-            title: "My Portfolio",
-            languages: ["JavaScript", "CSS", "HTML"],
-            app_type: "Web Application",
-            link: "https://miiree12lb.site",
-        },
-        {
-            title: "MenuMentor",
-            languages: ["Java", "SQL"],
-            app_type: "Desktop Application",
-            link: "https://miiree12lb.github.io/MenuMentor/",
-        },
-    ];
-
-    const global_languages = Array.from(
-        new Set(applications.flatMap((app) => app.languages))
-    );
-
-    const global_app_types = Array.from(
-        new Set(applications.map((app) => app.app_type))
-    );
-
-    const filteredApplications = applications.filter((app) => {
-        const titleMatch = app.title.toLowerCase().includes(filterCriteria.searchTerm.toLowerCase());
-        const languageMatch = filterCriteria.language === "none" || app.languages.includes(filterCriteria.language);
-        const appTypeMatch = filterCriteria.appType === "none" || app.app_type === filterCriteria.appType;
-
-        return titleMatch && languageMatch && appTypeMatch;
-    });
-
-    const handleSearchInputChange = (event) => {
-        setFilterCriteria({ ...filterCriteria, searchTerm: event.target.value });
-    };
-
-    const handleLanguageChange = (event) => {
-        setFilterCriteria({ ...filterCriteria, language: event.target.value });
-    };
-
-    const handleAppTypeChange = (event) => {
-        setFilterCriteria({ ...filterCriteria, appType: event.target.value });
-    };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.innerWidth < 800 && window.scrollY > 0) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
     return (
         <div className="projects-page">
             <header className="projects-header">
@@ -117,73 +13,24 @@ export default function Projects() {
                 <p className="sub-header">Web applications, tools, and desktop software built from scratch.</p>
             </header>
 
-            {/* Sticky Filter Bar */}
-            <div id="sticky" className={scrolled ? "scrolled" : ""}>
-                <div id="filter" className="filter-card">
-                    <div className="filter-title">
-                        <Filter size={20} className="icon-gold" />
-                        <h2>Search & Filter</h2>
+            {/* Case studies */}
+            {visibleCaseStudies.length > 0 && (
+                <section className="featured-studies">
+                    <h2><BookOpen size={22} className="icon-gold" aria-hidden="true" /> Case Studies</h2>
+                    <div className="featured-grid">
+                        {visibleCaseStudies.map((cs) => (
+                            <Link to={`/projects/${cs.slug}`} className="featured-card" key={cs.slug}>
+                                {!cs.published && <span className="cs-draft">Draft</span>}
+                                <h3>{cs.title}</h3>
+                                <p>{cs.tagline}</p>
+                                <ul className="cs-stack" aria-label="Tech stack">
+                                    {cs.stack.map((t) => <li key={t}>{t}</li>)}
+                                </ul>
+                                <span className="featured-cta">Read case study <ArrowRight size={16} /></span>
+                            </Link>
+                        ))}
                     </div>
-
-                    <div id="filter_components">
-                        {/* Input cerca amb icona */}
-                        <div className="search-input-wrapper">
-                            <Search size={18} className="search-icon" />
-                            <input
-                                type="text"
-                                placeholder="Search project title..."
-                                value={filterCriteria.searchTerm}
-                                onChange={handleSearchInputChange}
-                            />
-                        </div>
-
-                        {/* Selector d'idioma */}
-                        <div className="opts">
-                            <label htmlFor="language">Language:</label>
-                            <select id="language" value={filterCriteria.language} onChange={handleLanguageChange}>
-                                <option value="none">All Languages</option>
-                                {global_languages.map((language) => (
-                                    <option key={language} value={language}>
-                                        {language}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-
-                        {/* Selector de tipus d'app */}
-                        <div className="opts">
-                            <label htmlFor="app_type">App Type:</label>
-                            <select id="app_type" value={filterCriteria.appType} onChange={handleAppTypeChange}>
-                                <option value="none">All Types</option>
-                                {global_app_types.map((appType) => (
-                                    <option key={appType} value={appType}>
-                                        {appType}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Graella de Projectes */}
-            {filteredApplications.length > 0 ? (
-                <div id="grid">
-                    {filteredApplications.map((app, index) => (
-                        <Application
-                            key={index}
-                            title={app.title}
-                            languages={app.languages}
-                            app_type={app.app_type}
-                            link={app.link}
-                        />
-                    ))}
-                </div>
-            ) : (
-                <div className="no-results">
-                    <Code2 size={40} className="icon-gold" />
-                    <p>No projects match your current filter criteria.</p>
-                </div>
+                </section>
             )}
         </div>
     );
