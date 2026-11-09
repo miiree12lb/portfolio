@@ -1,0 +1,30 @@
+{
+    "/": {
+        "title": "Mireia Lopez Bruch | Developer and video creator",
+        "description": "Developer and video creator: building software and making computer science easier to understand."
+    },
+    "/projects": {
+        "title": "Projects | Mireia Lopez Bruch",
+        "description": "Case studies of projects I've built: the problem, the architecture and the trade-offs."
+    },
+    "/experience": {
+        "title": "Experience | Mireia Lopez Bruch",
+        "description": "Building software, teaching, and volunteering."
+    },
+    "/education": {
+        "title": "Education | Mireia Lopez Bruch",
+        "description": "MSc Computer Science at TU Delft, after a BSc in Technical Computer Science at the University of Twente."
+    },
+    "/achievements": {
+        "title": "Achievements | Mireia Lopez Bruch",
+        "description": "Scientific research programs, competitions, and physics experiments."
+    },
+    "/interests": {
+        "title": "Interests | Mireia Lopez Bruch",
+        "description": "A glimpse into my travels, favorite quotes, and resources."
+    },
+    "/privacy": {
+        "title": "Privacy | Mireia Lopez Bruch",
+        "description": "How this site handles your data."
+    }
+}

@@ -5,3 +5,9 @@ html {
     color: var(--text-color);
     font-family: "Segoe UI", Verdana, sans-serif;
 }
+
+/* Keyboard focus for clickable cards and badges */
+[role="button"]:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 3px;
+}

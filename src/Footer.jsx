@@ -13,17 +13,17 @@ export default function Footer({theme, toggleTheme}){
     return (
         <>
             <div id="footer-logo">
-                <Link to="https://miiree12lb.site/" target="_blank" rel="noopener noreferrer">
+                <Link to="/" aria-label="Home">
                     <img alt="logo" src={logo} id="footer-logo-image" />
                 </Link>
             </div>
             <div id="footer-icons-text">
                 <div id="footer-icons">
-                    <Link to="https://linktr.ee/miiree12lb" target="_blank" rel="noopener noreferrer"><img alt="Linktree" src={theme === "dark" ? linktree : linktreeBlack} width="50" height="50" /></Link>
+                    <a href="https://linktr.ee/miiree12lb" target="_blank" rel="noopener noreferrer"><img alt="Linktree" src={theme === "dark" ? linktree : linktreeBlack} width="50" height="50" /></a>
 
-                    <Link to="https://www.instagram.com/miiree12lb/" target="_blank" rel="noopener noreferrer"><img alt="Instagram" src={theme === "dark" ? instagram : instagramBlack} width="50" height="50" /></Link>
+                    <a href="https://www.instagram.com/miiree12lb/" target="_blank" rel="noopener noreferrer"><img alt="Instagram" src={theme === "dark" ? instagram : instagramBlack} width="50" height="50" /></a>
 
-                    <Link to="https://www.linkedin.com/in/mireia-lopez-bruch-0b7768241/" target="_blank" rel="noopener noreferrer"><img alt="LinkedIn" src={theme === "dark" ? linkedin : linkedinBlack} width="50" height="50" /></Link>  
+                    <a href="https://www.linkedin.com/in/mireia-lopez-bruch-0b7768241/" target="_blank" rel="noopener noreferrer"><img alt="LinkedIn" src={theme === "dark" ? linkedin : linkedinBlack} width="50" height="50" /></a>  
                 </div>
                 <div id="footer-text">
                     © Mireia Lopez Bruch - 2024-{new Date().getFullYear()} · <Link to="/privacy" className="footer-privacy-link">Privacy</Link>

@@ -1,26 +1,13 @@
 import React, { useState } from "react";
-import GenericSlider from "./GenericSlider.jsx";
 import { GraduationCap, Calendar, Award, BookOpen, ExternalLink, Code, Layers, ChevronRight, ClockFading } from "lucide-react";
 import "./css/root.css";
 import "./css/education.css";
-import aula1 from "./assets/images/aula/aula_escuela_europea.png";
-import aula2 from "./assets/images/aula/EM33qcnXsAA8vJi.png";
-import aula3 from "./assets/images/aula/aula.png";
-import twente1 from "./assets/images/twente/TechMed-Centre-UT.png";
-import twente2 from "./assets/images/twente/ut_me.png";
-import twente3 from "./assets/images/twente/ut-tower.png";
-import twente4 from "./assets/images/twente/ut.png";
 
 import Popup from "./PopupInterface.jsx";
-import useScreenWidth from "./useScreenWidth.jsx";
-import { useMediaQuery } from "react-responsive";
+import { clickable } from "./clickable.js";
 
 export default function Education() {
-    const screenWidth = useScreenWidth();
-    const isDesktop = useMediaQuery({ query: "(min-width: 801px)" });
 
-    const aula_images = [aula1, aula2, aula3];
-    const twente_images = [twente1, twente2, twente3, twente4];
 
     // Modals / Popups States
     const [isSpanishBaccalaureatePopupOpen, setIsSpanishBaccalaureatePopupOpen] = useState(false);
@@ -296,14 +283,6 @@ export default function Education() {
                 </div>
 
                 <div className="card-body">
-                    <div className="slider-container">
-                        <GenericSlider
-                            width={`${isDesktop ? 38 : 60}vw`}
-                            height={isDesktop ? (screenWidth * 38 * 362) / (500 * 100) : (screenWidth * 80 * 362) / (500 * 100)}
-                            items={twente_images}
-                        />
-                    </div>
-
                     <div className="details-container">
                         <h3>Major Overview</h3>
                         <p>
@@ -333,10 +312,10 @@ export default function Education() {
                             <p className="box-type">Minor</p>
                             <p className="box-desc">Offered by Master Spatial Engineering. Covers spatial data and governance.</p>
                             <div className="badge-group">
-                                <span onClick={openSISPopup}>SIS Module</span>
-                                <span onClick={openSPGPopup}>SPG Module</span>
-                                <span onClick={openTEPopup}>TE Module</span>
-                                <span onClick={openChallengeQ2Popup}>Challenge Q2</span>
+                                <span {...clickable(openSISPopup)}>SIS Module</span>
+                                <span {...clickable(openSPGPopup)}>SPG Module</span>
+                                <span {...clickable(openTEPopup)}>TE Module</span>
+                                <span {...clickable(openChallengeQ2Popup)}>Challenge Q2</span>
                             </div>
                         </div>
 
@@ -395,31 +374,20 @@ export default function Education() {
                 </div>
 
                 <div className="card-body">
-                    <div className="slider-container">
-                        <GenericSlider
-                            width={`${isDesktop ? 38 : 60}vw`}
-                            height={isDesktop ? (screenWidth * 38 * 362) / (500 * 100) : (screenWidth * 80 * 362) / (500 * 100)}
-                            items={aula_images}
-                        />
-                    </div>
-                    
                     <div className="details-container full-width">
-                        <ul>
-                            <li><strong>Early CS Passion:</strong> Mandatory Computer Science up to 10th grade laid the foundation for programming (Scratch, C++, Java).</li>
-                            <li><strong>Plurilingual Environment:</strong> Achieved fluency in English and French (B2+ level achieved by age 16).</li>
-                            <li><strong>Dual Baccalaureate:</strong> Completed both national and international rigorous programs simultaneously.</li>
-                        </ul>
+                        <p>Completed the Spanish and the International Baccalaureate in parallel.</p>
+                        <p>Languages: Catalan and Spanish (native), English (fluent), French (B2).</p>
                     </div>
                 </div>
 
                 <div className="overview-row">
-                    <div className="overview-card" onClick={openSpanishBaccalaureatePopup}>
+                    <div className="overview-card" {...clickable(openSpanishBaccalaureatePopup)}>
                         <h4>Spanish National Baccalaureate</h4>
                         <p>Grade: <strong>8.18/10</strong> (PAU: 11.528/14)</p>
                         <span>View Grade Breakdown →</span>
                     </div>
 
-                    <div className="overview-card" onClick={openInternationalBaccalaureatePopup}>
+                    <div className="overview-card" {...clickable(openInternationalBaccalaureatePopup)}>
                         <h4>International Baccalaureate (IB)</h4>
                         <p>Grade: <strong>34/45</strong></p>
                         <span>View Grade Breakdown →</span>

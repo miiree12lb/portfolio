@@ -13,6 +13,7 @@ import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from 'react-katex';
 
 import Popup from "./PopupInterface.jsx";
+import { clickable } from "./clickable.js";
 
 
 import "./css/achievements.css";
@@ -175,13 +176,13 @@ export default function Achievements() {
                 </div>
 
                 <p className="description-text">
-                    A prestigious gifted program selecting promising young students to introduce them to professional scientific research over three consecutive summers across regional, national, and international institutions.
+                    A three-year programme by La Pedrera Foundation that introduces selected secondary-school students to scientific research, with one summer each at a regional, a national and an international research centre.
                 </p>
 
                 <div className="overview-cards-grid">
                     
                     {/* Estiu 1 */}
-                    <div className="overview-item" onClick={() => setActivePopup("first")}>
+                    <div className="overview-item" {...clickable(() => setActivePopup("first"))}>
                         <div className="item-header">
                             <h3>MonNatura Pirineus</h3>
                             <span className="badge">1st Summer (2021)</span>
@@ -194,7 +195,7 @@ export default function Achievements() {
                     </div>
 
                     {/* Estiu 2 */}
-                    <div className="overview-item" onClick={() => setActivePopup("second")}>
+                    <div className="overview-item" {...clickable(() => setActivePopup("second"))}>
                         <div className="item-header">
                             <h3>
                                 <a href="http://essyi.hws.edu/" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
@@ -211,7 +212,7 @@ export default function Achievements() {
                     </div>
 
                     {/* Estiu 3 */}
-                    <div className="overview-item" onClick={() => setActivePopup("third")}>
+                    <div className="overview-item" {...clickable(() => setActivePopup("third"))}>
                         <div className="item-header">
                             <h3>
                                 <a href="https://www.lmh.ox.ac.uk/prospective-students/lmh-summer-programmes" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>

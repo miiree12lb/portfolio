@@ -6,7 +6,7 @@
 //   never in the deployed site.
 
 const caseStudies = [
-        {
+    {
         slug: "cleaning-scheduler",
         published: true,
         title: "Cleaning Scheduler",
@@ -148,6 +148,76 @@ const caseStudies = [
         learnings: "Maintainability is a design decision. Treating editions as data rather than pages is what lets the organisers keep updating the site years later. Next time I'd move the content out of the code entirely, into a JSON file or a simple CMS, so non-developers could edit it without a rebuild.",
     },
     {
+        slug: "lyra",
+        published: true,
+        title: "Lyra",
+        tagline: "A statically typed programming language and its compiler, built from scratch with ANTLR and LLVM, designed to be easy to write and fast to run.",
+        period: "Bachelor's thesis, completed January 2026",
+        role: "Language designer & compiler developer",
+        team: "Individual research project at the University of Twente",
+        stack: ["C++", "ANTLR4", "LLVM", "CMake"],
+        links: {
+            live: "",
+            code: "",
+            paper: "https://purl.utwente.nl/essays/109398",
+        },
+
+        problem: [
+            "Programming languages trade usability against performance. Modern dynamic languages like Python are quick to write but check types only at runtime, so they're slower and errors surface late. Statically typed, compiled languages catch errors early and run fast, but often ask the programmer to manage memory and learn a lot more.",
+            "Lyra aims to close that gap: readable syntax in the style of C++ and Java, strong static types checked before the program runs, automatic memory management, and compilation to optimised native code.",
+        ],
+
+        responsibilities: [
+            "Designed the language and its full grammar, scoped with MoSCoW: primitive types, control flow, functions and input/output as the minimum viable product, then strings, lists and maps.",
+            "Built a two-pass compiler in C++: a type and scope checker, then an LLVM IR generator, on top of an ANTLR-generated lexer and parser.",
+            "Wrote the runtime in C++: strings, lists and maps with their built-in methods, and reference-counted memory management.",
+            "Produced standalone native executables on Windows and other systems, and wrote the thesis paper.",
+        ],
+
+        architecture: "Source code goes through an ANTLR lexer and parser into a parse tree, which the compiler walks twice. The first pass checks types and scopes, using a symbol table plus records of every function and every built-in method. The second pass generates LLVM IR, calling into a C++ runtime for data structures and built-in functions. LLVM then optimises the IR at -O3, generates machine code for the host's architecture, and the result is linked into a native executable (with the Microsoft toolchain on Windows and clang++ elsewhere).",
+
+        decisions: [
+            {
+                title: "Build on ANTLR and LLVM rather than from scratch",
+                why: "ANTLR generates the lexer and parser from the grammar and handles left recursion, so operator precedence can be written naturally, as nine kinds of expressions from strongest to weakest. LLVM provides industrial-strength optimisation and code generation for many architectures, which let the project focus on the language itself.",
+                tradeoff: "Two large toolchains to depend on, and ANTLR resolves ambiguity by rule order, so the order of grammar rules matters.",
+            },
+            {
+                title: "Tree visitors instead of listeners",
+                why: "A visitor can choose the traversal order and return a value from every node, such as the type of an expression, which both compiler passes need.",
+                tradeoff: "In C++ every visit returns std::any, which gives up compile-time type safety inside the compiler itself, so it has to be used carefully.",
+            },
+            {
+                title: "Automatic memory with reference counting",
+                why: "Lyra is meant to be easy to use, so the compiler manages memory. Primitive types are copied on the stack, while data structures are shared by reference and freed when their last reference goes away. Each structure keeps its contents behind an inner pointer, so growing it with realloc never leaves other references pointing at freed memory.",
+                tradeoff: "Every assignment, function return and scope exit has to update reference counts correctly, which spreads memory logic across the code generator and is where the remaining bugs are.",
+            },
+            {
+                title: "A deliberately strict language",
+                why: "Every variable must be initialised when declared, the set of built-in functions is kept small, and semicolons are required only where they remove a real ambiguity, such as after a return. That keeps the language predictable and easy for the compiler to translate.",
+                tradeoff: "Less convenience than languages with more built-ins and looser rules.",
+            },
+        ],
+
+        challenges: [
+            {
+                title: "Grammar ambiguity",
+                text: "Without semicolons, a return statement followed by a print on the next line is ambiguous: the print could be read as the value being returned. Requiring a semicolon only after return removes the ambiguity without forcing semicolons everywhere.",
+            },
+            {
+                title: "Memory bugs found through test programs",
+                text: "Test programs (Fibonacci, bubble sort, a word histogram, and tests of the list and map methods) showed that the language works end to end, but also uncovered two memory-management bugs: a data structure returned from a function and never used leaks, and in one nested case a string isn't copied when it should be. The paper documents both, along with nested lists and maps, which are blocked in the type checker for now.",
+            },
+        ],
+
+        results: [
+            { value: "MVP+", label: "every must-have feature, plus strings, lists and maps" },
+            { value: "-O3", label: "LLVM-optimised native executables" },
+        ],
+
+        learnings: "Memory management touched too many places in the code generator, which is exactly where the remaining bugs come from. Next time I'd centralise it from the start, and fix it before adding more features. The project also showed that a goal like \"easy to use\" needs a usability study to prove, which was out of scope for this thesis.",
+    },
+    {
         slug: "video-gallery",
         published: true,
         title: "Video Gallery",
@@ -218,7 +288,7 @@ const caseStudies = [
     },
     {
         slug: "menumentor",
-        published: true,
+        published: false,
         title: "MenuMentor",
         tagline: "A desktop app that plans a week of meals around your calorie targets and how often you want each dish.",
         period: "High school (11th–12th grade), refined in 2024",

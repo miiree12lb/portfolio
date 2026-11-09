@@ -262,3 +262,7 @@
     .summary-pills { gap: 8px; }
     .pill { padding: 6px 10px; font-size: 0.85rem; }
 }
+
+.details-container.full-width p {
+    margin: 0;
+}

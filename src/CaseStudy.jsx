@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
-    ArrowLeft, ExternalLink, Code2, Calendar, User, Users, Target,
-    Layers, Scale, TriangleAlert, Lightbulb,
+    ArrowLeft, ExternalLink, Code2, Calendar, User, Users, Target, Layers, Scale, TriangleAlert, Lightbulb, FileText,
 } from "lucide-react";
 import { getCaseStudy, isDev } from "./caseStudies.js";
 import "./css/caseStudy.css";
@@ -102,6 +101,11 @@ export default function CaseStudy() {
                     {hasText(cs.links?.code) && (
                         <a href={cs.links.code} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                             <Code2 size={16} /> Source code
+                        </a>
+                    )}
+                    {hasText(cs.links?.paper) && (
+                        <a href={cs.links.paper} target="_blank" rel="noopener noreferrer" className={hasText(cs.links?.live) ? "btn-secondary" : "btn-primary"}>
+                            <FileText size={16} /> Read the paper
                         </a>
                     )}
                 </div>

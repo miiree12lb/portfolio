@@ -10,7 +10,7 @@ export default function Projects() {
         <div className="projects-page">
             <header className="projects-header">
                 <h1>Personal Projects</h1>
-                <p className="sub-header">Web applications, tools, and desktop software built from scratch.</p>
+                <p className="sub-header">Case studies of projects I've built: the problem, the architecture and the trade-offs.</p>
             </header>
 
             {/* Case studies */}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miiree12lb.site/sitemap.xml

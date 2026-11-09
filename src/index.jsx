@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./Home.jsx";
 import Experience from "./Experience.jsx";
@@ -10,9 +10,12 @@ import Navbar from "./Navbar.jsx";
 import Projects from "./Projects.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import Footer from "./Footer.jsx";
-import Interests from "./Interests.jsx";
 import Privacy from "./Privacy.jsx";
 import CaseStudy from "./CaseStudy.jsx";
+import PageTitle from "./PageTitle.jsx";
+
+// The Interests page includes a 3D globe library, so it's only downloaded when someone opens it.
+const Interests = lazy(() => import("./Interests.jsx"));
 
 import "./css/theme.css";
 import "./css/root.css";
@@ -41,8 +44,9 @@ function Root() {
   };
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
+      <PageTitle />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <div id="view">
@@ -54,7 +58,14 @@ function Root() {
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:slug" element={<CaseStudy />} />
-            <Route path="/interests" element={<Interests theme={theme} />} />
+            <Route
+              path="/interests"
+              element={
+                <Suspense fallback={null}>
+                  <Interests theme={theme} />
+                </Suspense>
+              }
+            />
             <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </div>
@@ -63,7 +74,7 @@ function Root() {
           <Footer theme={theme} toggleTheme={toggleTheme} />
         </div>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
