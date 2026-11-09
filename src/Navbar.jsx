@@ -37,7 +37,7 @@ export default function Navbar({ theme, toggleTheme }) {
     const navItems = [
         { 
             path: "/", 
-            name: "About Me", 
+            name: "Home", 
             iconDark: about_me, 
             iconLight: about_me_white, 
             selectedIcon: selected_about_me 

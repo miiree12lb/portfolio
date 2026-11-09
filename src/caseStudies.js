@@ -8,7 +8,7 @@
 const caseStudies = [
         {
         slug: "cleaning-scheduler",
-        published: false,
+        published: true,
         title: "Cleaning Scheduler",
         tagline: "A web app for shared houses that rotates cleaning tasks fairly every week, with house rules and a history of who did what.",
         period: "Nov 2026 – Present",
@@ -90,7 +90,7 @@ const caseStudies = [
 
         // 1–2 short paragraphs: what was the situation and why did it matter?
         problem: [
-            "OIFem (Olimpíada Informàtica Femenina) is a programming olympiad that encourages young women in Spain to get into computer science. I took part in its first edition in 2021 as a finalist, and have volunteered since 2022.",
+            "OIFem (Olimpíada Informàtica Femenina) is a programming olympiad that encourages young women in Spain to get into computer science. I took part in its first edition in 2021 as a finalist.",
             "The website is the main source of information for anyone who wants to take part, and the only way to register, so it has to be clear and reliable for students who may never have entered a programming competition before.",
             "The previous site was hard to maintain. It was built without a framework, so the same code was copied across pages and every change had to be made in several places. The new site needed to be easy to keep up to date edition after edition, without that duplication.",
         ],
@@ -99,7 +99,7 @@ const caseStudies = [
         responsibilities: [
             "Designed the site's look and layout from scratch.",
             "Built the site and its architecture, replacing the old duplicated pages.",
-            "Delivered it for the V edition of the olympiad.",
+            "Launched it for the V edition of the olympiad. It has been used for every edition since.",
             "Still the developer the organising team reaches out to for changes, while they also make their own edits on top of my code.",
         ],
 
@@ -139,7 +139,7 @@ const caseStudies = [
 
         // Only real numbers. Delete anything you can't back up.
         results: [
-            { value: "3", label: "editions run on the site (V, VI, VII)" },
+            { value: "Edition V", label: "onwards: every edition since has run on the site" },
             { value: "Still in use", label: "the organising team keeps building on my design and code" },
             // { value: "TODO", label: "e.g. participants registered through the site" },
         ],

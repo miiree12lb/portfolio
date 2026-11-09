@@ -61,7 +61,7 @@ export default function Privacy() {
 
             <h2>External links</h2>
             <p>
-                Links to other sites (LinkedIn, Instagram, Linktree, YouTube Music, my projects, etc.)
+                Links to other sites (LinkedIn, Instagram, Linktree, my projects, etc.)
                 only load those sites when you click them. Their own privacy policies apply there.
             </p>
 
