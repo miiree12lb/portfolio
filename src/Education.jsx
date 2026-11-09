@@ -234,8 +234,9 @@ export default function Education() {
                     <div className="details-container">
                         <h3>Programme Overview</h3>
                         <p>
-                            Two-year MSc in Computer Science, combining core courses in computer graphics,
-                            software architecture and machine learning with two specialisation themes (to be chosen).
+                            Two-year MSc in Computer Science, combining core courses in software architecture, machine
+                            learning, computer graphics and data management with two specialisation themes:{" "}
+                            <strong>Machine Learning Applications Engineering</strong> and <strong>Software Engineering</strong>.
                         </p>
 
                         <div className="summary-pills">
@@ -249,19 +250,55 @@ export default function Education() {
                     <h3><BookOpen size={20} className="icon-gold" /> Core Courses</h3>
                     <div className="grid-cards">
                         <div className="info-box">
-                            <h4>Computer Graphics</h4>
-                            <p className="box-type">Core</p>
-                            <p className="box-desc">Rendering, geometry and the algorithms behind real-time and photorealistic images.</p>
+                            <h4>Software Architecture</h4>
+                            <p className="box-type">Core · Compulsory</p>
+                            <p className="box-desc">Designing, modelling and evaluating the architecture of large software systems, with lab work on real open-source projects.</p>
                         </div>
                         <div className="info-box">
-                            <h4>Software Architecture</h4>
-                            <p className="box-type">Core</p>
-                            <p className="box-desc">Designing, documenting and evaluating the structure of large software systems.</p>
+                            <h4>Responsible Computer Science</h4>
+                            <p className="box-type">Core · Compulsory</p>
+                            <p className="box-desc">Ethical and sustainable practice in computing: privacy, fairness, inclusivity and accountability.</p>
                         </div>
                         <div className="info-box">
                             <h4>Machine and Deep Learning</h4>
-                            <p className="box-type">Core</p>
-                            <p className="box-desc">Foundations of machine learning and deep neural networks, from theory to practice.</p>
+                            <p className="box-type">Core · Chosen</p>
+                            <p className="box-desc">Supervised learning, model selection and deep architectures such as CNNs, RNNs and Transformers, and how to design ML experiments.</p>
+                        </div>
+                        <div className="info-box">
+                            <h4>3D Computer Graphics and Animation</h4>
+                            <p className="box-type">Core · Chosen</p>
+                            <p className="box-desc">Algorithms for synthesising images, 3D objects and motion, as used in games, film and simulation.</p>
+                        </div>
+                        <div className="info-box">
+                            <h4>Web-Scale Data Management</h4>
+                            <p className="box-type">Core · Chosen</p>
+                            <p className="box-desc">Distributed storage, from early systems to modern NoSQL databases, their trade-offs, and transactions at scale.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="sub-section">
+                    <h3><Layers size={20} className="icon-gold" /> Specialisation Themes</h3>
+                    <div className="grid-cards">
+                        <div className="info-box">
+                            <h4>Machine Learning Applications Engineering</h4>
+                            <p className="box-type">Theme · 15 ECTS</p>
+                            <p className="box-desc">From classical machine learning to its applications in conversational AI and software engineering.</p>
+                            <ul className="theme-courses">
+                                <li>Elements of Statistical Learning</li>
+                                <li>Conversational Agents</li>
+                                <li>Machine Learning for Software Engineering</li>
+                            </ul>
+                        </div>
+                        <div className="info-box">
+                            <h4>Software Engineering</h4>
+                            <p className="box-type">Theme · 15 ECTS</p>
+                            <p className="box-desc">Building and maintaining complex software systems, and automating key parts of how software is developed.</p>
+                            <ul className="theme-courses">
+                                <li>Development and Operation of Distributed Applications</li>
+                                <li>Sustainable Software Engineering</li>
+                                <li>Automated Software Testing</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

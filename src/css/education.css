@@ -266,3 +266,11 @@
 .details-container.full-width p {
     margin: 0;
 }
+
+/* Courses inside a specialisation theme */
+.theme-courses {
+    margin: 10px 0 0;
+    padding-left: 18px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
