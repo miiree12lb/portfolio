@@ -8,7 +8,7 @@
         "postbuild": "node scripts/postbuild.js",
         "test": "react-scripts test",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build --no-history"
     },
     "dependencies": {
         "lucide-react": "^1.25.0",
