@@ -19,6 +19,7 @@ const Interests = lazy(() => import("./Interests.jsx"));
 
 import "./css/theme.css";
 import "./css/root.css";
+import "./css/components.css";
 
 function Root() {
   const [theme, setTheme] = useState(() => {

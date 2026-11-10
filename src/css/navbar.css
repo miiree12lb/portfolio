@@ -3,7 +3,10 @@
     top: 0;
     right: 0;
     left: 0;
-    margin: 20px;
+    margin: 20px auto;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    max-width: 1304px; /* overhangs the 1200px page by 52px each side, as on a laptop */
     border: solid 1px var(--border-color);
     border-radius: 10px;
     background-color: var(--bg-color);
@@ -38,7 +41,7 @@
         color: var(--text-color);
     }
     a.active {
-        color: var(--accent-gold);
+        color: var(--gold-text);
     }
     a:hover {
         color: var(--accent-red);

@@ -3,9 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { 
     Award, 
     Microscope, 
-    FileText, 
     ExternalLink, 
-    ChevronRight, 
+    ArrowRight, 
+    Calendar, 
     Compass, 
     FlaskConical 
 } from "lucide-react";
@@ -49,7 +49,7 @@ export default function Achievements() {
                 target="_blank" 
                 rel="noopener noreferrer"
             >
-                Read Scientific Article <ExternalLink size={14} />
+                Read scientific article <ExternalLink size={16} />
             </a>
         </div>
     );
@@ -172,7 +172,7 @@ export default function Achievements() {
                             <p className="subtitle">La Pedrera Foundation • 3-Year Research Program</p>
                         </div>
                     </div>
-                    <span className="year-badge">2021 – 2023</span>
+                    <span className="year-badge"><Calendar size={14} aria-hidden="true" /> 2021 – 2023</span>
                 </div>
 
                 <p className="description-text">
@@ -190,7 +190,7 @@ export default function Achievements() {
                         <p className="item-location"><Compass size={14} /> Catalan Pyrenees, Spain</p>
                         <p className="item-desc">Selected as 1 of 12 candidates to study climate change impacts on mountain forest resilience.</p>
                         <button className="btn-read-more">
-                            Read Details <ChevronRight size={16} />
+                            Read details <ArrowRight size={16} />
                         </button>
                     </div>
 
@@ -207,7 +207,7 @@ export default function Achievements() {
                         <p className="item-location"><Compass size={14} /> Geneva, NY, USA</p>
                         <p className="item-desc">Interdisciplinary environmental science program focusing on sustainability models and eco-lodge engineering.</p>
                         <button className="btn-read-more">
-                            Read Details <ChevronRight size={16} />
+                            Read details <ArrowRight size={16} />
                         </button>
                     </div>
 
@@ -224,7 +224,7 @@ export default function Achievements() {
                         <p className="item-location"><Compass size={14} /> Oxford, United Kingdom</p>
                         <p className="item-desc">Intensive 3-week course on AI & Machine Learning theory, neural networks, and computer vision (ResNet18).</p>
                         <button className="btn-read-more">
-                            Read Details <ChevronRight size={16} />
+                            Read details <ArrowRight size={16} />
                         </button>
                     </div>
 
@@ -245,14 +245,14 @@ export default function Achievements() {
                             <p className="subtitle">Competitive Programming Olympiad</p>
                         </div>
                     </div>
-                    <span className="year-badge">2021</span>
+                    <span className="year-badge"><Calendar size={14} aria-hidden="true" /> 2021</span>
                 </div>
 
                 <p className="description-text">
                     Participated in the inaugural edition of the Women's Spanish Informatics Olympiad. Successfully qualified in the top 15 candidates nationally during the classification round to advance to the national finals.
                 </p>
                 <button className="btn-secondary-action" onClick={() => setActivePopup("diploma")}>
-                    <FileText size={16} /> View Finalist Diploma
+                    View finalist diploma <ArrowRight size={16} />
                 </button>
                 
             </section>
@@ -271,7 +271,7 @@ export default function Achievements() {
                             <p className="subtitle">Applied Physics Experiment at Tibidabo Amusement Park</p>
                         </div>
                     </div>
-                    <span className="year-badge">2022</span>
+                    <span className="year-badge"><Calendar size={14} aria-hidden="true" /> 2022</span>
                 </div>
 
                 <p className="description-text">
@@ -279,7 +279,7 @@ export default function Achievements() {
                 </p>
 
                 <button className="btn-secondary-action" onClick={() => setActivePopup("fisidabo")}>
-                    <FlaskConical size={16} /> Read Experiment Details & Physical Model
+                    Read experiment details <ArrowRight size={16} />
                 </button>
             </section>
         </div>

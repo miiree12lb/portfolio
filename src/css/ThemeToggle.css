@@ -72,3 +72,8 @@
 .theme-switch input:checked + .slider .thumb {
   transform: translateX(32px);
 }
+/* The real checkbox is invisible, so show keyboard focus on the visible switch */
+.theme-switch input:focus-visible + .slider {
+  outline: 2px solid var(--gold-text);
+  outline-offset: 3px;
+}

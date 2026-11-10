@@ -10,12 +10,17 @@ export default function TravelGlobe({ theme = "dark" }) {
     const [selectedCountry, setSelectedCountry] = useState(null);
     const isDesktop = useMediaQuery({ query: "(min-width: 531px)" });
 
-    const visitedISO = [
-        "USA", "ESP", "FRA", "ITA", "VAT", "DEU", "GBR",
-        "BEL", "IRL", "NLD", "CHE", "NOR", "SWE", "TUR", "GRC",
-        "HRV", "SVN", "LUX", "MCO", "AND", "PRT", "HUN", "CZE", "SVK", "AUT", "DNK",
-        "CAN"
-    ];
+    // Visited countries, by ISO code, with the name shown in the text list
+    const visited = {
+        USA: "United States", ESP: "Spain", FRA: "France", ITA: "Italy", VAT: "Vatican City",
+        DEU: "Germany", GBR: "United Kingdom", BEL: "Belgium", IRL: "Ireland", NLD: "Netherlands",
+        CHE: "Switzerland", NOR: "Norway", SWE: "Sweden", TUR: "Türkiye", GRC: "Greece",
+        HRV: "Croatia", SVN: "Slovenia", LUX: "Luxembourg", MCO: "Monaco", AND: "Andorra",
+        PRT: "Portugal", HUN: "Hungary", CZE: "Czechia", SVK: "Slovakia", AUT: "Austria",
+        DNK: "Denmark", CAN: "Canada",
+    };
+    const visitedISO = Object.keys(visited);
+    const visitedNames = Object.values(visited).sort((a, b) => a.localeCompare(b));
 
     const getCountryISO = (properties) => {
         if (properties.ISO_A3 && properties.ISO_A3 !== "-99") return properties.ISO_A3;
@@ -47,41 +52,54 @@ export default function TravelGlobe({ theme = "dark" }) {
     });
 
     return (
-        <div className={`globe-wrapper ${theme}`} style={{ position: "relative", width: "100%", height: "500px" }}>
-            <Globe
-                key={theme}
-                ref={globeRef}
-                globeMaterial={customGlobeMaterial} // Assignem el material del mar aquí
-                backgroundColor="rgba(0,0,0,0)" // Fons transparent per al contenidor
-                
-                polygonsData={countriesGeo.features}
-                polygonCapColor={(d) => {
-                    const iso = getCountryISO(d.properties);
-                    const isVisited = visitedISO.includes(iso);
-                    if (isVisited) return "rgb(148, 105, 45)";
-                    return theme === "dark" 
-                        ? "rgb(30, 30, 30)" 
-                        : "rgb(255, 255, 255)"; // Països en blanc/gris clar
-                }}
-                polygonSideColor={() => "rgb(20, 20, 20)"}
-                polygonStrokeColor={() => { return theme === "dark" ? "#444444" : "#a0a0a0"}}
-                polygonAltitude={0.007}
-                polygonLabel={({ properties: d }) => {
-                    const iso = getCountryISO(d);
-                    return `
-                        <div style="
-                            background: ${theme === "dark" ? "#000000" : "#ffffff"}; 
-                            color: ${theme === "dark" ? "#ffffff" : "#000000"}; 
-                            padding: 6px 12px; 
-                            border-radius: 6px; 
-                            border: 1px solid #94692d; 
-                            font-family: sans-serif;
-                        ">
-                            <b>${d.NAME || d.ADMIN}</b> ${visitedISO.includes(iso) ? " (Visited)" : ""}
-                        </div>
-                    `;
-                }}
-            />
-        </div>
+        <>
+            <div
+                className={`globe-wrapper ${theme}`}
+                role="img"
+                aria-label={`Interactive 3D globe with the ${visitedNames.length} countries I've visited highlighted in gold. The full list follows.`}
+                style={{ position: "relative", width: "100%", height: "500px" }}>
+                <Globe
+                    key={theme}
+                    ref={globeRef}
+                    globeMaterial={customGlobeMaterial} // Assignem el material del mar aquí
+                    backgroundColor="rgba(0,0,0,0)" // Fons transparent per al contenidor
+                    
+                    polygonsData={countriesGeo.features}
+                    polygonCapColor={(d) => {
+                        const iso = getCountryISO(d.properties);
+                        const isVisited = visitedISO.includes(iso);
+                        if (isVisited) return "rgb(148, 105, 45)";
+                        return theme === "dark" 
+                            ? "rgb(30, 30, 30)" 
+                            : "rgb(255, 255, 255)"; // Països en blanc/gris clar
+                    }}
+                    polygonSideColor={() => "rgb(20, 20, 20)"}
+                    polygonStrokeColor={() => { return theme === "dark" ? "#444444" : "#a0a0a0"}}
+                    polygonAltitude={0.007}
+                    polygonLabel={({ properties: d }) => {
+                        const iso = getCountryISO(d);
+                        return `
+                            <div style="
+                                background: ${theme === "dark" ? "#000000" : "#ffffff"}; 
+                                color: ${theme === "dark" ? "#ffffff" : "#000000"}; 
+                                padding: 6px 12px; 
+                                border-radius: 6px; 
+                                border: 1px solid #94692d; 
+                                font-family: sans-serif;
+                            ">
+                                <b>${d.NAME || d.ADMIN}</b> ${visitedISO.includes(iso) ? " (Visited)" : ""}
+                            </div>
+                        `;
+                    }}
+                />
+            </div>
+
+            <details className="globe-list">
+                <summary>See the list ({visitedNames.length} countries)</summary>
+                <ul>
+                    {visitedNames.map((name) => <li key={name}>{name}</li>)}
+                </ul>
+            </details>
+        </>
     );
 }

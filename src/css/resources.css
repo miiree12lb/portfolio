@@ -38,13 +38,13 @@
 }
 
 .card-icon {
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
 }
 
 .card-header h3 {
     margin: 0;
     font-size: 1.2rem;
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
 }
 
 /* Llista d'enllaços */
@@ -95,7 +95,7 @@
 }
 
 .resource-item:hover .link-icon {
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
     transform: scale(1.1);
 }
 

@@ -1,0 +1,269 @@
+/*
+ * Shared components: one style for each kind of box and link, used on every page.
+ * Prefixed with #route so these win over the page stylesheets, whatever order they load in.
+ *
+ *   White = titles and content · Gold = labels and actions · Red = hover feedback
+ */
+
+/* ---------- Cards: the top-level boxes on a page ---------- */
+#route .featured-card,
+#route .exp-entry,
+#route .education-card,
+#route .achievement-card,
+#route .content-card,
+#route .quotes-card,
+#route .globe-wrapper {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--accent-gold);
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+#route .featured-card,
+#route .exp-entry,
+#route .education-card,
+#route .achievement-card,
+#route .content-card {
+    padding: 24px;
+}
+
+/* ---------- Inner boxes: boxes inside a card ---------- */
+#route .info-box,
+#route .project-box,
+#route .overview-card,
+#route .overview-item {
+    background-color: var(--bg-color);
+    border: 1px solid rgba(148, 105, 45, 0.3);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+#route .resource-item {
+    border: 1px solid rgba(148, 105, 45, 0.3);
+    border-radius: 12px;
+    color: inherit;
+}
+
+/* Case-study result boxes sit on the page like cards */
+#route .cs-results li {
+    border-radius: 16px;
+}
+
+/* ---------- Hover: only boxes you can click react, and always the same way ---------- */
+#route .featured-card,
+#route .overview-card,
+#route .overview-item,
+#route .resource-item {
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+#route .featured-card:hover,
+#route .overview-card:hover,
+#route .overview-item:hover,
+#route .resource-item:hover {
+    transform: none;
+    border-color: var(--accent-red);
+}
+
+#route .content-card:hover,
+#route .quotes-card:hover {
+    transform: none;
+    border-color: var(--accent-gold);
+}
+
+/* ---------- Card titles are white ---------- */
+#route .exp-org h2,
+#route .content-card .card-header h3,
+#route .title-group h2 a,
+#route .item-header h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#route .title-group h2 a:hover,
+#route .item-header h3 a:hover {
+    color: var(--accent-red);
+}
+
+/* ---------- Action links: one style, arrow = opens here, external icon = leaves the site ---------- */
+#route .home-featured-all,
+#route .featured-cta,
+#route .exp-link,
+#route .btn-inline,
+#route .btn-text,
+#route .btn-read-more,
+#route .paper-link,
+#route .btn-secondary-action,
+#route .card-cta {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 6px;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--gold-text);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#route .exp-link,
+#route .btn-inline,
+#route .btn-text,
+#route .btn-read-more,
+#route .paper-link,
+#route .btn-secondary-action,
+#route .card-cta {
+    margin-top: 12px;
+}
+
+#route .home-featured-all:hover,
+#route .featured-cta:hover,
+#route .exp-link:hover,
+#route .btn-inline:hover,
+#route .btn-text:hover,
+#route .btn-read-more:hover,
+#route .paper-link:hover,
+#route .btn-secondary-action:hover,
+#route .featured-card:hover .featured-cta,
+#route .overview-card:hover .card-cta,
+#route .overview-item:hover .btn-read-more {
+    color: var(--accent-red);
+    background: none;
+}
+
+/* ---------- Inside boxes: same title, label, text and spacing everywhere ---------- */
+#route .info-box,
+#route .project-box,
+#route .overview-card,
+#route .overview-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+#route .info-box h4,
+#route .project-box h4,
+#route .overview-card h4,
+#route .item-header h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+#route .item-header {
+    margin: 0;
+}
+
+/* Labels inside boxes are gold */
+#route .box-type,
+#route .item-location {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold-text);
+}
+
+/* Body text inside boxes is grey */
+#route .box-desc,
+#route .project-box p,
+#route .item-desc,
+#route .overview-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+
+#route .overview-card p strong {
+    color: var(--text-color);
+}
+
+/* The action link sits at the bottom of its box, so links line up across a row */
+#route :is(.info-box, .project-box, .overview-card, .overview-item) > :is(.btn-text, .paper-link, .card-cta, .btn-read-more) {
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+/* Card subtitles are grey, like on Experience and Achievements */
+#route .degree-title {
+    color: var(--text-muted);
+}
+
+/* ---------- Badges and tags ---------- */
+#route .date-badge,
+#route .year-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--hover-bg);
+    color: var(--text-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+/* ---------- Tags ----------
+   Static tags (tech stack, summer number, key facts) are flat labels:
+   filled, no visible border, no hover, default cursor.
+   Clickable tags (the Twente minor modules) look like small buttons:
+   no fill, gold outline and text, an arrow, red on hover. */
+#route .badge,
+#route .cs-stack li,
+#route .pill {
+    background-color: var(--hover-bg);
+    color: var(--text-color);
+    border: 1px solid transparent;
+    cursor: default;
+}
+
+#route .badge {
+    border-radius: 6px;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+}
+
+#route .badge-group span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background-color: transparent;
+    color: var(--gold-text);
+    border: 1px solid var(--gold-text);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#route .badge-group span:hover {
+    background-color: transparent;
+    color: var(--accent-red);
+    border-color: var(--accent-red);
+}
+
+/* Small utility buttons use the site font */
+#route .copy-email-btn {
+    font-family: inherit;
+}
+
+/* ---------- Phones: slightly tighter cards ---------- */
+@media (max-width: 600px) {
+    #route .featured-card,
+    #route .exp-entry,
+    #route .education-card,
+    #route .achievement-card,
+    #route .content-card {
+        padding: 18px 16px;
+    }
+}

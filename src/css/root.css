@@ -6,8 +6,32 @@ html {
     font-family: "Segoe UI", Verdana, sans-serif;
 }
 
-/* Keyboard focus for clickable cards and badges */
-[role="button"]:focus-visible {
-    outline: 2px solid var(--accent-gold);
+/* Visible keyboard focus everywhere (the browser default is near-black, invisible in dark mode) */
+:focus-visible {
+    outline: 2px solid var(--gold-text);
     outline-offset: 3px;
+}
+
+/* Page width: content stops stretching on wide screens and stays centred */
+#route,
+#footer {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Comfortable line length for running text (cards and grids still use the full width) */
+#route p,
+#route li {
+    max-width: 72ch;
+}
+
+/* Reading-column pages are already a comfortable width, so their text can fill the column */
+#route .case-study p,
+#route .case-study li,
+#route .experience-page p,
+#route .experience-page li,
+#route .privacy-page p,
+#route .privacy-page li {
+    max-width: none;
 }

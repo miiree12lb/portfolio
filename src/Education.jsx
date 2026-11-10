@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { GraduationCap, Calendar, Award, BookOpen, ExternalLink, Code, Layers, ChevronRight, ClockFading } from "lucide-react";
+import { GraduationCap, Calendar, Award, BookOpen, ExternalLink, Code, Layers, ArrowRight, ClockFading } from "lucide-react";
 import "./css/root.css";
 import "./css/education.css";
 
@@ -334,7 +334,7 @@ export default function Education() {
                         </div>
 
                         <button className="btn-inline" onClick={openSubjectSummaryUTPopup}>
-                            View Complete Subject Summary <ChevronRight size={16} />
+                            View complete subject summary <ArrowRight size={16} />
                         </button>
                     </div>
                 </div>
@@ -349,10 +349,10 @@ export default function Education() {
                             <p className="box-type">Minor</p>
                             <p className="box-desc">Offered by Master Spatial Engineering. Covers spatial data and governance.</p>
                             <div className="badge-group">
-                                <span {...clickable(openSISPopup)}>SIS Module</span>
-                                <span {...clickable(openSPGPopup)}>SPG Module</span>
-                                <span {...clickable(openTEPopup)}>TE Module</span>
-                                <span {...clickable(openChallengeQ2Popup)}>Challenge Q2</span>
+                                <span {...clickable(openSISPopup)}>SIS Module <ArrowRight size={12} aria-hidden="true" /></span>
+                                <span {...clickable(openSPGPopup)}>SPG Module <ArrowRight size={12} aria-hidden="true" /></span>
+                                <span {...clickable(openTEPopup)}>TE Module <ArrowRight size={12} aria-hidden="true" /></span>
+                                <span {...clickable(openChallengeQ2Popup)}>Challenge Q2 <ArrowRight size={12} aria-hidden="true" /></span>
                             </div>
                         </div>
 
@@ -360,14 +360,14 @@ export default function Education() {
                             <h4>Data Science & AI: Seeing through the hype</h4>
                             <p className="box-type">Elective</p>
                             <p className="box-desc">Fundamentals & critical analysis of machine learning, NLP, and distributed big data.</p>
-                            <button className="btn-text" onClick={openDSAIPopup}>Read Details →</button>
+                            <button className="btn-text" onClick={openDSAIPopup}>Read details <ArrowRight size={16} /></button>
                         </div>
 
                         <div className="info-box">
                             <h4>Programming Paradigms</h4>
                             <p className="box-type">Elective / Minor</p>
                             <p className="box-desc">Functional programming, concurrency, GPU parallelism, and compiler development.</p>
-                            <button className="btn-text" onClick={openProgrammingParadigmsPopup}>Read Details →</button>
+                            <button className="btn-text" onClick={openProgrammingParadigmsPopup}>Read details <ArrowRight size={16} /></button>
                         </div>
 
                     </div>
@@ -387,7 +387,7 @@ export default function Education() {
                             <h4>Research Project (Thesis)</h4>
                             <p>Created a strongly-typed imperative programming language with ANTLR4, C++, and LLVM.</p>
                             <a href="https://purl.utwente.nl/essays/109398" target="_blank" rel="noopener noreferrer" className="paper-link">
-                                Read Research Paper <ExternalLink size={14} />
+                                Read research paper <ExternalLink size={16} />
                             </a>
                         </div>
 
@@ -421,13 +421,13 @@ export default function Education() {
                     <div className="overview-card" {...clickable(openSpanishBaccalaureatePopup)}>
                         <h4>Spanish National Baccalaureate</h4>
                         <p>Grade: <strong>8.18/10</strong> (PAU: 11.528/14)</p>
-                        <span>View Grade Breakdown →</span>
+                        <span className="card-cta">View grade breakdown <ArrowRight size={16} /></span>
                     </div>
 
                     <div className="overview-card" {...clickable(openInternationalBaccalaureatePopup)}>
                         <h4>International Baccalaureate (IB)</h4>
                         <p>Grade: <strong>34/45</strong></p>
-                        <span>View Grade Breakdown →</span>
+                        <span className="card-cta">View grade breakdown <ArrowRight size={16} /></span>
                     </div>
                 </div>
             </section>

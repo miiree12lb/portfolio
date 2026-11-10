@@ -32,7 +32,7 @@
 }
 
 .highlight-text {
-    color: var(--accent-gold);
+    color: var(--gold-text);
 }
 
 .hero-tagline {
@@ -85,7 +85,7 @@
     gap: 8px;
     padding: 12px 24px;
     border: 1px solid var(--accent-gold);
-    color: var(--accent-gold);
+    color: var(--gold-text);
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
@@ -132,7 +132,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--accent-gold);
+    color: var(--gold-text);
     text-decoration: none;
     font-weight: 600;
     white-space: nowrap;

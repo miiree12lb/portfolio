@@ -48,7 +48,7 @@
 }
 
 .degree-title {
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
     font-size: 1rem;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .icon-gold {
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
 }
 
 /* Cos de la Card */
@@ -111,7 +111,7 @@
 .btn-inline {
     background: none;
     border: none;
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -129,7 +129,7 @@
 .btn-text {
     background: none;
     border: none;
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
     cursor: pointer;
     font-size: 0.85rem;
     font-weight: 600;
@@ -174,7 +174,7 @@
 
 .box-type {
     font-size: 0.8rem;
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
     font-weight: 600;
     margin: -6px 0 8px 0;
 }
@@ -197,7 +197,7 @@
     padding: 4px 8px;
     border-radius: 6px;
     cursor: pointer;
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
     border: 1px solid rgba(148, 105, 45, 0.3);
     transition: all 0.2s ease;
 }
@@ -227,10 +227,10 @@
 
 .overview-card {
     flex: 1;
-    background-color: var(--hover-bg, #292929);
+    background-color: var(--bg-color, #151515); /* same as the other cards on this page */
     padding: 16px;
     border-radius: 12px;
-    border: 1px solid var(--accent-gold, #94692d);
+    border: 1px solid rgba(148, 105, 45, 0.3);
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
@@ -242,7 +242,7 @@
 
 .overview-card span {
     font-size: 0.85rem;
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
     font-weight: 600;
 }
 
@@ -277,4 +277,35 @@
     padding-left: 18px;
     font-size: 0.9rem;
     line-height: 1.6;
+}
+
+/* Wide screens: overview text on the left, key facts (pills) stacked beside it */
+@media (min-width: 901px) {
+    .details-container:not(.full-width) {
+        display: grid;
+        grid-template-columns: minmax(0, 72ch) 1fr;
+        column-gap: 48px;
+        row-gap: 12px;
+        align-items: start;
+    }
+
+    .details-container:not(.full-width) > h3 {
+        grid-column: 1 / -1;
+        margin: 0 0 4px;
+    }
+
+    .details-container:not(.full-width) > p,
+    .details-container:not(.full-width) > .btn-inline {
+        grid-column: 1;
+        margin: 0;
+    }
+
+    .details-container:not(.full-width) > .summary-pills {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        justify-self: end; /* lines up with the date badge above */
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0;
+    }
 }

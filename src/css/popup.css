@@ -44,7 +44,7 @@
 .popup-header h2,
 .popup-header h3 {
     margin: 0;
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
     font-size: 1.3rem;
 }
 
@@ -90,7 +90,7 @@
 
 .popup-body .table th {
     background-color: var(--hover-bg, #292929);
-    color: var(--accent-gold, #94692d);
+    color: var(--gold-text);
     text-align: left;
     padding: 10px 14px;
     font-weight: 600;

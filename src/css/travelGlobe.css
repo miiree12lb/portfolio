@@ -22,3 +22,20 @@
         transform: translateY(0);
     }
 }
+/* Text version of the globe, for keyboard and screen-reader users (and anyone who prefers a list) */
+.globe-list {
+    margin-top: 12px;
+}
+
+.globe-list summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--gold-text);
+}
+
+.globe-list ul {
+    columns: 3 160px;
+    margin: 12px 0 0;
+    padding-left: 20px;
+    line-height: 1.8;
+}

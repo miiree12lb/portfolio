@@ -8,12 +8,13 @@ const ThemeToggle = ({theme, toggleTheme}) => {
       <input
         type="checkbox"
         id="theme-toggle"
+        aria-label="Dark mode"
         checked={theme === "dark"}
         onChange={toggleTheme}
       />
       <div className="slider">
-        <Moon className="icon moon-icon" size={16} />
-        <Sun className="icon sun-icon" size={16} />
+        <Moon className="icon moon-icon" size={16} aria-hidden="true" />
+        <Sun className="icon sun-icon" size={16} aria-hidden="true" />
         <div className="thumb"></div>
       </div>
     </label>

@@ -9,6 +9,7 @@ html.dark-mode {
   --play-btn: #000000;
   
   --accent-gold: #94692d;
+  --gold-text: #c0904d; /* gold for text: readable on dark backgrounds */
   --accent-red: #FF4136;
   --border-color: #94692d;
   --nav-bg: #94692d50;
@@ -20,11 +21,12 @@ html.light-mode {
   --panel-bg-st: #ffffff80;
   --hover-bg: #e4e4e7;
   --text-color: #18181b;
-  --text-muted: #71717a;
+  --text-muted: #5f5f67;
   --play-btn: #ffffff;
   
   --accent-gold: #94692d;
-  --accent-red: #FF4136;
+  --gold-text: #7d5a22; /* gold for text: readable on light backgrounds */
+  --accent-red: #c0261c;
   --border-color: #94692d;
   --nav-bg: #94692d50;
 }
