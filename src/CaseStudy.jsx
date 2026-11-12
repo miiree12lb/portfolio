@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import {
     ArrowLeft, ExternalLink, Code2, Calendar, User, Users, Target, Layers, Scale, TriangleAlert, Lightbulb, FileText,
 } from "lucide-react";
@@ -21,6 +21,27 @@ function Section({ icon: Icon, title, children }) {
             <h2><Icon size={20} className="icon-gold" aria-hidden="true" /> {title}</h2>
             {children}
         </section>
+    );
+}
+
+/* Back link: returns to the page the visitor came from (Home, Projects, Experience...).
+   Opened directly, with no earlier page on this site, it goes to All projects.
+   It stays a real link to /projects, so it also works when opened in a new tab. */
+function BackLink() {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const cameFromSite = location.key !== "default";
+
+    const handleClick = (e) => {
+        if (!cameFromSite || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault();
+        navigate(-1);
+    };
+
+    return (
+        <Link to="/projects" className="cs-back" onClick={handleClick}>
+            <ArrowLeft size={16} /> {cameFromSite ? "Back" : "All projects"}
+        </Link>
     );
 }
 
@@ -60,7 +81,7 @@ export default function CaseStudy() {
     if (!cs) {
         return (
             <div className="case-study">
-                <Link to="/projects" className="cs-back"><ArrowLeft size={16} /> All projects</Link>
+                <BackLink />
                 <p>That case study doesn't exist.</p>
             </div>
         );
@@ -69,7 +90,7 @@ export default function CaseStudy() {
     return (
         <article className="case-study">
             <div className="cs-sticky" style={{ top: stickyTop }}>
-                <Link to="/projects" className="cs-back"><ArrowLeft size={16} /> All projects</Link>
+                <BackLink />
                 <span className={`cs-sticky-title ${showStickyTitle ? "visible" : ""}`} aria-hidden={!showStickyTitle}>
                     {cs.title}
                 </span>

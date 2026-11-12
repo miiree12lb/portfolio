@@ -53,7 +53,7 @@
 }
 
 .slider:hover .thumb {
-  background-color: #FF4136; 
+  background-color: var(--hover-color);
 }
 
 .theme-switch input:checked + .slider {

@@ -49,7 +49,7 @@
 }
 
 .title-group h2 a:hover {
-    color: var(--accent-red, #FF4136);
+    color: var(--hover-color);
 }
 
 .subtitle {
@@ -96,7 +96,7 @@
 
 .overview-item:hover {
     transform: translateY(-3px);
-    border-color: var(--accent-red, #FF4136);
+    border-color: var(--hover-color);
 }
 
 .item-header {
@@ -162,7 +162,7 @@
 }
 
 .overview-item:hover .btn-read-more {
-    color: var(--accent-red, #FF4136);
+    color: var(--hover-color);
 }
 
 .btn-secondary-action {
@@ -181,8 +181,8 @@
 }
 
 .btn-secondary-action:hover {
-    border-color: var(--accent-red, #FF4136);
-    color: var(--accent-red, #FF4136);
+    border-color: var(--hover-color);
+    color: var(--hover-color);
 }
 
 .popup-image-container {
@@ -199,7 +199,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--accent-red, #FF4136);
+    color: var(--hover-color);
     text-decoration: none;
     font-weight: 600;
     margin-top: 12px;

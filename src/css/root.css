@@ -12,10 +12,14 @@ html {
     outline-offset: 3px;
 }
 
-/* Page width: content stops stretching on wide screens and stays centred */
+/* Page width: every page and the footer share one centred column */
+:root {
+    --page-width: 960px;
+}
+
 #route,
 #footer {
-    max-width: 1200px;
+    max-width: var(--page-width);
     margin-left: auto;
     margin-right: auto;
 }
@@ -26,12 +30,9 @@ html {
     max-width: 72ch;
 }
 
-/* Reading-column pages are already a comfortable width, so their text can fill the column */
-#route .case-study p,
-#route .case-study li,
-#route .experience-page p,
-#route .experience-page li,
-#route .privacy-page p,
-#route .privacy-page li {
+/* List items that are rows or boxes span the full width; the text inside them stays capped */
+#route .exp-earlier li,
+#route .cs-results li {
     max-width: none;
 }
+

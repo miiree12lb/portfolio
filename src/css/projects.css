@@ -85,7 +85,7 @@
 }
 
 .search-input-wrapper input:focus {
-    border-color: var(--accent-red, #FF4136);
+    border-color: var(--hover-color);
 }
 
 /* Dropdowns i Etiquetes */
@@ -117,7 +117,7 @@
 }
 
 .opts select:focus {
-    border-color: var(--accent-red, #FF4136);
+    border-color: var(--hover-color);
 }
 
 /* Graella de Projectes */

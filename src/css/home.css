@@ -75,7 +75,8 @@
 }
 
 .btn-primary:hover {
-    background-color: var(--accent-red);
+    background-color: var(--hover-fill);
+    color: var(--on-hover);
     transform: translateY(-2px);
 }
 
@@ -93,8 +94,9 @@
 }
 
 .btn-secondary:hover {
-    border-color: var(--accent-red);
-    color: var(--accent-red);
+    background-color: var(--hover-tint);
+    border-color: var(--hover-color);
+    color: var(--hover-color);
 }
 
 .hero-image-wrapper {
@@ -139,7 +141,19 @@
 }
 
 .home-featured-all:hover {
-    color: var(--accent-red);
+    color: var(--hover-color);
+}
+
+/* Selected work: the (up to 3) cards share one row on wide screens and stack on smaller ones,
+   so a lone card never sits on a row of its own */
+#route .home-featured .featured-grid {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+    #route .home-featured .featured-grid {
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 870px) {

@@ -66,7 +66,7 @@
 
 .popup-close-btn:hover {
     background-color: var(--hover-bg, #292929);
-    color: var(--accent-red, #FF4136);
+    color: var(--hover-color);
 }
 
 /* Cos del Popup (amb scroll intern si el contingut és llarg) */
@@ -152,4 +152,16 @@
     .popup-body {
         padding: 16px;
     }
+}
+
+/* Links inside popups use the site link colours */
+.popup-body a {
+    color: var(--gold-text);
+    font-weight: 600;
+    text-underline-offset: 3px;
+}
+
+.popup-body a:hover {
+    color: var(--hover-color);
+    text-decoration-thickness: 2px;
 }

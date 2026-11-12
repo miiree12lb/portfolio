@@ -10,7 +10,10 @@ html.dark-mode {
   
   --accent-gold: #94692d;
   --gold-text: #c0904d; /* gold for text: readable on dark backgrounds */
-  --accent-red: #FF4136;
+  --hover-color: #f0c674; /* bright gold: hover and focus state */
+  --on-hover: #000000;    /* text on a hover-fill */
+  --hover-fill: #f0c674;  /* main button on hover */
+  --hover-tint: #241c10;  /* soft gold background behind hovered boxes and buttons */
   --border-color: #94692d;
   --nav-bg: #94692d50;
 }
@@ -26,7 +29,10 @@ html.light-mode {
   
   --accent-gold: #94692d;
   --gold-text: #7d5a22; /* gold for text: readable on light backgrounds */
-  --accent-red: #c0261c;
+  --hover-color: #8f5a00; /* deep amber: readable on light backgrounds and on the tint */
+  --on-hover: #ffffff;
+  --hover-fill: #6b4400;
+  --hover-tint: #f8eedb;
   --border-color: #94692d;
   --nav-bg: #94692d50;
 }

@@ -53,7 +53,9 @@
 #route .featured-card,
 #route .overview-card,
 #route .overview-item,
-#route .resource-item {
+#route .resource-item,
+#route .info-box[role="button"],
+#route a.project-box {
     cursor: pointer;
     transition: border-color 0.2s ease;
 }
@@ -61,9 +63,13 @@
 #route .featured-card:hover,
 #route .overview-card:hover,
 #route .overview-item:hover,
-#route .resource-item:hover {
+#route .resource-item:hover,
+#route .info-box[role="button"]:hover,
+#route a.project-box:hover {
     transform: none;
-    border-color: var(--accent-red);
+    border-color: var(--hover-color);
+    box-shadow: 0 0 0 1px var(--hover-color); /* reads as a 2px border, without moving the layout */
+    background-color: var(--hover-tint);
 }
 
 #route .content-card:hover,
@@ -83,7 +89,10 @@
 
 #route .title-group h2 a:hover,
 #route .item-header h3 a:hover {
-    color: var(--accent-red);
+    color: var(--hover-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
 }
 
 /* ---------- Action links: one style, arrow = opens here, external icon = leaves the site ---------- */
@@ -134,9 +143,14 @@
 #route .btn-secondary-action:hover,
 #route .featured-card:hover .featured-cta,
 #route .overview-card:hover .card-cta,
-#route .overview-item:hover .btn-read-more {
-    color: var(--accent-red);
+#route .overview-item:hover .btn-read-more,
+#route .info-box[role="button"]:hover .card-cta,
+#route a.project-box:hover .paper-link {
+    color: var(--hover-color);
     background: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
 }
 
 /* ---------- Inside boxes: same title, label, text and spacing everywhere ---------- */
@@ -247,9 +261,9 @@
 }
 
 #route .badge-group span:hover {
-    background-color: transparent;
-    color: var(--accent-red);
-    border-color: var(--accent-red);
+    background-color: var(--hover-tint);
+    color: var(--hover-color);
+    border-color: var(--hover-color);
 }
 
 /* Small utility buttons use the site font */
@@ -266,4 +280,22 @@
     #route .content-card {
         padding: 18px 16px;
     }
+}
+
+/* A box that is itself a link keeps the normal text colours */
+#route a.project-box {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Links inside running text: gold and underlined, like links in popups */
+#route p a:not([class]) {
+    color: var(--gold-text);
+    font-weight: 600;
+    text-underline-offset: 3px;
+}
+
+#route p a:not([class]):hover {
+    color: var(--hover-color);
+    text-decoration-thickness: 2px;
 }

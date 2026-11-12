@@ -44,7 +44,10 @@
         color: var(--gold-text);
     }
     a:hover {
-        color: var(--accent-red);
+        color: var(--hover-color);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
     }
 }
 
@@ -66,4 +69,9 @@
     #links {
         gap: 15px;
     }
+}
+
+/* The light nav bar is tan, so its hover gold is a little deeper to stay readable */
+html.light-mode #links a:hover {
+    color: #704a00;
 }

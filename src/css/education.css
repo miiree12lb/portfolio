@@ -123,7 +123,7 @@
 }
 
 .btn-inline:hover {
-    color: var(--accent-red, #FF4136);
+    color: var(--hover-color);
 }
 
 .btn-text {
@@ -140,7 +140,7 @@
 }
 
 .btn-text:hover {
-    color: var(--accent-red, #FF4136);
+    color: var(--hover-color);
 }
 
 /* Sub-seccions i Grids */
@@ -202,14 +202,9 @@
     transition: all 0.2s ease;
 }
 
-.badge-group span:hover {
-    background-color: var(--accent-red, #FF4136);
-    color: #ffffff;
-    border-color: var(--accent-red, #FF4136);
-}
 
 .paper-link {
-    color: var(--accent-red, #FF4136);
+    color: var(--hover-color);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -237,7 +232,7 @@
 
 .overview-card:hover {
     transform: translateY(-3px);
-    border-color: var(--accent-red, #FF4136);
+    border-color: var(--hover-color);
 }
 
 .overview-card span {
@@ -283,7 +278,7 @@
 @media (min-width: 901px) {
     .details-container:not(.full-width) {
         display: grid;
-        grid-template-columns: minmax(0, 72ch) 1fr;
+        grid-template-columns: minmax(0, 1fr) max-content; /* facts column fits its pills */
         column-gap: 48px;
         row-gap: 12px;
         align-items: start;

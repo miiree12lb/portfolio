@@ -15,7 +15,7 @@
 }
 
 .quotes-card:hover {
-    border-color: var(--accent-red, #FF4136);
+    border-color: var(--hover-color);
 }
 
 .quote-icon {
@@ -69,8 +69,8 @@
 
 .carousel-btn:hover {
     background-color: var(--hover-bg, #292929);
-    border-color: var(--accent-red, #FF4136);
-    color: var(--accent-red, #FF4136);
+    border-color: var(--hover-color);
+    color: var(--hover-color);
 }
 
 .prev-btn {
@@ -107,7 +107,7 @@
 }
 
 .dot:hover {
-    background-color: var(--accent-red, #FF4136);
+    background-color: var(--hover-color);
 }
 
 /* Adaptació per a dispositius mòbils */

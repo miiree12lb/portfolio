@@ -1,6 +1,4 @@
 .case-study {
-    max-width: 760px; /* centred reading column, like the Experience and Privacy pages */
-    margin: 0 auto;
     padding: 32px 0 24px;
     line-height: 1.65;
 }
@@ -136,7 +134,7 @@
     text-decoration: none;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
-.featured-card:hover { transform: translateY(-3px); border-color: var(--accent-red, #FF4136); }
+.featured-card:hover { transform: translateY(-3px); border-color: var(--hover-color); }
 .featured-card:focus-visible { outline: 2px solid var(--accent-gold, #94692d); outline-offset: 3px; }
 .featured-card h3 { margin: 0; font-size: 1.25rem; }
 .featured-card p { margin: 0; color: var(--text-muted, #a1a1aa); }

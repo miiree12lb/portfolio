@@ -40,6 +40,8 @@ The site uses normal URLs like `/projects/oifem`. GitHub Pages only serves real 
 
 ## Running it locally
 
+Requires Node.js 24 or later.
+
 ```sh
 npm install
 npm start          # http://localhost:3000

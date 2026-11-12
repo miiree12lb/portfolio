@@ -61,7 +61,7 @@ export default function Achievements() {
                 For the second summer, 'La Pedrera' Foundation reserved places in national and international research centers based on scientific article evaluations.
             </p>
             <p>
-                I was selected for the Environmental Studies Summer Youth Institute (ESSYI) in Geneva, NY, USA (July 10 – July 23, 2022).
+                I was selected for the <a href="http://essyi.hws.edu/" target="_blank" rel="noopener noreferrer">Environmental Studies Summer Youth Institute (ESSYI)</a> in Geneva, NY, USA (July 10 – July 23, 2022).
             </p>
             <p>
                 During the first week, we attended lectures and academic workshops. In the second week, our team designed a sustainable eco-lodge, modeling energy consumption, waste management, site location, local activities, and financial budgeting.
@@ -73,7 +73,7 @@ export default function Achievements() {
     const thirdSummerJicContent = (
         <div>
             <p>
-                In my third summer, I attended the course <i>'Artificial Intelligence and Machine Learning: Theory and Practice'</i> at Lady Margaret Hall College, University of Oxford.
+                In my third summer, I attended the course <i>'Artificial Intelligence and Machine Learning: Theory and Practice'</i> at <a href="https://www.lmh.ox.ac.uk/prospective-students/lmh-summer-programmes" target="_blank" rel="noopener noreferrer">Lady Margaret Hall College</a>, University of Oxford.
             </p>
             <p>
                 This 3-week program combined morning lectures, afternoon seminars, and tutorial defense sessions. We completed three key assignments:
@@ -164,11 +164,7 @@ export default function Achievements() {
                     <div className="title-group">
                         <Microscope className="icon-gold" size={26} />
                         <div>
-                            <h2>
-                                <a href="https://www.fundaciocatalunya-lapedrera.com/en/youth-and-science" target="_blank" rel="noopener noreferrer">
-                                    Youth and Science (Joves i Ciència)
-                                </a>
-                            </h2>
+                            <h2>Youth and Science (Joves i Ciència)</h2>
                             <p className="subtitle">La Pedrera Foundation • 3-Year Research Program</p>
                         </div>
                     </div>
@@ -176,7 +172,7 @@ export default function Achievements() {
                 </div>
 
                 <p className="description-text">
-                    A three-year programme by La Pedrera Foundation that introduces selected secondary-school students to scientific research, with one summer each at a regional, a national and an international research centre.
+                    A three-year programme by <a href="https://www.fundaciocatalunya-lapedrera.com/en/youth-and-science" target="_blank" rel="noopener noreferrer">La Pedrera Foundation</a> that introduces selected secondary-school students to scientific research, with one summer each at a regional, a national and an international research centre.
                 </p>
 
                 <div className="overview-cards-grid">
@@ -189,43 +185,29 @@ export default function Achievements() {
                         </div>
                         <p className="item-location"><Compass size={14} /> Catalan Pyrenees, Spain</p>
                         <p className="item-desc">Selected as 1 of 12 candidates to study climate change impacts on mountain forest resilience.</p>
-                        <button className="btn-read-more">
-                            Read details <ArrowRight size={16} />
-                        </button>
+                        <span className="btn-read-more">Read details <ArrowRight size={16} /></span>
                     </div>
 
                     {/* Estiu 2 */}
                     <div className="overview-item" {...clickable(() => setActivePopup("second"))}>
                         <div className="item-header">
-                            <h3>
-                                <a href="http://essyi.hws.edu/" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                                    ESSYI Institute
-                                </a>
-                            </h3>
+                            <h3>ESSYI Institute</h3>
                             <span className="badge">2nd Summer (2022)</span>
                         </div>
                         <p className="item-location"><Compass size={14} /> Geneva, NY, USA</p>
                         <p className="item-desc">Interdisciplinary environmental science program focusing on sustainability models and eco-lodge engineering.</p>
-                        <button className="btn-read-more">
-                            Read details <ArrowRight size={16} />
-                        </button>
+                        <span className="btn-read-more">Read details <ArrowRight size={16} /></span>
                     </div>
 
                     {/* Estiu 3 */}
                     <div className="overview-item" {...clickable(() => setActivePopup("third"))}>
                         <div className="item-header">
-                            <h3>
-                                <a href="https://www.lmh.ox.ac.uk/prospective-students/lmh-summer-programmes" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                                    LMH Oxford
-                                </a>
-                            </h3>
+                            <h3>LMH Oxford</h3>
                             <span className="badge">3rd Summer (2023)</span>
                         </div>
                         <p className="item-location"><Compass size={14} /> Oxford, United Kingdom</p>
                         <p className="item-desc">Intensive 3-week course on AI & Machine Learning theory, neural networks, and computer vision (ResNet18).</p>
-                        <button className="btn-read-more">
-                            Read details <ArrowRight size={16} />
-                        </button>
+                        <span className="btn-read-more">Read details <ArrowRight size={16} /></span>
                     </div>
 
                 </div>
@@ -237,11 +219,7 @@ export default function Achievements() {
                     <div className="title-group">
                         <Award className="icon-gold" size={26} />
                         <div>
-                            <h2>
-                                <a href="https://oifem.es/" target="_blank" rel="noopener noreferrer">
-                                    OIFem (Olimpíada Informàtica Femenina)
-                                </a>
-                            </h2>
+                            <h2>OIFem (Olimpíada Informàtica Femenina)</h2>
                             <p className="subtitle">Competitive Programming Olympiad</p>
                         </div>
                     </div>
@@ -249,7 +227,7 @@ export default function Achievements() {
                 </div>
 
                 <p className="description-text">
-                    Participated in the inaugural edition of the Women's Spanish Informatics Olympiad. Successfully qualified in the top 15 candidates nationally during the classification round to advance to the national finals.
+                    Participated in the inaugural edition of the <a href="https://oifem.es/" target="_blank" rel="noopener noreferrer">Women's Spanish Informatics Olympiad</a>. Successfully qualified in the top 15 candidates nationally during the classification round to advance to the national finals.
                 </p>
                 <button className="btn-secondary-action" onClick={() => setActivePopup("diploma")}>
                     View finalist diploma <ArrowRight size={16} />
@@ -263,11 +241,7 @@ export default function Achievements() {
                     <div className="title-group">
                         <FlaskConical className="icon-gold" size={26} />
                         <div>
-                            <h2>
-                                <a href="https://fisidabo.upc.edu/ca" target="_blank" rel="noopener noreferrer">
-                                    Fisidabo Hypatia
-                                </a>
-                            </h2>
+                            <h2>Fisidabo Hypatia</h2>
                             <p className="subtitle">Applied Physics Experiment at Tibidabo Amusement Park</p>
                         </div>
                     </div>
@@ -275,7 +249,7 @@ export default function Achievements() {
                 </div>
 
                 <p className="description-text">
-                    Selected by Universitat Politècnica de Catalunya (UPC) to conduct a real-world physics experiment on the <i>Diavolo</i> rotational attraction to analyze circular motion, conical pendulum tension, and inclination dynamics.
+                    Selected by Universitat Politècnica de Catalunya (UPC), through its <a href="https://fisidabo.upc.edu/ca" target="_blank" rel="noopener noreferrer">Fisidabo</a> programme, to conduct a real-world physics experiment on the <i>Diavolo</i> rotational attraction to analyze circular motion, conical pendulum tension, and inclination dynamics.
                 </p>
 
                 <button className="btn-secondary-action" onClick={() => setActivePopup("fisidabo")}>

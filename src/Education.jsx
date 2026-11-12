@@ -356,18 +356,18 @@ export default function Education() {
                             </div>
                         </div>
 
-                        <div className="info-box">
+                        <div className="info-box" {...clickable(openDSAIPopup)}>
                             <h4>Data Science & AI: Seeing through the hype</h4>
                             <p className="box-type">Elective</p>
                             <p className="box-desc">Fundamentals & critical analysis of machine learning, NLP, and distributed big data.</p>
-                            <button className="btn-text" onClick={openDSAIPopup}>Read details <ArrowRight size={16} /></button>
+                            <span className="card-cta">Read details <ArrowRight size={16} /></span>
                         </div>
 
-                        <div className="info-box">
+                        <div className="info-box" {...clickable(openProgrammingParadigmsPopup)}>
                             <h4>Programming Paradigms</h4>
                             <p className="box-type">Elective / Minor</p>
                             <p className="box-desc">Functional programming, concurrency, GPU parallelism, and compiler development.</p>
-                            <button className="btn-text" onClick={openProgrammingParadigmsPopup}>Read details <ArrowRight size={16} /></button>
+                            <span className="card-cta">Read details <ArrowRight size={16} /></span>
                         </div>
 
                     </div>
@@ -383,13 +383,11 @@ export default function Education() {
                             <p>Developed a computer vision application for real-time LEGO brick recognition from video streams to generate <code>.bsx</code> files and assist in manufacturing accuracy.</p>
                         </div>
 
-                        <div className="project-box">
+                        <a className="project-box" href="https://purl.utwente.nl/essays/109398" target="_blank" rel="noopener noreferrer">
                             <h4>Research Project (Thesis)</h4>
                             <p>Created a strongly-typed imperative programming language with ANTLR4, C++, and LLVM.</p>
-                            <a href="https://purl.utwente.nl/essays/109398" target="_blank" rel="noopener noreferrer" className="paper-link">
-                                Read research paper <ExternalLink size={16} />
-                            </a>
-                        </div>
+                            <span className="paper-link">Read research paper <ExternalLink size={16} /></span>
+                        </a>
 
                     </div>
                 </div>
