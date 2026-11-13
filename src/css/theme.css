@@ -14,6 +14,17 @@ html.dark-mode {
   --on-hover: #000000;    /* text on a hover-fill */
   --hover-fill: #f0c674;  /* main button on hover */
   --hover-tint: #241c10;  /* soft gold background behind hovered boxes and buttons */
+
+  /* Code (the Lyra panel on Home) */
+  --code-bg: #0c0c0c;
+  --code-out-bg: #161410;
+  --code-kw: #c0904d;
+  --code-type: #f0c674;
+  --code-fn: #ffffff;
+  --code-id: #d4d4d8;
+  --code-str: #ffffff;
+  --code-com: #8b8b94;
+  --code-punct: #a1a1aa;
   --border-color: #94692d;
   --nav-bg: #94692d50;
 }
@@ -33,6 +44,16 @@ html.light-mode {
   --on-hover: #ffffff;
   --hover-fill: #6b4400;
   --hover-tint: #f8eedb;
+
+  --code-bg: #ffffff;
+  --code-out-bg: #faf6ee;
+  --code-kw: #7d5a22;
+  --code-type: #8f5a00;
+  --code-fn: #18181b;
+  --code-id: #3f3f46;
+  --code-str: #18181b;
+  --code-com: #6b6b73;
+  --code-punct: #5f5f67;
   --border-color: #94692d;
   --nav-bg: #94692d50;
 }

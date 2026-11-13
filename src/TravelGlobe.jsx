@@ -31,7 +31,7 @@ export default function TravelGlobe({ theme = "dark" }) {
 
     useEffect(() => {
         // Served from /public so visitors don't make a request to a third party
-        fetch(`${process.env.PUBLIC_URL}/countries.geojson`)
+        fetch(`${import.meta.env.BASE_URL}countries.geojson`)
             .then((res) => res.json())
             .then((data) => setCountriesGeo(data));
     }, []);

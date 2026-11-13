@@ -17,7 +17,7 @@ My personal website: who I am, case studies of projects I've built, my experienc
 
 ## Tech stack
 
-React 18 with React Router, built with Create React App and deployed to GitHub Pages on a custom domain. Icons come from Lucide, maths is rendered with KaTeX, and the globe uses react-globe.gl (loaded only when the Interests page is opened). Light and dark mode follow a toggle that's remembered in the browser.
+React 18 with React Router, built with Vite and deployed to GitHub Pages on a custom domain. Icons come from Lucide, maths is rendered with KaTeX, and the globe uses react-globe.gl (loaded only when the Interests page is opened). Light and dark mode follow a toggle that's remembered in the browser.
 
 ## How it's organised
 

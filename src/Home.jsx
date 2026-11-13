@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { visibleCaseStudies } from "./caseStudies.js";
+import LyraHero from "./LyraHero.jsx";
 import portrait from "./assets/images/mireia-portrait.jpg";
 
 import "./css/home.css";
@@ -17,15 +18,22 @@ export default function Home() {
         <div className="home">
             <section className="hero-section">
                 <div className="hero-container">
-                    <div className="hero-content">
+                    <div className="hero-intro">
+                        <p className="hero-hello">
+                            {/* Shown only on screens where the navigation bar leaves out the photo */}
+                            <img src={portrait} alt="" className="hero-avatar" width="64" height="64" />
+                            Hi, I'm
+                        </p>
                         <h1 className="hero-title">
-                            Hi, I'm <span className="highlight-text">Mireia Lopez Bruch</span>
+                            <span>Mireia</span> <span>Lopez Bruch</span>
                         </h1>
 
                         <p className="hero-tagline">
                             Developer and video creator: building software and making computer science easier to understand.
                         </p>
+                    </div>
 
+                    <div className="hero-details">
                         <p className="hero-description">
                             Originally from Barcelona, I'm studying for an MSc in Computer Science at{" "}
                             <strong>TU Delft</strong>, after a BSc in Technical Computer Science at the{" "}
@@ -33,23 +41,21 @@ export default function Home() {
                             of Spain's informatics olympiad for girls and a chore scheduler my house uses every week, and
                             I make short videos that explain topics like cryptography and programming paradigms.
                         </p>
-
-                        <div className="hero-actions">
-                            <Link to="/projects" className="btn-primary">
-                                See my projects <ArrowRight size={18} />
-                            </Link>
-                            <a href={VIDEOS_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                                Watch my videos <ExternalLink size={16} />
-                            </a>
-                            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                                GitHub <ExternalLink size={16} />
-                            </a>
-                        </div>
                     </div>
 
-                    <div className="hero-image-wrapper">
-                        <img src={portrait} alt="Mireia Lopez Bruch" className="hero-portrait" width="420" height="420" />
+                    <div className="hero-actions">
+                        <Link to="/projects" className="btn-primary">
+                            See my projects <ArrowRight size={18} />
+                        </Link>
+                        <a href={VIDEOS_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                            Watch my videos <ExternalLink size={16} />
+                        </a>
+                        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                            GitHub <ExternalLink size={16} />
+                        </a>
                     </div>
+
+                    <LyraHero />
                 </div>
             </section>
 

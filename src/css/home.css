@@ -10,29 +10,70 @@
     width: 100%;
 }
 
+/* Laptops: the text beside the code panel, the buttons on their own row across the full width.
+   Phones: name and tagline, then the code panel, then the description and buttons. */
 .hero-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 440px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "intro   code"
+        "details code"
+        "actions actions";
+    column-gap: 48px;
+    align-items: start; /* the code panel lines up with the name */
+}
+
+.hero-intro {
+    grid-area: intro;
+    min-width: 0;
+}
+
+.hero-details {
+    grid-area: details;
+    min-width: 0;
+}
+
+.hero-container .lyra-panel {
+    grid-area: code;
+}
+
+.hero-hello {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 48px;
+    gap: 14px;
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+    color: var(--text-muted);
 }
 
-.hero-content {
-    flex: 1;
-    min-width: 0;
-    max-width: 680px;
+/* The navigation shows the photo from 961px up; below that it appears here instead */
+.hero-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-gold);
 }
 
+@media (min-width: 961px) {
+    .hero-avatar {
+        display: none;
+    }
+}
+
+/* The name is the typographic statement of the site */
 .hero-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 16px 0;
+    font-size: clamp(2.8rem, 7vw, 4.6rem);
+    font-weight: 750;
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    margin: 0 0 22px;
     color: var(--text-color);
 }
 
-.highlight-text {
-    color: var(--gold-text);
+.hero-title span {
+    display: inline-block; /* wraps between "Mireia" and "Lopez Bruch", never inside them */
 }
 
 .hero-tagline {
@@ -47,7 +88,7 @@
     font-size: 1.05rem;
     line-height: 1.7;
     color: var(--text-muted, #a1a1aa);
-    margin: 0 0 28px 0;
+    margin: 0;
 }
 
 .hero-description strong {
@@ -56,6 +97,8 @@
 }
 
 .hero-actions {
+    grid-area: actions;
+    margin-top: 28px;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -99,22 +142,7 @@
     color: var(--hover-color);
 }
 
-.hero-image-wrapper {
-    flex: 0 0 340px;
-    display: flex;
-    justify-content: center;
-}
 
-.hero-portrait {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 24px;
-    border: 2px solid var(--accent-gold);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-    display: block;
-}
 
 /* Selected work */
 .home-featured-header {
@@ -158,32 +186,24 @@
 
 @media (max-width: 870px) {
     .hero-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 28px;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: none;
+        grid-template-areas:
+            "intro"
+            "code"
+            "details"
+            "actions";
     }
 
     .hero-section {
         padding-top: 16px;
     }
 
-    .hero-title {
-        font-size: 2.1rem;
-    }
+
 
     .hero-tagline {
         font-size: 1.15rem;
     }
 
-    .hero-actions {
-        justify-content: center;
-    }
 
-    .hero-image-wrapper {
-        flex: none;
-    }
-
-    .hero-portrait {
-        width: min(220px, 60vw);
-    }
 }

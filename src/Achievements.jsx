@@ -9,8 +9,7 @@ import {
     Compass, 
     FlaskConical 
 } from "lucide-react";
-import 'katex/dist/katex.min.css';
-import { BlockMath, InlineMath } from 'react-katex';
+import { BlockMath, InlineMath } from "./Math.jsx";
 
 import Popup from "./PopupInterface.jsx";
 import { clickable } from "./clickable.js";

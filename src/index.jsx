@@ -17,6 +17,9 @@ import PageTitle from "./PageTitle.jsx";
 // The Interests page includes a 3D globe library, so it's only downloaded when someone opens it.
 const Interests = lazy(() => import("./Interests.jsx"));
 
+import "@fontsource-variable/bricolage-grotesque";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
 import "./css/theme.css";
 import "./css/root.css";
 import "./css/components.css";

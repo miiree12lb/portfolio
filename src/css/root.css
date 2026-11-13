@@ -3,7 +3,7 @@ html {
     padding-top: 75px;
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: "Segoe UI", Verdana, sans-serif;
+    font-family: var(--font-body);
 }
 
 /* Visible keyboard focus everywhere (the browser default is near-black, invisible in dark mode) */
@@ -15,6 +15,28 @@ html {
 /* Page width: every page and the footer share one centred column */
 :root {
     --page-width: 960px;
+    /* Bundled with the site (@fontsource), so no font requests go to Google */
+    --font-body: "Bricolage Grotesque Variable", "Segoe UI", system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+
+code,
+pre,
+kbd {
+    font-family: var(--font-mono);
+}
+
+/* Text for screen readers only */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 #route,
