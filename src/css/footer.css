@@ -1,25 +1,52 @@
-#footer{
+/* Quiet footer, centred and stacked: logo, social icons, then the copyright line */
+#footer {
     margin-top: auto;
-    bottom: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #94692d;
-}
-
-#footer-text {
     text-align: center;
+    gap: 14px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(148, 105, 45, 0.5);
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
 
 #footer-logo-image {
-    width: 100px;
+    display: block;
+    width: 44px;
     height: auto;
 }
 
 #footer-icons {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 18px;
 }
-.footer-privacy-link { color: inherit; }
+
+#footer-icons a {
+    display: inline-flex;
+    padding: 4px; /* a comfortable tap target around the small icons */
+}
+
+#footer-icons img {
+    width: 22px;
+    height: 22px;
+    opacity: 0.65;
+    transition: opacity 0.2s ease;
+}
+
+#footer-icons a:hover img,
+#footer-icons a:focus-visible img {
+    opacity: 1;
+}
+
+.footer-privacy-link {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+
+.footer-privacy-link:hover {
+    color: var(--hover-color);
+    text-decoration-thickness: 2px;
+}

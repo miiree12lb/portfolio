@@ -37,6 +37,8 @@ export default function Privacy() {
             <p>
                 This site has no analytics, no advertising, no tracking cookies, no contact forms
                 and no embedded third-party players. I do not collect, sell or share data about you.
+                Everything the site needs, including its fonts, is served from this site itself: nothing is
+                loaded from Google Fonts or other third-party servers.
             </p>
 
             <h2>Hosting</h2>
