@@ -10,7 +10,7 @@ import "./css/lyraHero.css";
    Each line is a list of [kind, text] tokens; the kind picks the colour. */
 const PROGRAM = [
     [["com", "// Lyra, the language from my thesis"]],
-    [["kw", "void"], ["sp", " "], ["fn", "main"], ["pun", "() {"]],
+    [["ty", "void"], ["sp", " "], ["fn", "main"], ["pun", "() {"]],
     [["sp", "    "], ["ty", "string"], ["sp", " "], ["id", "name"], ["pun", " = "], ["str", "\"Mireia Lopez Bruch\""]],
     [["sp", "    "], ["ty", "string"], ["sp", " "], ["id", "from"], ["pun", " = "], ["str", "\"Barcelona\""]],
     [["sp", "    "], ["ty", "list"], ["pun", "<"], ["ty", "string"], ["pun", ">"], ["sp", " "], ["id", "roles"], ["pun", " = ["]],

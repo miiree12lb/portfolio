@@ -4,6 +4,7 @@ import {
     ArrowLeft, ExternalLink, Code2, Calendar, User, Users, Target, Layers, Scale, TriangleAlert, Lightbulb, FileText,
 } from "lucide-react";
 import { getCaseStudy, isDev } from "./caseStudies.js";
+import LyraSample from "./LyraSample.jsx";
 import "./css/caseStudy.css";
 
 const hasText = (v) => (Array.isArray(v) ? v.length > 0 : Boolean(v && String(v).trim()));
@@ -146,6 +147,12 @@ export default function CaseStudy() {
             {hasText(cs.problem) && (
                 <Section icon={Target} title="The problem">
                     {cs.problem.map((p, i) => <p key={i}><T>{p}</T></p>)}
+                </Section>
+            )}
+
+            {cs.sample && (
+                <Section icon={Code2} title="What Lyra looks like">
+                    <LyraSample file={cs.sample.file} code={cs.sample.code} output={cs.sample.output} caption={cs.sample.caption} />
                 </Section>
             )}
 

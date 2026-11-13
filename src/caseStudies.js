@@ -167,6 +167,35 @@ const caseStudies = [
             "Lyra aims to close that gap: readable syntax in the style of C++ and Java, strong static types checked before the program runs, automatic memory management, and compilation to optimised native code.",
         ],
 
+        // One of the test programs, with what it prints when compiled and run
+        sample: {
+            file: "bubbleSort.lyra",
+            caption: "A bubble sort from the project's test programs. Lists know their own size, declarations need no semicolon, and print's second argument ends the line.",
+            code: `void printList(list<int> l) {
+    for (int i = 0; i < l.size(); i++) {
+        print(l[i], false)
+        print(' ', false)
+    }
+    print('', true)
+}
+
+void main () {
+    list<int> ls = [10, -3, 7, 5, 2, 100, -30]
+    printList(ls)
+    for (int i = 0; i < ls.size() - 1; i++) {
+        for (int j = 0; j < ls.size() - i - 1; j++) {
+            if (ls[j] > ls[j+1]) {
+                int temp = ls[j]
+                ls[j] = ls[j+1]
+                ls[j+1] = temp
+            }
+        }
+    }
+    printList(ls)
+}`,
+            output: "10 -3 7 5 2 100 -30\n-30 -3 2 5 7 10 100",
+        },
+
         responsibilities: [
             "Designed the language and its full grammar, scoped with MoSCoW: primitive types, control flow, functions and input/output as the minimum viable product, then strings, lists and maps.",
             "Built a two-pass compiler in C++: a type and scope checker, then an LLVM IR generator, on top of an ANTLR-generated lexer and parser.",

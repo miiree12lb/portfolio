@@ -176,3 +176,34 @@
         font-size: 0.68rem;
     }
 }
+
+/* ---------- Static sample (Lyra case study) ---------- */
+.lyra-panel.lyra-static {
+    margin: 8px 0 0;
+}
+
+.lyra-static .lyra-src:focus-visible {
+    outline: 2px solid var(--gold-text);
+    outline-offset: -2px;
+}
+
+.lyra-output-block {
+    align-items: flex-start;
+}
+
+.lyra-output-block .lyra-output-label {
+    padding-top: 2px;
+}
+
+.lyra-output-block .lyra-output-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.lyra-caption {
+    padding: 10px 16px 12px;
+    border-top: 1px solid rgba(148, 105, 45, 0.35);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}

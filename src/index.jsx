@@ -20,6 +20,7 @@ const Interests = lazy(() => import("./Interests.jsx"));
 import "@fontsource-variable/bricolage-grotesque";
 import "@fontsource/ibm-plex-mono/400.css";
 import "@fontsource/ibm-plex-mono/500.css";
+import "@fontsource/ibm-plex-mono/400-italic.css"; // code comments
 import "./css/theme.css";
 import "./css/root.css";
 import "./css/components.css";
