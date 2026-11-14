@@ -17,7 +17,7 @@ const caseStudies = [
         stack: ["TypeScript", "React", "Vite", "Hono", "Cloudflare Workers", "Cloudflare D1", "Vitest"],
         links: {
             live: "https://cleaning-scheduler.miiree12lb.workers.dev",
-            code: "", // TODO: add https://github.com/miiree12lb/cleaning-scheduler once the repo is public
+            code: "https://github.com/miiree12lb/cleaning-scheduler",
         },
 
         problem: [
