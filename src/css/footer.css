@@ -1,27 +1,33 @@
-/* Quiet footer, centred and stacked: logo, social icons, then the copyright line */
+/* Quiet footer: logo on the left; beside it the social icons above the copyright line, both left-aligned */
 #footer {
     margin-top: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    gap: 14px;
+    gap: 20px;
     padding: 22px 0;
     border-top: 1px solid rgba(148, 105, 45, 0.5);
     font-size: 0.9rem;
     color: var(--text-muted);
 }
 
+.footer-icons-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
 #footer-logo-image {
     display: block;
-    width: 44px;
+    width: 56px;
     height: auto;
 }
 
 #footer-icons {
     display: flex;
-    align-items: center;
     gap: 18px;
+    margin-left: -4px; /* the first icon lines up with the text, despite its tap padding */
 }
 
 #footer-icons a {
@@ -49,4 +55,9 @@
 .footer-privacy-link:hover {
     color: var(--hover-color);
     text-decoration-thickness: 2px;
+}
+
+/* On narrow screens the line breaks between the name and the dates, never inside them */
+#footer-text .nowrap {
+    white-space: nowrap;
 }
